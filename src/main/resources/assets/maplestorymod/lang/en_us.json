@@ -1,0 +1,68 @@
+{
+  "item.maplestorymod.orangemushroomcap": "Orange Mushroom Cap",
+  "item.maplestorymod.slime_bubble": "Green Slime Bubble",
+  "item.maplestorymod.blue_snail_shell": "Blue Snail Shell",
+  "item.maplestorymod.squishy_liquid": "Green Squishy Liquid",
+
+  "item.maplestorymod.ruby": "Ruby",
+  "block.maplestorymod.ruby_block": "Ruby Block",
+  "block.maplestorymod.ruby_ore": "Ruby Ore",
+  "block.maplestorymod.oven": "Oven",
+  "item.maplestorymod.ruby_pickaxe": "Ruby Pickaxe",
+
+  "item.maplestorymod.arcane_essence": "Arcane Essence",
+  "item.maplestorymod.absolab_essence": "AbsoLab Essence",
+  "item.maplestorymod.cra": "CRA Shard",
+
+  "item.maplestorymod.dual_blade_dagger": "Dual Blade's Dagger",
+  "item.maplestorymod.dual_blade_katara": "Dual Blade's Katara",
+  "item.maplestorymod.kaiser_kaisereum": "Kaiser's Kaisereum",
+  "item.maplestorymod.aran_axe_one": "Aran's Maha",
+
+  "item.maplestorymod.elixir": "Elixir",
+  "item.maplestorymod.white_potion": "White Potion",
+  "item.maplestorymod.power_elixir": "Power Elixir",
+  "item.maplestorymod.melting_cheese": "Melting Cheese",
+  "item.maplestorymod.reindeer_milk": "Reindeer Milk",
+
+  "item.maplestorymod.utgard_polearm": "Utgard Polearm",
+  "item.maplestorymod.utgard_twohanded_sword": "Utgard Two Handed Sword",
+  "item.maplestorymod.utgard_dagger": "Utgard Dagger",
+  "item.maplestorymod.utgard_katara": "Utgard Katara",
+  "item.maplestorymod.utgard_katana": "Utgard Katana",
+  "item.maplestorymod.utgard_staff": "Utgard Staff",
+  "item.maplestorymod.utgard_shining_rod": "Utgard Shining Rod",
+
+  "item.maplestorymod.arcane_polearm": "Arcane Polearm",
+  "item.maplestorymod.arcane_twohanded_sword": "Arcane Two Handed Sword",
+  "item.maplestorymod.arcane_dagger": "Arcane Dagger",
+  "item.maplestorymod.arcane_katara": "Arcane Katara",
+
+  "item.maplestorymod.absolab_polearm": "AbsoLab Polearm",
+  "item.maplestorymod.absolab_twohanded_sword": "AbsoLab Two Handed Sword",
+  "item.maplestorymod.absolab_dagger": "AbsoLab Dagger",
+  "item.maplestorymod.absolab_katara": "AbsoLab Katara",
+
+  "item.maplestorymod.utgard_chaser_hat": "Utgard Chaser Hat",
+  "item.maplestorymod.utgard_chaser_chest": "Utgard Chaser Chest",
+  "item.maplestorymod.utgard_battle_leggings": "Utgard Battle Leggings",
+  "item.maplestorymod.utgard_battle_boots": "Utgard Battle Boots",
+
+  "item.maplestorymod.absolab_bandit_cap": "AbsoLab Bandit Cap",
+  "item.maplestorymod.absolab_bandit_chest": "AbsoLab Bandit Chest",
+  "item.maplestorymod.absolab_bandit_leggings": "AbsoLab Bandit Leggings",
+  "item.maplestorymod.absolab_knight_shoes": "AbsoLab Knight Shoes",
+
+  "item.maplestorymod.arcane_thief_hat": "Arcane Thief Hat",
+  "item.maplestorymod.arcane_thief_chest": "Arcane Thief Chest",
+  "item.maplestorymod.arcane_thief_leggings": "Arcane Thief Leggings",
+  "item.maplestorymod.arcane_knight_shoes": "Arcane Knight Shoes",
+
+  "entity.maplestorymod.mushroom": "Mushroom",
+  "entity.maplestorymod.blue_snail": "Blue Snail",
+  "item.maplestorymod.mushroom_spawn_egg": "Mushroom Spawn Egg",
+  "item.maplestorymod.blue_snail_spawn_egg": "Blue Snail Spawn Egg",
+  "item.maplestorymod.green_slime_spawn_egg": "Green Slime Spawn Egg",
+
+  "itemGroup.maplestorymod": "Maple Story Mod"
+}
