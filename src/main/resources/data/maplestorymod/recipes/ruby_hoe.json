@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    " w ",
+    " w "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "maplestorymod:ruby"
+    },
+    "w":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:ruby_hoe",
+    "count": 1
+  }
+}
