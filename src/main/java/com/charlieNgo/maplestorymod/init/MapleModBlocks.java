@@ -9,12 +9,12 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.block.Block;
 
 public class MapleModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MapleStoryMod.MOD_ID);
-
-    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
-
-    public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", ()-> new Block
-            (BlockBehaviour.Properties.of(Material.STONE).strength(4F, 10F).destroyTime(15).requiresCorrectToolForDrops()));
+//    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MapleStoryMod.MOD_ID);
+//
+////    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
+//
+//    public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", ()-> new Block
+//            (BlockBehaviour.Properties.of(Material.STONE).strength(4F, 10F).destroyTime(15).requiresCorrectToolForDrops()));
 
 
 }

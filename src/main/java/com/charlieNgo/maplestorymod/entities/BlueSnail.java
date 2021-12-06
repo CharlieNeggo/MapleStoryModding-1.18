@@ -11,6 +11,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Slime;
@@ -29,7 +30,7 @@ public class BlueSnail extends Slime implements Enemy, IForgeShearable {
     }
 
     // func_233666_p_ to registerAttributes
-    public static AttributeSupplier.Builder registerAttributes() {
+    public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 15.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.2F)
@@ -39,10 +40,11 @@ public class BlueSnail extends Slime implements Enemy, IForgeShearable {
     }
 
     //Goals for the Mushroom
+    @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.targetSelector.addGoal(2, new BlueSnail.BlueSnailNearestAttackableTargetGoal<>(Player.class));
-        this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 10.0F));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 6.0F));
     }
 
     class BlueSnailNearestAttackableTargetGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
@@ -52,11 +54,6 @@ public class BlueSnail extends Slime implements Enemy, IForgeShearable {
 
         public BlueSnailNearestAttackableTargetGoal(Class<T> targetClassIn) {
             super(BlueSnail.this, targetClassIn, true);
-        }
-
-        @Override
-        public boolean canUse() {
-            return BlueSnail.this.isAggressive() && super.canUse();
         }
     }
 

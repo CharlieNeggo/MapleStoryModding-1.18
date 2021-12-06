@@ -7,9 +7,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public class MapleArcaneArmorMaterial implements ArmorMaterial {
+public class MapleSetArmorMaterial implements ArmorMaterial {
+    ;
 
-    private static final int [] MAX_DAMAGE_ARRAY = new int [] { 11, 16, 15, 13 };
+    private static final int[] MAPLE_DURABILITY = new int[]{12, 15, 16, 11};
     private final int enchantability;
     private final int[] durability, damageReduction;
     private final float knockbackResistance, toughness;
@@ -17,9 +18,9 @@ public class MapleArcaneArmorMaterial implements ArmorMaterial {
     private final SoundEvent equipSound;
     private final Supplier<Ingredient> repairMaterial;
 
-    public MapleArcaneArmorMaterial(int enchantability, int[] durability, int[] damageReduction,
-                             float knockbackResistance, float toughness, String name, SoundEvent equipSound,
-                             Supplier<Ingredient> repairMaterial) {
+    public MapleSetArmorMaterial(int enchantability, int[] durability, int[] damageReduction,
+                                 float knockbackResistance, float toughness, String name, SoundEvent equipSound,
+                                 Supplier<Ingredient> repairMaterial) {
         this.enchantability = enchantability;
         this.durability = durability;
         this.damageReduction = damageReduction;
@@ -28,7 +29,8 @@ public class MapleArcaneArmorMaterial implements ArmorMaterial {
         this.name = name;
         this.equipSound = equipSound;
         this.repairMaterial = repairMaterial;
-    }
+        }
+
     @Override
     public int getDefenseForSlot(EquipmentSlot slot) {
         return this.damageReduction[slot.getIndex()];
