@@ -1,62 +1,52 @@
 package com.charlieNgo.maplestorymod.util.enums.weapon;
 
-import com.charlieNgo.maplestorymod.init.MapleModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum MapleAbsolabItemTier implements IItemTier, Tier {
-    ABSOLAB(2, 3700, 10.5F, 4.0F, 12, () -> {
-        return Ingredient.fromItems(MapleModItems.ABSOLAB_ESSENCE.get());
-    });
-
-    private final int harvestLevel;
-    private final int maxUses ;
-    private final float Efficiency;
-    private final float attackDamage;
-    private final int enchantability;
+public class MapleAbsolabItemTier implements Tier {
+    private final float attackDamageBonus, speed;
+    private final int enchantability, harvestLevel, durability;
     private final Supplier<Ingredient> repairMaterial;
 
-    MapleAbsolabItemTier(int harvestLevel, int maxUses, float Efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
-        this.harvestLevel = harvestLevel;
-        this.maxUses = maxUses;
-        this.Efficiency = Efficiency;
+    public MapleAbsolabItemTier(float attackDamageBonus, int enchantability, int harvestLevel, float speed,
+                               int durability, Supplier<Ingredient> repairMaterial) {
+        this.attackDamageBonus = attackDamageBonus;
         this.enchantability = enchantability;
-        this.attackDamage = attackDamage;
+        this.harvestLevel = harvestLevel;
+        this.speed = speed;
+        this.durability = durability;
         this.repairMaterial = repairMaterial;
 
     }
     @Override
-    public int getMaxUses() {
-        return maxUses;
+    public float getAttackDamageBonus() {
+        return this.attackDamageBonus;
     }
 
     @Override
-    public float getEfficiency() {
-        return Efficiency;
+    public int getEnchantmentValue() {
+        return this.enchantability;
     }
 
     @Override
-    public float getAttackDamage() {
-        return attackDamage;
+    public int getLevel() {
+        return this.harvestLevel;
     }
 
     @Override
-    public int getHarvestLevel() {
-        return harvestLevel;
+    public Ingredient getRepairIngredient() {
+        return this.repairMaterial.get();
     }
 
     @Override
-    public int getEnchantability() {
-        return enchantability;
+    public float getSpeed() {
+        return this.speed;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
-        return repairMaterial.get();
+    public int getUses() {
+        return this.durability;
     }
-
 }

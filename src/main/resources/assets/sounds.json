@@ -1,0 +1,17 @@
+{
+  "entity.mushroom_entity_ambient" : {
+    "sounds": [
+      "maplestorymod:mushroom_entity_ambient"
+    ]
+  },
+  "entity.mushroom_entity_death" : {
+    "sounds": [
+      "maplestorymod:mushroom_entity_death"
+    ]
+  },
+  "entity.mushroom_entity_hurt" : {
+    "sounds": [
+      "maplestorymod:mushroom_entity_hurt"
+    ]
+  }
+}

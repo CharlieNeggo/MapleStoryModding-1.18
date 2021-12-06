@@ -1,14 +1,12 @@
 package com.charlieNgo.maplestorymod.events.arcane;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.MapleArcaneSetItems;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
+import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,21 +17,16 @@ public class ArcaneWarriorClientEvents {
 
     @SubscribeEvent
     public static void onDamageEntityArcanePoleArm(AttackEntityEvent event) {
-        if (event.getEntityLiving().getHeldItemMainhand().getItem() == MapleArcaneSetItems.ARCANE_POLEARM.get()) {
+        if (event.getEntityLiving().getMainHandItem().getItem() == MapleArcaneSetItems.ARCANE_POLEARM.get()) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
                 if (target instanceof Entity) {
 
-                    PlayerEntity player = event.getPlayer();
-                    target.addPotionEffect(new EffectInstance(Effects.SLOWNESS, 10*20));
-                    target.addPotionEffect(new EffectInstance(Effects.WEAKNESS, 10*30));
-                    target.addPotionEffect(new EffectInstance(Effects.WITHER, 10*30));
+                    Player player = event.getPlayer();
+                    target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
+                    target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 10*30));
+                    target.addEffect(new MobEffectInstance(MobEffects.WITHER, 10*30));
 
-
-                    if (event.getPlayer().getEntityWorld().isRemote) {
-                        String msg = TextFormatting.RED + "Weakened and Slowed...";
-                        player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
-                    }
                 }
             }
         }
@@ -41,20 +34,15 @@ public class ArcaneWarriorClientEvents {
 
     @SubscribeEvent
     public static void onDamageEntityArcaneTwoHandedSword(AttackEntityEvent event) {
-        if (event.getEntityLiving().getHeldItemMainhand().getItem() == MapleArcaneSetItems.ARCANE_TWOHANDED_SWORD.get()) {
+        if (event.getEntityLiving().getMainHandItem().getItem() == MapleArcaneSetItems.ARCANE_TWOHANDED_SWORD.get()) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
                 if (target instanceof Entity) {
 
-                    PlayerEntity player = event.getPlayer();
-                    target.addPotionEffect(new EffectInstance(Effects.SLOWNESS, 10*20));
-                    target.setFire(3);
+                    Player player = event.getPlayer();
+                    target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
+                    target.setSecondsOnFire(3);
 
-
-                    if (event.getPlayer().getEntityWorld().isRemote) {
-                        String msg = TextFormatting.RED + "Slowed and Burned...";
-                        player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
-                    }
                 }
             }
         }

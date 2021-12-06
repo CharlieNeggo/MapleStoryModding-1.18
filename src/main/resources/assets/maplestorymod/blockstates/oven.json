@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "maplestorymod:block/oven" },
-    "facing=south": { "model": "maplestorymod:block/oven", "y":  180},
-    "facing=west": { "model": "maplestorymod:block/oven", "y":  270},
-    "facing=east": { "model": "maplestorymod:block/oven", "y":  90}
-  }
-}

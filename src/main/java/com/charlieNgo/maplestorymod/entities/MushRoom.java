@@ -1,106 +1,90 @@
 package com.charlieNgo.maplestorymod.entities;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.CreatureEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.entity.player.AttackEntityEvent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Slime;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.IForgeShearable;
 
 import javax.annotation.Nullable;
+import java.util.function.Predicate;
 
-public class MushRoom extends MonsterEntity {
-
-//    private EatGrassGoal eatGrassGoal;
-//    private int mushroomTimer;
-
-    public MushRoom(EntityType<? extends MonsterEntity> type, World worldIn) {
-        super(type, worldIn);
+public class MushRoom extends Slime implements Enemy, IForgeShearable {
+    public MushRoom(EntityType<? extends MushRoom> entityType, Level level) {
+        super(entityType, level);
+        this.xpReward = 3;
     }
 
     // func_233666_p_ to registerAttributes
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-
-        return MonsterEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 15.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 20D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 2.0D);
+        public static AttributeSupplier.Builder registerAttributes() {
+            return Mob.createMobAttributes()
+                    .add(Attributes.MAX_HEALTH, 15.0D)
+                    .add(Attributes.MOVEMENT_SPEED, 0.2F)
+                    .add(Attributes.ATTACK_DAMAGE, 5.0D)
+                    .add(Attributes.ARMOR, 8.0D);
         
     }
 
     //Goals for the Mushroom
-    @Override
     protected void registerGoals() {
-        super.registerGoals();
-//        this.eatGrassGoal = new EatGrassGoal(this);
-        this.goalSelector.addGoal(0, new SwimGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomFlyingGoal(this,1.0D));
-        this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-//        this.goalSelector.addGoal(5, this.eatGrassGoal);
+        this.goalSelector.addGoal(1, new FloatGoal(this));
+        this.targetSelector.addGoal(2, new MushRoom.MushRoomNearestAttackableTargetGoal<>(Player.class));
+        this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 10.0F));
+    }
+
+    class MushRoomNearestAttackableTargetGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
+        public MushRoomNearestAttackableTargetGoal(Class<T> targetClassIn, @Nullable Predicate<LivingEntity> targetPredicate) {
+            super(MushRoom.this, targetClassIn, 10, true, false, targetPredicate);
+        }
+
+        public MushRoomNearestAttackableTargetGoal(Class<T> targetClassIn) {
+            super(MushRoom.this, targetClassIn, true);
+        }
+
+        @Override
+        public boolean canUse() {
+            return MushRoom.this.isAggressive() && super.canUse();
+        }
     }
 
     @Override
-    protected int getExperiencePoints(PlayerEntity player) {
-        return 3 + this.world.rand.nextInt(4);
+    protected int getExperienceReward(Player player) {
+        return this.xpReward;
     }
 
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_MOOSHROOM_EAT;
+        return SoundEvents.FOX_AMBIENT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_FOX_DEATH;
+        return SoundEvents.FOX_DEATH;
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ENTITY_FOX_HURT; }
+        return SoundEvents.FOX_HURT; }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.ENTITY_PIG_STEP, 0.15F,  1.0F);
+        this.playSound(SoundEvents.PIG_STEP, 0.15F,  1.0F);
     }
-
-//    @Override
-//    protected void updateAITasks() {
-//        this.mushroomTimer = this.eatGrassGoal.getEatingGrassTimer();
-//        super.updateAITasks();
-//    }
-//
-//    @Override
-//    public void livingTick() {
-//        if (this.world.isRemote) {
-//            this.mushroomTimer = Math.max(0, this.mushroomTimer-1);
-//        }
-//        super.livingTick();
-//    }
-//
-//    @OnlyIn(Dist.CLIENT)
-//    public void handStatusUpdate(byte id) {
-//        if (id == 10) {
-//            this.mushroomTimer = 40;
-//        } else {
-//            super.handleStatusUpdate(id);
-//        }
-//    }
 }
 

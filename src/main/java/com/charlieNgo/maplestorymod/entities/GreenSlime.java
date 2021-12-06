@@ -1,73 +1,88 @@
 package com.charlieNgo.maplestorymod.entities;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.CreatureEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Slime;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.IForgeShearable;
 
 import javax.annotation.Nullable;
+import java.util.function.Predicate;
 
-public class GreenSlime extends MonsterEntity {
-
-    public GreenSlime(EntityType<? extends MonsterEntity> type, World worldIn) {
-        super(type, worldIn);
+public class GreenSlime extends Slime implements Enemy, IForgeShearable {
+    public GreenSlime(EntityType<? extends GreenSlime> entityType, Level level) {
+        super(entityType, level);
+        this.xpReward = 5;
     }
 
-    // func_233666_p_ to registerAttributes
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-
-        return MonsterEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 15.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 20D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 2.0D);
+    public static AttributeSupplier.Builder registerAttributes() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 15.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2F)
+                .add(Attributes.ATTACK_DAMAGE, 5.0D)
+                .add(Attributes.ARMOR, 8.0D);
 
     }
 
     //Goals for the Green Slime
-    @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(0, new SwimGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomFlyingGoal(this,1.0D));
-        this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(1, new FloatGoal(this));
+        this.targetSelector.addGoal(2, new GreenSlime.GreenSlimeNearestAttackableTargetGoal<>(Player.class));
+        this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 10.0F));
+    }
+    class GreenSlimeNearestAttackableTargetGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
+        public GreenSlimeNearestAttackableTargetGoal(Class<T> targetClassIn, @Nullable Predicate<LivingEntity> targetPredicate) {
+            super(GreenSlime.this, targetClassIn, 10, true, false, targetPredicate);
+        }
+
+        public GreenSlimeNearestAttackableTargetGoal(Class<T> targetClassIn) {
+            super(GreenSlime.this, targetClassIn, true);
+        }
+
+        @Override
+        public boolean canUse() {
+            return GreenSlime.this.isAggressive() && super.canUse();
+        }
     }
 
     @Override
-    protected int getExperiencePoints(PlayerEntity player) {
-        return 3 + this.world.rand.nextInt(4);
+    protected int getExperienceReward(Player player) {
+        return this.xpReward;
     }
 
+    @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SLIME_SQUISH;
+        return SoundEvents.FOX_AMBIENT;
     }
 
+    @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SLIME_DEATH;
+        return SoundEvents.FOX_DEATH;
     }
 
+    @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ENTITY_SLIME_HURT; }
+        return SoundEvents.FOX_HURT; }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.ENTITY_SLIME_JUMP, 0.15F,  1.0F);
+        this.playSound(SoundEvents.PIG_STEP, 0.15F,  1.0F);
     }
 }
 
