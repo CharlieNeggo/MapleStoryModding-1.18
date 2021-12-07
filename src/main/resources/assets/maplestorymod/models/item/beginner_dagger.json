@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "maplestorymod:items/maple_items/beginner_dagger"
+  }
+}

@@ -48,24 +48,4 @@ public class AbsolabThiefClientEvents {
             }
         }
     }
-
-//    @SubscribeEvent
-//    public static void WearChaserHat(Event event) {
-//        if (event.getEntityLiving().getHeldItemMainhand().getItem() == MapleAbsolabSetItems.ABSOLAB_KATARA.get()) {
-//            if (event.getTarget().isAlive()) {
-//                LivingEntity target = (LivingEntity) event.getTarget();
-//                if (target instanceof Entity) {
-//
-//                    PlayerEntity player = event.getPlayer();
-//                    target.addPotionEffect(new EffectInstance(Effects.POISON, 10*20));
-//                    target.addPotionEffect(new EffectInstance(Effects.SLOWNESS, 10*20));
-//
-//                    if (event.getPlayer().getEntityWorld().isRemote) {
-//                        String msg = TextFormatting.DARK_PURPLE + "Poisoned and Slowed...";
-//                        player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
-//                    }
-//                }
-//            }
-//        }
-//    }
 }

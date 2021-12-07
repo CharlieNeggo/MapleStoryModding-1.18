@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MapleCRASetItems {
 
-    //Weapons for AbsoLab Set
+    //Weapons for Cra Set
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MOD_ID);
 
     public static final RegistryObject<AxeItem> CRA_POLEARM = ITEMS.register("cra_polearm", () ->
