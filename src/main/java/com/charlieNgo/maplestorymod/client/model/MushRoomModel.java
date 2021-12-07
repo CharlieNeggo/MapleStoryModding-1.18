@@ -10,19 +10,19 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class MushRoomModel<T extends MushRoom> extends EntityModel<T> {
+public class MushRoomModel<Type extends MushRoom> extends EntityModel<Type> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "mushroom"), "main");
-    private final ModelPart bb_main;
+    private final ModelPart body;
 
     public MushRoomModel(ModelPart root) {
-        this.bb_main = root.getChild("bb_main");
+        this.body = root.getChild("body");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(51, 21).addBox(-6.0F, -2.0F, -5.0F, 11.0F, 1.0F, 11.0F, new CubeDeformation(0.0F))
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(51, 21).addBox(-6.0F, -2.0F, -5.0F, 11.0F, 1.0F, 11.0F, new CubeDeformation(0.0F))
                 .texOffs(83, 75).addBox(-6.0F, -11.0F, 6.0F, 11.0F, 8.0F, 2.0F, new CubeDeformation(0.0F))
                 .texOffs(68, 77).addBox(-8.0F, -11.0F, -5.0F, 2.0F, 8.0F, 11.0F, new CubeDeformation(0.0F))
                 .texOffs(38, 69).addBox(-6.0F, -11.0F, -7.0F, 11.0F, 8.0F, 2.0F, new CubeDeformation(0.0F))
@@ -45,12 +45,12 @@ public class MushRoomModel<T extends MushRoom> extends EntityModel<T> {
     }
 
     @Override
-    public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(MushRoom entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
     }
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        bb_main.render(poseStack, buffer, packedLight, packedOverlay);
+        body.render(poseStack, buffer, packedLight, packedOverlay);
     }
 }

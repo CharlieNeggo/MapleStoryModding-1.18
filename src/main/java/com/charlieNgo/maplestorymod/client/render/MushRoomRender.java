@@ -7,16 +7,16 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class MushRoomRender extends MobRenderer<MushRoom, MushRoomModel<MushRoom>> {
+public class MushRoomRender<Type extends MushRoom> extends MobRenderer<Type, MushRoomModel<Type>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MOD_ID, "textures/entity/mushroom.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MODID, "textures/entity/mushroom.png");
 
-    public MushRoomRender(EntityRendererProvider.Context p_174304_, MushRoomModel<MushRoom> p_174305_, float p_174306_) {
-        super(p_174304_, p_174305_, p_174306_);
+    public MushRoomRender(EntityRendererProvider.Context context) {
+        super(context, new MushRoomModel<>(context.bakeLayer(MushRoomModel.LAYER_LOCATION)), 0.5f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(MushRoom entity) {
+    public ResourceLocation getTextureLocation(Type entity) {
         return TEXTURE;
     }
 }

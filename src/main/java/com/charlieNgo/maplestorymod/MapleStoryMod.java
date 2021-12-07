@@ -22,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("maplestorymod")
 public class MapleStoryMod {
         public static final String MODID = "maplestorymod";
+
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger("Maple Story");
     public static final String MOD_ID = "maplestorymod";
@@ -31,12 +32,11 @@ public class MapleStoryMod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-//        MapleModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleUtgardSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleArcaneSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        MapleModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -57,7 +57,6 @@ public class MapleStoryMod {
 //            EntityAttributeCreationEvent.put(MapleModEntityTypes.GREENSLIME.get(), GreenSlime.setCustomAttributes().create());
 //        });
     }
-
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
