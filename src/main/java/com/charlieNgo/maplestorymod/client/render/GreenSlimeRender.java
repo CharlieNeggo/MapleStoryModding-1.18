@@ -2,21 +2,23 @@ package com.charlieNgo.maplestorymod.client.render;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.model.GreenSlimeModel;
+import com.charlieNgo.maplestorymod.client.model.MushRoomModel;
 import com.charlieNgo.maplestorymod.entities.GreenSlime;
+import com.charlieNgo.maplestorymod.entities.MushRoom;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class GreenSlimeRender extends MobRenderer<GreenSlime, GreenSlimeModel<GreenSlime>> {
+public class GreenSlimeRender<Type extends GreenSlime> extends MobRenderer<Type, GreenSlimeModel<Type>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MOD_ID, "textures/entity/green_slime.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MODID, "textures/entity/green_slime.png");
 
-    public GreenSlimeRender(EntityRendererProvider.Context p_174304_, GreenSlimeModel<GreenSlime> p_174305_, float p_174306_) {
-        super(p_174304_, p_174305_, p_174306_);
+    public GreenSlimeRender(EntityRendererProvider.Context context) {
+        super(context, new GreenSlimeModel<>(context.bakeLayer(GreenSlimeModel.LAYER_LOCATION)), 0.3f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(GreenSlime entity) {
+    public ResourceLocation getTextureLocation(Type entity) {
         return TEXTURE;
     }
 }

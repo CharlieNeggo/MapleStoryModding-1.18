@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class GreenSlimeModel<T extends GreenSlime> extends EntityModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "green_slime"), "main");
     private final ModelPart body;
     private final ModelPart string;
 

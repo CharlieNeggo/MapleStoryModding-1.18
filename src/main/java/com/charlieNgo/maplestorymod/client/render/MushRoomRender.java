@@ -12,7 +12,7 @@ public class MushRoomRender<Type extends MushRoom> extends MobRenderer<Type, Mus
     private static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MODID, "textures/entity/mushroom.png");
 
     public MushRoomRender(EntityRendererProvider.Context context) {
-        super(context, new MushRoomModel<>(context.bakeLayer(MushRoomModel.LAYER_LOCATION)), 0.5f);
+        super(context, new MushRoomModel<>(context.bakeLayer(MushRoomModel.LAYER_LOCATION)), 0.4f);
     }
 
     @Override
