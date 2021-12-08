@@ -22,19 +22,7 @@ public class MapleModEntityTypes {
     //Orange Mushroom
     public static final RegistryObject<EntityType<MushRoom>> MUSHROOM = ENTITIES.register("mushroom", () ->
             EntityType.Builder.of(MushRoom::new, MobCategory.MONSTER).sized(0.8f, 0.6f).build(new ResourceLocation(MapleStoryMod.MODID, "mushroom").toString()));
+    public static final RegistryObject<EntityType<GreenSlime>> GREENSLIME = ENTITIES.register("green_slime", () ->
+            EntityType.Builder.of(GreenSlime::new, MobCategory.MONSTER).sized(0.8f, 0.6f).build(new ResourceLocation(MapleStoryMod.MODID, "green_slime").toString()));
+
 }
-
-    //Orange Mushroom
-//    public static final RegistryObject<EntityType<MushRoom>> MUSHROOM = ENTITY_TYPES.register("mushroom", () -> EntityType.Builder.of(MushRoom::new
-//    , MobCategory.MONSTER).sized(0.8f, 0.6f)
-//            .build(new ResourceLocation(MapleStoryMod.MOD_ID, "mushroom").toString()));
-
-    //Blue Snail
-//    public static final RegistryObject<EntityType<BlueSnail>> BLUESNAIL = ENTITY_TYPES.register("bluesnail", () -> EntityType.Builder.of(BlueSnail::new
-//                    , MobCategory.MONSTER).sized(0.8f, 0.6f)
-//            .build(new ResourceLocation(MapleStoryMod.MOD_ID, "bluesnail").toString()));
-//
-//    //Green Slime
-//    public static final RegistryObject<EntityType<GreenSlime>> GREENSLIME  = ENTITY_TYPES.register("greenslime", () -> EntityType.Builder.of(GreenSlime::new
-//                    , MobCategory.MONSTER).sized(0.8f, 0.6f)
-//            .build(new ResourceLocation(MapleStoryMod.MOD_ID, "greenslime").toString()));

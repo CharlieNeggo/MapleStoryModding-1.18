@@ -2,21 +2,25 @@ package com.charlieNgo.maplestorymod.client.render;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.model.BlueSnailModel;
+import com.charlieNgo.maplestorymod.client.model.GreenSlimeModel;
+import com.charlieNgo.maplestorymod.client.model.MushRoomModel;
 import com.charlieNgo.maplestorymod.entities.BlueSnail;
+import com.charlieNgo.maplestorymod.entities.GreenSlime;
+import com.charlieNgo.maplestorymod.entities.MushRoom;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class BlueSnailRender extends MobRenderer<BlueSnail, BlueSnailModel<BlueSnail>> {
+public class BlueSnailRender<Type extends BlueSnail> extends MobRenderer<Type, BlueSnailModel<Type>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MOD_ID, "textures/entity/blue_snail.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MODID, "textures/entity/blue_snail.png");
 
-    public BlueSnailRender(EntityRendererProvider.Context p_174304_, BlueSnailModel<BlueSnail> p_174305_, float p_174306_) {
-        super(p_174304_, p_174305_, p_174306_);
+    public BlueSnailRender(EntityRendererProvider.Context context) {
+        super(context, new BlueSnailModel<>(context.bakeLayer(GreenSlimeModel.LAYER_LOCATION)), 0.5f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(BlueSnail entity) {
+    public ResourceLocation getTextureLocation(Type entity) {
         return TEXTURE;
     }
 }
