@@ -16,7 +16,7 @@ public class BlueSnailRender<Type extends BlueSnail> extends MobRenderer<Type, B
     private static final ResourceLocation TEXTURE = new ResourceLocation(MapleStoryMod.MODID, "textures/entity/blue_snail.png");
 
     public BlueSnailRender(EntityRendererProvider.Context context) {
-        super(context, new BlueSnailModel<>(context.bakeLayer(GreenSlimeModel.LAYER_LOCATION)), 0.5f);
+        super(context, new BlueSnailModel<>(context.bakeLayer(BlueSnailModel.LAYER_LOCATION)), 0.2f);
     }
 
     @Override

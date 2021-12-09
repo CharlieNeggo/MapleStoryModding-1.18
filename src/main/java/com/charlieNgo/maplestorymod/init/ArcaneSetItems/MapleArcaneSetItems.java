@@ -13,7 +13,7 @@ public class MapleArcaneSetItems {
 
 
     //Weapon Set for Arcane
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
     public static final RegistryObject<AxeItem> ARCANE_POLEARM = ITEMS.register("arcane_polearm", () -> new AxeItem(MapleArcaneWeaponInit.ARCANE, 30, -3.0F
             , new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));

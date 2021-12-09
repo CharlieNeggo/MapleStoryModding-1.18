@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class MapleUtgardSetItems {
 
     //Weapons for Utgard Set
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
     //Utgard set for warriors
     public static final RegistryObject<AxeItem> UTGARD_POLEARM = ITEMS.register("utgard_polearm", () ->

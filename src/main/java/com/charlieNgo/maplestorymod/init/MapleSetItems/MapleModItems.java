@@ -19,7 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MapleModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
     // For Armor Sets/Weapons for what material their going to be made out of
     public static final RegistryObject<Item> MAPLE = ITEMS.register("maple", () ->

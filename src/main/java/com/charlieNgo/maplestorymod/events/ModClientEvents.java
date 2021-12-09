@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 //import net.minecraft.util.text.StringTextComponent;
 //import net.minecraft.util.text.TextFormatting;
 
-@Mod.EventBusSubscriber(modid = MapleStoryMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModClientEvents {
 
     @SubscribeEvent

@@ -9,16 +9,16 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MapleStorySoundInit {
 
-    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create (ForgeRegistries.SOUND_EVENTS, MapleStoryMod.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create (ForgeRegistries.SOUND_EVENTS, MapleStoryMod.MODID);
 
     public static final RegistryObject<SoundEvent> MUSHROOM_AMBIENT = SOUNDS.register("entity.mushroom_entity_ambient", () ->
-            new SoundEvent(new ResourceLocation(MapleStoryMod.MOD_ID, "entity.mushroom_entity.ambient")));
+            new SoundEvent(new ResourceLocation(MapleStoryMod.MODID, "entity.mushroom_entity.ambient")));
 
     public static final RegistryObject<SoundEvent> MUSHROOM_HURT = SOUNDS.register("entity.mushroom_entity.hurt", () ->
-            new SoundEvent(new ResourceLocation(MapleStoryMod.MOD_ID, "entity.mushroom_entity.hurt")));
+            new SoundEvent(new ResourceLocation(MapleStoryMod.MODID, "entity.mushroom_entity.hurt")));
 
     public static final RegistryObject<SoundEvent> MUSHROOM_DEATH = SOUNDS.register("entity.mushroom_entity.death", () ->
-            new SoundEvent(new ResourceLocation(MapleStoryMod.MOD_ID, "entity.mushroom_entity.death")));
+            new SoundEvent(new ResourceLocation(MapleStoryMod.MODID, "entity.mushroom_entity.death")));
 
 
     private MapleStorySoundInit() {

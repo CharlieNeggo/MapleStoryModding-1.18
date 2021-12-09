@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class MapleAbsolabSetItems {
 
     //Weapons for AbsoLab Set
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
     public static final RegistryObject<AxeItem> ABSOLAB_POLEARM = ITEMS.register("absolab_polearm", () ->
             new AxeItem(MapleAbsolabWeaponInit.ABSOLAB, 25, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));

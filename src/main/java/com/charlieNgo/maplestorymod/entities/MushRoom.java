@@ -287,7 +287,7 @@ public class MushRoom extends Mob implements Enemy {
         }
 
         public void start() {
-            this.growTiredTimer = reducedTickDelay(200);
+            this.growTiredTimer = reducedTickDelay(100);
             super.start();
         }
 
