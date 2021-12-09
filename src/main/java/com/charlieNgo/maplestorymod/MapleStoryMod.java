@@ -2,8 +2,10 @@ package com.charlieNgo.maplestorymod;
 
 import com.charlieNgo.maplestorymod.init.AbsolabSetItems.MapleAbsolabSetItems;
 import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
+import com.charlieNgo.maplestorymod.init.Consumables.MapleConsumables;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -28,7 +30,9 @@ public class MapleStoryMod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        MapleConsumables.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        MapleSpawnEggs.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleUtgardSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleArcaneSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
