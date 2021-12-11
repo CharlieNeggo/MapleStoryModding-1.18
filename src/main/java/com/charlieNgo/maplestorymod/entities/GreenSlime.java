@@ -114,7 +114,7 @@ public class GreenSlime extends Mob implements Enemy {
         if (this.onGround && !this.wasOnGround) {
             int i = this.getSize();
 
-            if (spawnCustomParticles()) i = 0; // don't spawn particles if it's handled by the implementation itself
+            if (spawnCustomParticles()) i = 0; //don't spawn particles if it's handled by the implementation itself
             for(int j = 0; j < i * 8; ++j) {
                 float f = this.random.nextFloat() * ((float)Math.PI * 2F);
                 float f1 = this.random.nextFloat() * 0.5F + 0.5F;
@@ -136,7 +136,6 @@ public class GreenSlime extends Mob implements Enemy {
     protected void decreaseSquish() {
         this.targetSquish *= 0.6F;
     }
-
     protected int getJumpDelay() {
         return this.random.nextInt(20) + 10;
     }
@@ -191,7 +190,6 @@ public class GreenSlime extends Mob implements Enemy {
                 this.level.addFreshEntity(GreenSlime);
             }
         }
-
         super.remove(p_149847_);
     }
 
@@ -218,7 +216,6 @@ public class GreenSlime extends Mob implements Enemy {
                 this.doEnchantDamageEffects(this, p_33638_);
             }
         }
-
     }
 
     protected float getStandingEyeHeight(Pose p_33614_, EntityDimensions p_33615_) {
@@ -312,7 +309,7 @@ public class GreenSlime extends Mob implements Enemy {
             if (livingentity == null) {
                 return false;
             } else {
-                return !this.GreenSlime.canAttack(livingentity) ? false : this.GreenSlime.getMoveControl() instanceof GreenSlime.GreenSlimeMoveControl;
+                return this.GreenSlime.canAttack(livingentity) && this.GreenSlime.getMoveControl() instanceof GreenSlimeMoveControl;
             }
         }
 

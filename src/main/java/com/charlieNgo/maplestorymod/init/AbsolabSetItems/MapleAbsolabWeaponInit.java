@@ -7,7 +7,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleAbsolabWeaponInit {
-    protected static final Tier ABSOLAB = new MapleAbsolabItemTier(15.5f, 500, 5, 25f, 2500,
+    protected static final Tier ABSOLAB = new MapleAbsolabItemTier(15f, 500, 5, 25f, 2500,
         () -> Ingredient.of(MapleModItems.ABSOLAB_ESSENCE.get()));
 
     private MapleAbsolabWeaponInit() {

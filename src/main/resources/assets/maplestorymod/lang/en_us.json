@@ -3,15 +3,24 @@
   "item.maplestorymod.slime_bubble": "Green Slime Bubble",
   "item.maplestorymod.blue_snail_shell": "Blue Snail Shell",
   "item.maplestorymod.squishy_liquid": "Green Squishy Liquid",
+  "item.maplestorymod.octopus_tentacle": "Octopus Tentacle",
 
   "item.maplestorymod.arcane_essence": "Arcane Essence",
   "item.maplestorymod.absolab_essence": "AbsoLab Essence",
   "item.maplestorymod.cra": "CRA Shard",
+  "item.maplestorymod.utgard": "Utgard Material",
+  "item.maplestorymod.maple": "Maple Essence",
 
   "item.maplestorymod.dual_blade_dagger": "Dual Blade's Dagger",
   "item.maplestorymod.dual_blade_katara": "Dual Blade's Katara",
   "item.maplestorymod.kaiser_kaisereum": "Kaiser's Kaisereum",
   "item.maplestorymod.aran_axe_one": "Aran's Maha",
+
+  "item.maplestorymod.sparta": "Sparta",
+  "item.maplestorymod.basic_twohanded_sword": "Basic Two Handed Sword",
+  "item.maplestorymod.doombringer": "Doom Bringer",
+  "item.maplestorymod.zard": "Zard",
+  "item.maplestorymod.devil_sunrise": "Devil Sun Rise",
 
   "item.maplestorymod.elixir": "Elixir",
   "item.maplestorymod.white_potion": "White Potion",
@@ -36,7 +45,7 @@
   "item.maplestorymod.cursayer_dagger": "Cursayer Dagger",
   "item.maplestorymod.iron_dagger": "Iron Dagger",
   "item.maplestorymod.timeless_pescas_dagger": "Timeless Pescas Dagger",
-  "item.maplestorymod.dragon_toenail": "Dragon Toe Nail",
+  "item.maplestorymod.dragon_toenail_dagger": "Dragon Toe Nail Dagger",
 
   "item.maplestorymod.absolab_polearm": "AbsoLab Polearm",
   "item.maplestorymod.absolab_twohanded_sword": "AbsoLab Two Handed Sword",
@@ -52,6 +61,14 @@
   "item.maplestorymod.absolab_bandit_chest": "AbsoLab Bandit Chest",
   "item.maplestorymod.absolab_bandit_leggings": "AbsoLab Bandit Leggings",
   "item.maplestorymod.absolab_knight_shoes": "AbsoLab Knight Shoes",
+
+  "item.maplestorymod.cra_dagger": "Fafnir Damascus",
+  "item.maplestorymod.cra_katara": "Fafnir Rapid Edge",
+  "item.maplestorymod.cra_assassin_hood": "Cra Assassin Hood",
+  "item.maplestorymod.cra_assassin_chest": "Cra Assassin Chest",
+  "item.maplestorymod.cra_assassin_leggings": "Cra Assassin Leggings",
+  "item.maplestorymod.cra_polearm": "Fafnir Penitent Tears",
+  "item.maplestorymod.cra_twohanded_sword": "Fafnir Moon Glaive",
 
   "item.maplestorymod.arcane_thief_hat": "Arcane Thief Hat",
   "item.maplestorymod.arcane_thief_chest": "Arcane Thief Chest",

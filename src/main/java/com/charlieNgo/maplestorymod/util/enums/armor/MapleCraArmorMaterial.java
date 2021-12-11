@@ -9,10 +9,6 @@ import java.util.function.Supplier;
 
 public class MapleCraArmorMaterial implements ArmorMaterial {
 
-//    CRA(MapleStoryMod.MOD_ID + ":cra", 150, new int [] { 14, 17, 19, 14 }, 20,
-//            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5.0F, () -> { return Ingredient.fromItems(MapleModItems.CRA.get()); }, 1);
-;
-    private static final int [] MAX_DAMAGE_ARRAY = new int [] { 11, 16, 15, 13 };
     private final int enchantability;
     private final int[] durability, damageReduction;
     private final float knockbackResistance, toughness;
@@ -21,8 +17,8 @@ public class MapleCraArmorMaterial implements ArmorMaterial {
     private final Supplier<Ingredient> repairMaterial;
 
     public MapleCraArmorMaterial(int enchantability, int[] durability, int[] damageReduction,
-                             float knockbackResistance, float toughness, String name, SoundEvent equipSound,
-                             Supplier<Ingredient> repairMaterial) {
+                                    float knockbackResistance, float toughness, String name, SoundEvent equipSound,
+                                    Supplier<Ingredient> repairMaterial) {
         this.enchantability = enchantability;
         this.durability = durability;
         this.damageReduction = damageReduction;

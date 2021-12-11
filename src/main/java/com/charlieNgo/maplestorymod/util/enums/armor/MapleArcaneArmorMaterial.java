@@ -9,7 +9,6 @@ import java.util.function.Supplier;
 
 public class MapleArcaneArmorMaterial implements ArmorMaterial {
 
-    private static final int [] MAX_DAMAGE_ARRAY = new int [] { 11, 16, 15, 13 };
     private final int enchantability;
     private final int[] durability, damageReduction;
     private final float knockbackResistance, toughness;

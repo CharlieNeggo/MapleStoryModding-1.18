@@ -30,8 +30,6 @@ public class MapleModItems {
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> ARCANE_ESSENCE = ITEMS.register("arcane_essence", () ->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
-    public static final RegistryObject<Item> GENESIS = ITEMS.register("genesis", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> CRA = ITEMS.register("cra", () ->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
@@ -43,6 +41,8 @@ public class MapleModItems {
     public static final RegistryObject<Item> BLUE_SNAIL_SHELL = ITEMS.register("blue_snail_shell", () ->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
     public static final RegistryObject<Item> SLIME_BUBBLE =  ITEMS.register("slime_bubble", () ->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+    public static final RegistryObject<Item> OCTOPUS_TENTACLE = ITEMS.register("octopus_tentacle",()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
 
     //Kaiser Sword
@@ -69,6 +69,18 @@ public class MapleModItems {
             new SwordItem(MapleSetWeaponInit.MAPLE, 4, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> TIMELESS_PESCAS_DAGGER = ITEMS.register("timeless_pescas_dagger", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 5, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Items for Two handed swords 10-130
+    public static final RegistryObject<SwordItem> SPARTA = ITEMS.register("sparta", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 2, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> BASIC_TWOHANDED_SWORD = ITEMS.register("basic_twohanded_sword", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 1, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> ZARD = ITEMS.register("zard", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 3, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> DOOMBRINGER = ITEMS.register("doombringer", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 4, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> DEVIL_SUNRISE = ITEMS.register("devil_sunrise", ()->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 5, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Block Items
 

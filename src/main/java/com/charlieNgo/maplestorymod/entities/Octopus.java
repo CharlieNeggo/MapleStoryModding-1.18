@@ -69,14 +69,7 @@ public class Octopus extends Monster {
         --this.nextHeightOffsetChangeTick;
         if (this.nextHeightOffsetChangeTick <= 0) {
             this.nextHeightOffsetChangeTick = 0;
-            this.allowedHeightOffset = 0.5F + (float)this.random.nextGaussian() * 3.0F;
-        }
-
-        LivingEntity livingentity = this.getTarget();
-        if (livingentity != null && livingentity.getEyeY() > this.getEyeY() + (double)this.allowedHeightOffset && this.canAttack(livingentity)) {
-            Vec3 vec3 = this.getDeltaMovement();
-            this.setDeltaMovement(this.getDeltaMovement().add(0.0D, ((double)0.3F - vec3.y) * (double)0.3F, 0.0D));
-            this.hasImpulse = true;
+            this.allowedHeightOffset = 0.5F + (float)this.random.nextGaussian() * 0.5F;
         }
 
         super.customServerAiStep();

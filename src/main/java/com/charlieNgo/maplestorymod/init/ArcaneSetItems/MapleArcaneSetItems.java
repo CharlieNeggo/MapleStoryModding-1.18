@@ -32,5 +32,5 @@ public class MapleArcaneSetItems {
     public static final RegistryObject<ArmorItem> ARCANE_THIEF_LEGGINGS = ITEMS.register("arcane_thief_leggings", () ->
             new ArmorItem(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ARCANE_KNIGHT_SHOES = ITEMS.register("arcane_knight_shoes", () ->
-            new ArmorItem(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new MapleArcaneItem(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 }
