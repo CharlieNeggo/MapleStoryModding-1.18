@@ -1,7 +1,6 @@
 package com.charlieNgo.maplestorymod.entities;
 
 import java.util.EnumSet;
-import javax.annotation.Nullable;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -13,7 +12,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -21,9 +19,7 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.Goal;
@@ -32,7 +28,6 @@ import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.phys.Vec3;
 
@@ -53,9 +48,7 @@ public class GreenSlime extends Mob implements Enemy {
         this.goalSelector.addGoal(2, new GreenSlime.GreenSlimeAttackGoal(this));
         this.goalSelector.addGoal(3, new GreenSlime.GreenSlimeRandomDirectionGoal(this));
         this.goalSelector.addGoal(5, new GreenSlime.GreenSlimeKeepOnJumpingGoal(this));
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (p_33641_) -> {
-            return Math.abs(p_33641_.getY() - this.getY()) <= 4.0D;
-        }));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (p_33641_) -> Math.abs(p_33641_.getY() - this.getY()) <= 4.0D));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
     }
 
@@ -69,9 +62,9 @@ public class GreenSlime extends Mob implements Enemy {
         this.entityData.set(ID_SIZE, i);
         this.reapplyPosition();
         this.refreshDimensions();
-        this.getAttribute(Attributes.MAX_HEALTH).setBaseValue((double)(i * i));
-        this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)(0.2F + 0.1F * (float)i));
-        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue((double)i);
+        this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10);
+        this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2F + 0.1F * (float)i);
+        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(i);
         if (p_33595_) {
             this.setHealth(this.getMaxHealth());
         }
@@ -95,10 +88,6 @@ public class GreenSlime extends Mob implements Enemy {
         this.wasOnGround = p_33607_.getBoolean("wasOnGround");
     }
 
-    public boolean isTiny() {
-        return this.getSize() <= 1;
-    }
-
     protected ParticleOptions getParticleType() {
         return ParticleTypes.ITEM_SLIME;
     }
@@ -114,7 +103,7 @@ public class GreenSlime extends Mob implements Enemy {
         if (this.onGround && !this.wasOnGround) {
             int i = this.getSize();
 
-            if (spawnCustomParticles()) i = 0; //don't spawn particles if it's handled by the implementation itself
+            if (spawnCustomParticles()) i = 0; // don't spawn particles if it's handled by the implementation itself
             for(int j = 0; j < i * 8; ++j) {
                 float f = this.random.nextFloat() * ((float)Math.PI * 2F);
                 float f1 = this.random.nextFloat() * 0.5F + 0.5F;
@@ -136,6 +125,7 @@ public class GreenSlime extends Mob implements Enemy {
     protected void decreaseSquish() {
         this.targetSquish *= 0.6F;
     }
+
     protected int getJumpDelay() {
         return this.random.nextInt(20) + 10;
     }
@@ -185,11 +175,11 @@ public class GreenSlime extends Mob implements Enemy {
                 GreenSlime.setCustomName(component);
                 GreenSlime.setNoAi(flag);
                 GreenSlime.setInvulnerable(this.isInvulnerable());
-                GreenSlime.setSize(j, true);
                 GreenSlime.moveTo(this.getX() + (double)f1, this.getY() + 0.5D, this.getZ() + (double)f2, this.random.nextFloat() * 360.0F, 0.0F);
                 this.level.addFreshEntity(GreenSlime);
             }
         }
+
         super.remove(p_149847_);
     }
 
@@ -205,7 +195,6 @@ public class GreenSlime extends Mob implements Enemy {
         if (this.isDealsDamage()) {
             this.dealDamage(p_33611_);
         }
-
     }
 
     protected void dealDamage(LivingEntity p_33638_) {
@@ -223,7 +212,7 @@ public class GreenSlime extends Mob implements Enemy {
     }
 
     protected boolean isDealsDamage() {
-        return !this.isTiny() && this.isEffectiveAi();
+        return this.isEffectiveAi();
     }
 
     protected float getAttackDamage() {
@@ -231,15 +220,15 @@ public class GreenSlime extends Mob implements Enemy {
     }
 
     protected SoundEvent getHurtSound(DamageSource p_33631_) {
-        return this.isTiny() ? SoundEvents.SLIME_HURT_SMALL : SoundEvents.SLIME_HURT;
+        return SoundEvents.SLIME_HURT_SMALL;
     }
 
     protected SoundEvent getDeathSound() {
-        return this.isTiny() ? SoundEvents.SLIME_DEATH_SMALL : SoundEvents.SLIME_DEATH;
+        return SoundEvents.SLIME_BLOCK_BREAK;
     }
 
     protected SoundEvent getSquishSound() {
-        return this.isTiny() ? SoundEvents.SLIME_SQUISH_SMALL : SoundEvents.SLIME_SQUISH;
+        return SoundEvents.SLIME_SQUISH_SMALL;
     }
 
     protected ResourceLocation getDefaultLootTable() {
@@ -260,39 +249,23 @@ public class GreenSlime extends Mob implements Enemy {
 
     protected void jumpFromGround() {
         Vec3 vec3 = this.getDeltaMovement();
-        this.setDeltaMovement(vec3.x, (double)this.getJumpPower(), vec3.z);
+        this.setDeltaMovement(vec3.x, this.getJumpPower(), vec3.z);
         this.hasImpulse = true;
     }
 
-    @Nullable
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_33601_, DifficultyInstance p_33602_, MobSpawnType p_33603_, @Nullable SpawnGroupData p_33604_, @Nullable CompoundTag p_33605_) {
-        int i = this.random.nextInt(3);
-        if (i < 2 && this.random.nextFloat() < 0.5F * p_33602_.getSpecialMultiplier()) {
-            ++i;
-        }
-
-        int j = 1 << i;
-        this.setSize(j, true);
-        return super.finalizeSpawn(p_33601_, p_33602_, p_33603_, p_33604_, p_33605_);
-    }
-
     float getSoundPitch() {
-        float f = this.isTiny() ? 1.4F : 0.8F;
+        float f = 1.4F;
         return ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) * f;
     }
 
     protected SoundEvent getJumpSound() {
-        return this.isTiny() ? SoundEvents.SLIME_JUMP_SMALL : SoundEvents.SLIME_JUMP;
+        return SoundEvents.SLIME_JUMP;
     }
 
     public EntityDimensions getDimensions(Pose p_33597_) {
-        return super.getDimensions(p_33597_).scale(0.255F * (float)this.getSize());
+        return super.getDimensions(p_33597_).scale(1.255F * (float)this.getSize());
     }
 
-    /**
-     * Called when the GreenSlime spawns particles on landing, see onUpdate.
-     * Return true to prevent the spawning of the default particles.
-     */
     protected boolean spawnCustomParticles() { return false; }
 
     static class GreenSlimeAttackGoal extends Goal {
@@ -314,7 +287,7 @@ public class GreenSlime extends Mob implements Enemy {
         }
 
         public void start() {
-            this.growTiredTimer = reducedTickDelay(300);
+            this.growTiredTimer = reducedTickDelay(100);
             super.start();
         }
 

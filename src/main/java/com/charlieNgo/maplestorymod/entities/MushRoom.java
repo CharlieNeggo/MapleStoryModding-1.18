@@ -62,7 +62,7 @@ public class MushRoom extends Mob implements Enemy {
         this.entityData.set(ID_SIZE, i);
         this.reapplyPosition();
         this.refreshDimensions();
-        this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(i * i);
+        this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(12);
         this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2F + 0.1F * (float)i);
         this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(i);
         if (p_33595_) {
