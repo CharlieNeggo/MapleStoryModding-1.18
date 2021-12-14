@@ -1,14 +1,8 @@
 package com.charlieNgo.maplestorymod.events.MapleMobsAttributes;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.client.model.BlueSnailModel;
-import com.charlieNgo.maplestorymod.client.model.GreenSlimeModel;
-import com.charlieNgo.maplestorymod.client.model.MushRoomModel;
-import com.charlieNgo.maplestorymod.client.model.OctopusModel;
-import com.charlieNgo.maplestorymod.client.render.BlueSnailRender;
-import com.charlieNgo.maplestorymod.client.render.GreenSlimeRender;
-import com.charlieNgo.maplestorymod.client.render.MushRoomRender;
-import com.charlieNgo.maplestorymod.client.render.OctopusRender;
+import com.charlieNgo.maplestorymod.client.model.*;
+import com.charlieNgo.maplestorymod.client.render.*;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -27,6 +21,8 @@ public class MapleClientModEvents {
         event.registerLayerDefinition(GreenSlimeModel.LAYER_LOCATION, GreenSlimeModel::createBodyLayer);
         event.registerLayerDefinition(BlueSnailModel.LAYER_LOCATION, BlueSnailModel::createBodyLayer);
         event.registerLayerDefinition(OctopusModel.LAYER_LOCATION, OctopusModel::createBodyLayer);
+        event.registerLayerDefinition(MuddySwampMonsterModel.LAYER_LOCATION, MuddySwampMonsterModel::createBodyLayer);
+
     }
 
     @SubscribeEvent
@@ -35,6 +31,7 @@ public class MapleClientModEvents {
         event.registerEntityRenderer(MapleModEntityTypes.GREENSLIME.get(), GreenSlimeRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.MUSHROOM.get(), MushRoomRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.OCTOPUS.get(), OctopusRender::new);
+        event.registerEntityRenderer(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonsterRender::new);
 
     }
 }

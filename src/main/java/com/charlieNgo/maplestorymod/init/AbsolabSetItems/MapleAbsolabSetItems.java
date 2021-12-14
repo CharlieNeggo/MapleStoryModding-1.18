@@ -9,19 +9,21 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MapleAbsolabSetItems {
 
-    //Weapons for AbsoLab Set
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
+    //Warrior Weapons
     public static final RegistryObject<AxeItem> ABSOLAB_POLEARM = ITEMS.register("absolab_polearm", () ->
-            new AxeItem(MapleAbsolabWeaponInit.ABSOLAB, 25, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new AxeItem(MapleAbsolabWeaponInit.ABSOLAB, 20, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> ABSOLAB_TWOHANDED_SWORD = ITEMS.register("absolab_twohanded_sword", () ->
-            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 20, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> ABSOLAB_DAGGER = ITEMS.register("absolab_dagger", () ->
-            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 19, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> ABSOLAB_KATARA = ITEMS.register("absolab_katara", () ->
-            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 15, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 16, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
-    //Armor for AbsoLab Set
+    //Thief Weapons
+    public static final RegistryObject<SwordItem> ABSOLAB_DAGGER = ITEMS.register("absolab_dagger", () ->
+            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 12, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> ABSOLAB_KATARA = ITEMS.register("absolab_katara", () ->
+            new SwordItem(MapleAbsolabWeaponInit.ABSOLAB, 12, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Armor for Thief
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_CAP = ITEMS.register("absolab_bandit_cap", () ->
             new MapleAbsolabItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_CHEST = ITEMS.register("absolab_bandit_chest", () ->
@@ -29,5 +31,15 @@ public class MapleAbsolabSetItems {
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_LEGGINGS = ITEMS.register("absolab_bandit_leggings", () ->
             new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_SHOES = ITEMS.register("absolab_knight_shoes", () ->
-            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new MapleAbsolabItemTwo(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Armor for
+//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_HELMET = ITEMS.register("absolab_knight_helmet", () ->
+//            new MapleAbsolabItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_CHEST = ITEMS.register("absolab_knight_chest", () ->
+//            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_LEGGINGS = ITEMS.register("absolab_bandit_leggings", () ->
+//            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_SHOE = ITEMS.register("absolab_knight_shoe", () ->
+//            new MapleAbsolabItemTwo(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 }

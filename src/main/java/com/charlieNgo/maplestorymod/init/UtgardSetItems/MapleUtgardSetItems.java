@@ -14,11 +14,11 @@ public class MapleUtgardSetItems {
 
     //Utgard set for warriors
     public static final RegistryObject<AxeItem> UTGARD_POLEARM = ITEMS.register("utgard_polearm", () ->
-            new AxeItem(MapleUtgardWeaponInit.UTGARD, 20, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new AxeItem(MapleUtgardWeaponInit.UTGARD, 10, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> UTGARD_TWOHANDED_SWORD = ITEMS.register("utgard_twohanded_sword", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 15, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleUtgardWeaponInit.UTGARD, 8, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> UTGARD_KATANA = ITEMS.register("utgard_katana", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 16, -1.8F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleUtgardWeaponInit.UTGARD, 7, -1.8F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Bowman class
 //    public static final RegistryObject<BowItem> UTGARD_BOW = ITEMS.register("utgard_bow", () ->
@@ -34,9 +34,9 @@ public class MapleUtgardSetItems {
 
     //Utgard set for thiefs
     public static final RegistryObject<SwordItem> UTGARD_DAGGER = ITEMS.register("utgard_dagger", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 14, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleUtgardWeaponInit.UTGARD, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> UTGARD_KATARA = ITEMS.register("utgard_katara", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleUtgardWeaponInit.UTGARD, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Armor for Utgard Set
     //Utgard Set for Thiefs

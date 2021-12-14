@@ -8,9 +8,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public class MapleSetArmorMaterial implements ArmorMaterial {
-    ;
-
-    private static final int[] MAPLE_DURABILITY = new int[]{12, 15, 16, 11};
     private final int enchantability;
     private final int[] durability, damageReduction;
     private final float knockbackResistance, toughness;

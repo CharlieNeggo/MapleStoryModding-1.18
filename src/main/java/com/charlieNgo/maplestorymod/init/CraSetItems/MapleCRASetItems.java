@@ -15,14 +15,17 @@ public class MapleCRASetItems {
     //Weapons for Cra Set
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
+    //Warrior Weapons
     public static final RegistryObject<AxeItem> CRA_POLEARM = ITEMS.register("cra_polearm", () ->
-            new AxeItem(MapleCraWeaponInit.CRA, 25, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new AxeItem(MapleCraWeaponInit.CRA, 16, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> CRA_TWOHANDED_SWORD = ITEMS.register("cra_twohanded_sword", () ->
-            new SwordItem(MapleCraWeaponInit.CRA, 20, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleCraWeaponInit.CRA, 13, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Thief Weapons
     public static final RegistryObject<SwordItem> CRA_DAGGER = ITEMS.register("cra_dagger", () ->
-            new SwordItem(MapleCraWeaponInit.CRA, 19, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> CRA_KATARA = ITEMS.register("cra_katara", () ->
-            new SwordItem(MapleCraWeaponInit.CRA, 15, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Armor for AbsoLab Set
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_HOOD = ITEMS.register("cra_assassin_hood", () ->

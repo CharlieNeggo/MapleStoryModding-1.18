@@ -12,21 +12,23 @@ import net.minecraftforge.registries.RegistryObject;
 public class MapleArcaneSetItems {
 
 
-    //Weapon Set for Arcane
+    //Weapon Warriors
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
-    public static final RegistryObject<AxeItem> ARCANE_POLEARM = ITEMS.register("arcane_polearm", () -> new AxeItem(MapleArcaneWeaponInit.ARCANE, 30, -3.0F
+    public static final RegistryObject<AxeItem> ARCANE_POLEARM = ITEMS.register("arcane_polearm", () -> new AxeItem(MapleArcaneWeaponInit.ARCANE, 24, -3.0F
             , new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> ARCANE_TWOHANDED_SWORD = ITEMS.register("arcane_twohanded_sword", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 25, -2.0F
+    public static final RegistryObject<SwordItem> ARCANE_TWOHANDED_SWORD = ITEMS.register("arcane_twohanded_sword", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 20, -2.0F
             , new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> ARCANE_DAGGER = ITEMS.register("arcane_dagger", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 24, 0.5F
+
+    //Weapon for Thieves
+    public static final RegistryObject<SwordItem> ARCANE_DAGGER = ITEMS.register("arcane_dagger", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 16, 0.5F
             , new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> ARCANE_KATARA = ITEMS.register("arcane_katara", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 20, 0.5F
+    public static final RegistryObject<SwordItem> ARCANE_KATARA = ITEMS.register("arcane_katara", () -> new SwordItem(MapleArcaneWeaponInit.ARCANE, 16, 0.5F
             , new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Armor Set for Arcane
     public static final RegistryObject<ArmorItem> ARCANE_THIEF_HAT = ITEMS.register("arcane_thief_hat", () ->
-            new ArmorItem(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new MapleArcaneItemTwo(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ARCANE_THIEF_CHEST = ITEMS.register("arcane_thief_chest", () ->
             new ArmorItem(MapleArcaneMaterialInit.ARCANE, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ARCANE_THIEF_LEGGINGS = ITEMS.register("arcane_thief_leggings", () ->

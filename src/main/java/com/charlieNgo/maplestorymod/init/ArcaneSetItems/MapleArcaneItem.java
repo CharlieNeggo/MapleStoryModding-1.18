@@ -55,7 +55,7 @@ public class MapleArcaneItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect, 400, 3));
+            player.addEffect(new MobEffectInstance(mapStatusEffect, 10, 2));
 
 
         }

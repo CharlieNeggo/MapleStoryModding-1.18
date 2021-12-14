@@ -79,11 +79,13 @@
   "entity.maplestorymod.green_slime": "Green Slime",
   "entity.maplestorymod.blue_snail": "Blue Snail",
   "entity.maplestorymod.octopus": "Octopus",
+  "entity.maplestorymod.muddy_swamp_monster":"Muddy Swamp Monster",
 
   "item.maplestorymod.mushroom_spawn_egg": "Mushroom Spawn Egg",
   "item.maplestorymod.blue_snail_spawn_egg": "Blue Snail Spawn Egg",
   "item.maplestorymod.green_slime_spawn_egg": "Green Slime Spawn Egg",
   "item.maplestorymod.octopus_spawn_egg": "Octopus Spawn Egg",
+  "item.maplestorymod.muddy_swamp_monster_spawn_egg": "Muddy Swamp Monster Egg",
 
   "itemGroup.maplestorymod": "Maple Story Mod"
 }

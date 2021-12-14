@@ -1,6 +1,5 @@
 package com.charlieNgo.maplestorymod.entities;
 
-import java.util.EnumSet;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -18,19 +17,16 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class Octopus extends Monster {
-    private static final EntityDataAccessor<Integer> ID_SIZE = SynchedEntityData.defineId(GreenSlime.class, EntityDataSerializers.INT);
-    private float allowedHeightOffset = 0.5F;
+    private float allowedHeightOffset = 0.2F;
     private int nextHeightOffsetChangeTick;
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(Octopus.class, EntityDataSerializers.BYTE);
 
-    public Octopus(EntityType<? extends Octopus> p_32219_, Level p_32220_) {
-        super(p_32219_, p_32220_);
+    public Octopus(EntityType<? extends Octopus> p_32119_, Level p_32220_) {
+        super(p_32119_, p_32220_);
         this.xpReward = 10;
     }
 
@@ -48,16 +44,8 @@ public class Octopus extends Monster {
         return Monster.createMonsterAttributes().add(Attributes.ATTACK_DAMAGE, 6.0D).add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.FOLLOW_RANGE, 48.0D);
     }
 
-    public int getSize() {
-        return this.entityData.get(ID_SIZE);
-    }
-
-    protected float getStandingEyeHeight(Pose p_33614_, EntityDimensions p_33615_) {
-        return 10.625F * p_33615_.height;
-    }
-
-    public EntityDimensions getDimensions(Pose p_33597_) {
-        return super.getDimensions(p_33597_).scale(1.255F * (float)this.getSize());
+    protected float getStandingEyeHeight(Pose stupid, EntityDimensions p_32119_) {
+        return 1.62F;
     }
 
     protected void defineSynchedData() {
@@ -79,9 +67,16 @@ public class Octopus extends Monster {
 
     protected void customServerAiStep() {
         --this.nextHeightOffsetChangeTick;
-        if (this.nextHeightOffsetChangeTick <= 0) {
-            this.nextHeightOffsetChangeTick = 0;
-            this.allowedHeightOffset = 0.5F + (float)this.random.nextGaussian() * 0.5F;
+        if (this.nextHeightOffsetChangeTick <= 1) {
+            this.nextHeightOffsetChangeTick = 1;
+            this.allowedHeightOffset = 0.2F + (float)this.random.nextGaussian() * 0.5F;
+        }
+
+        LivingEntity livingentity = this.getTarget();
+        if (livingentity != null && livingentity.getEyeY() > this.getEyeY() + (double)this.allowedHeightOffset && this.canAttack(livingentity)) {
+            Vec3 vec3 = this.getDeltaMovement();
+            this.setDeltaMovement(this.getDeltaMovement().add(0.0D, ((double)0.3F - vec3.y) * (double)0.3F, 0.0D));
+            this.hasImpulse = true;
         }
 
         super.customServerAiStep();
@@ -89,19 +84,5 @@ public class Octopus extends Monster {
 
     public boolean causeFallDamage(float p_149683_, float p_149684_, DamageSource p_149685_) {
         return false;
-    }
-
-    static class OctopusAttackGoal extends Goal {
-        private final Octopus Octopus;
-
-        public OctopusAttackGoal(Octopus p_32247_) {
-            this.Octopus = p_32247_;
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
-        }
-
-        public boolean canUse() {
-            LivingEntity livingentity = this.Octopus.getTarget();
-            return livingentity != null && livingentity.isAlive() && this.Octopus.canAttack(livingentity);
-        }
     }
 }

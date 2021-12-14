@@ -8,8 +8,8 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleCraMaterialInit {
-    public static final ArmorMaterial CRA = new MapleCraArmorMaterial(100, new int[] { 950, 1400, 1800, 1000 },
-            new int[] { 20, 35, 50, 27 }, 15f, 9f, MapleStoryMod.MODID + ":cra",
+    public static final ArmorMaterial CRA = new MapleCraArmorMaterial(20, new int[] { 950, 1400, 1800, 1000 },
+            new int[] { 6, 9, 11, 6 }, 5f, 9f, MapleStoryMod.MODID + ":cra",
             SoundEvents.ARMOR_EQUIP_GENERIC, () -> Ingredient.of(MapleModItems.CRA.get()));
 
     private MapleCraMaterialInit() {

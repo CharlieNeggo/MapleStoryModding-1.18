@@ -24,7 +24,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BlueSnail extends Monster {
-    private static final int MAX_LIFE = 2400;
     private int life;
 
     public BlueSnail(EntityType<? extends BlueSnail> p_32591_, Level p_32592_) {
@@ -42,12 +41,12 @@ public class BlueSnail extends Monster {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
-    protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
-        return 0.13F;
+    protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions BlueSnail) {
+        return 0.53F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 8.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 2.0D);
+        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 5.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 2.0D);
     }
 
     protected Entity.MovementEmission getMovementEmission() {

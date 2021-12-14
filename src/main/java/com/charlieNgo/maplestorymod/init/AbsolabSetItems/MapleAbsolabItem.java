@@ -16,8 +16,8 @@ import java.util.Map;
 
 public class MapleAbsolabItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffect>())
-                    .put(MapleAbsolabMaterialInit.ABSOLAB, MobEffects.DAMAGE_BOOST).build();
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffect>()
+                    .put(MapleAbsolabMaterialInit.ABSOLAB, MobEffects.MOVEMENT_SPEED).build());
 
     public MapleAbsolabItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -53,7 +53,7 @@ public class MapleAbsolabItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect, 400, 2));
+            player.addEffect(new MobEffectInstance(mapStatusEffect, 10, 1));
 
         }
     }

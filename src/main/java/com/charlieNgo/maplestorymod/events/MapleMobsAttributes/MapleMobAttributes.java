@@ -1,10 +1,7 @@
 package com.charlieNgo.maplestorymod.events.MapleMobsAttributes;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.entities.BlueSnail;
-import com.charlieNgo.maplestorymod.entities.GreenSlime;
-import com.charlieNgo.maplestorymod.entities.MushRoom;
-import com.charlieNgo.maplestorymod.entities.Octopus;
+import com.charlieNgo.maplestorymod.entities.*;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -27,6 +24,9 @@ public class MapleMobAttributes {
                 .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
         //Octopus
         event.put(MapleModEntityTypes.OCTOPUS.get(), Octopus.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+        //Muddy Swamp Monster
+        event.put(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonster.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
 
     }

@@ -8,8 +8,8 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleUtgardMaterialInit {
-    public static final ArmorMaterial UTGARD = new MapleUtgardArmorMaterial(100, new int[] { 950, 1400, 1800, 1000 },
-            new int[] { 20, 35, 50, 27 }, 10f, 6f, MapleStoryMod.MODID + ":utgard",
+    public static final ArmorMaterial UTGARD = new MapleUtgardArmorMaterial(20, new int[] { 950, 1400, 1800, 1000 },
+            new int[] { 4, 7, 9, 4 }, 4f, 6f, MapleStoryMod.MODID + ":utgard",
             SoundEvents.ARMOR_EQUIP_GENERIC, () -> Ingredient.of(MapleModItems.UTGARD.get()));
 
     private MapleUtgardMaterialInit() {
