@@ -39,6 +39,8 @@ public class MapleModItems {
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> OCTOPUS_TENTACLE = ITEMS.register("octopus_tentacle",()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<Item> MUD_CLUMP = ITEMS.register("mud_clump",()->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
     //Kaiser Sword
     public static final RegistryObject<SwordItem> KAISER_KAISREUM = ITEMS.register("kaiser_kaisereum", () ->
@@ -79,7 +81,6 @@ public class MapleModItems {
 
     //Block Items
     public static final RegistryObject<BlockItem> SILVER_ORE_BLOCK = ITEMS.register("silver_ore_block",
-            () -> new BlockItem(MapleStoryBlocks.SILVER_ORE_BLOCK.get(),
-                    new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            () -> new BlockItem(MapleStoryBlocks.SILVER_ORE_BLOCK.get(), new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
 }
