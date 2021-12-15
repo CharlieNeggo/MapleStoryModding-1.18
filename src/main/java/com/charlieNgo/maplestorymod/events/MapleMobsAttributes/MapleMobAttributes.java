@@ -18,16 +18,16 @@ public class MapleMobAttributes {
                 .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
         //Green Slime
         event.put(MapleModEntityTypes.GREENSLIME.get(), GreenSlime.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+                .add(Attributes.MOVEMENT_SPEED, 0.22F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
         //Blue Snail
         event.put(MapleModEntityTypes.BLUESNAIL.get(), BlueSnail.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+                .add(Attributes.MOVEMENT_SPEED, 0.16F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
         //Octopus
         event.put(MapleModEntityTypes.OCTOPUS.get(), Octopus.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+                .add(Attributes.MOVEMENT_SPEED, 0.22F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
         //Muddy Swamp Monster
         event.put(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonster.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+                .add(Attributes.MOVEMENT_SPEED, 0.20F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
 
     }
 }

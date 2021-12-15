@@ -1,7 +1,9 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
+import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,22 +25,24 @@ public class MapleModItems {
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> CRA = ITEMS.register("cra", () ->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<Item> SILVER = ITEMS.register("silver_ore", ()->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
     // Items
     public static final RegistryObject<Item> ORANGEMUSHROOMCAP = ITEMS.register("orangemushroomcap", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> SQUISHY_LIQUID = ITEMS.register("squishy_liquid", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> BLUE_SNAIL_SHELL = ITEMS.register("blue_snail_shell", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> SLIME_BUBBLE =  ITEMS.register("slime_bubble", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> OCTOPUS_TENTACLE = ITEMS.register("octopus_tentacle",()->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(9999)));
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
     //Kaiser Sword
     public static final RegistryObject<SwordItem> KAISER_KAISREUM = ITEMS.register("kaiser_kaisereum", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 10, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new SwordItem(MapleSetWeaponInit.MAPLE, 15, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     //Dual Blade Dagger
     public static final RegistryObject<SwordItem> DUAL_BLADE_DAGGER = ITEMS.register("dual_blade_dagger", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -74,5 +78,8 @@ public class MapleModItems {
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Block Items
+    public static final RegistryObject<BlockItem> SILVER_ORE_BLOCK = ITEMS.register("silver_ore_block",
+            () -> new BlockItem(MapleStoryBlocks.SILVER_ORE_BLOCK.get(),
+                    new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
 }

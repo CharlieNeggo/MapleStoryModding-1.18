@@ -1,5 +1,6 @@
 package com.charlieNgo.maplestorymod;
 
+import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import com.charlieNgo.maplestorymod.init.AbsolabSetItems.MapleAbsolabSetItems;
 import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
 import com.charlieNgo.maplestorymod.init.Consumables.Foods.MapleConsumables;
@@ -30,6 +31,8 @@ public class MapleStoryMod {
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        MapleStoryBlocks.BLOCK.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleConsumables.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleSpawnEggs.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -32,7 +32,7 @@ particles:0
 maxFps:260
 difficulty:2
 graphicsMode:1
-ao:2
+ao:1
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:true

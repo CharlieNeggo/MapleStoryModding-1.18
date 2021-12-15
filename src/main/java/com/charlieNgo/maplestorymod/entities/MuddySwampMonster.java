@@ -47,11 +47,11 @@ public class MuddySwampMonster extends Monster {
     }
 
     protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
-        return 0.13F;
+        return 0.63F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 22.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 2.0D);
+        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 22.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 3.0D);
     }
 
     protected Entity.MovementEmission getMovementEmission() {

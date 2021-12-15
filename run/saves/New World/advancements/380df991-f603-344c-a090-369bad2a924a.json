@@ -1,6 +1,13 @@
 {
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2021-12-14 19:34:29 -0500"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:stony_shore": "2021-12-14 19:33:06 -0500",
       "minecraft:forest": "2021-12-14 18:28:28 -0500",
       "minecraft:jungle": "2021-12-14 18:29:16 -0500"
     },

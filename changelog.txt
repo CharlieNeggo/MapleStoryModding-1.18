@@ -1,3 +1,28 @@
+Build: 1.18.1-39.0.5 - Mon Dec 13 21:58:30 GMT 2021
+	pupnewfster:
+		Add RenderArmEvent to make overriding just the arm rendering not require copying nearly as much vanilla code (#8254)
+
+=========
+Build: 1.18.1-39.0.4 - Mon Dec 13 21:32:20 GMT 2021
+	bageldotjpg:
+		Add MobEffect tags (#8231)
+
+=========
+Build: 1.18.1-39.0.3 - Mon Dec 13 19:49:00 GMT 2021
+	xfacthd:
+		Log missing or unsupported dependencies (#8218)
+
+=========
+Build: 1.18.1-39.0.2 - Mon Dec 13 19:33:05 GMT 2021
+	sciwhiz12:
+		Fix datagen test for sounds definitions provider  (#8249)
+
+=========
+Build: 1.18.1-39.0.1 - Mon Dec 13 19:14:15 GMT 2021
+	williewillus:
+		Fix wrong stage being declared in transition to common (#8267)
+
+=========
 Build: 1.18.1-39.0.0 - Fri Dec 10 19:32:24 GMT 2021
 	curle:
 		Update to 1.18.1

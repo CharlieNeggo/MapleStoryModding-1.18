@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.events;
+package com.charlieNgo.maplestorymod.events.ogclass;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
@@ -12,48 +12,9 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-//import net.minecraft.entity.Entity;
-//import net.minecraft.entity.LivingEntity;
-//import net.minecraft.entity.player.PlayerEntity;
-//import net.minecraft.potion.EffectInstance;
-//import net.minecraft.potion.Effects;
-//import net.minecraft.util.text.StringTextComponent;
-//import net.minecraft.util.text.TextFormatting;
-
 @Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
-public class ModClientEvents {
 
-    @SubscribeEvent
-    public static void onDamageEntityDualDagger(AttackEntityEvent event) {
-        if (event.getEntityLiving().getMainHandItem().getItem() == MapleModItems.DUAL_BLADE_DAGGER.get()) {
-            if (event.getTarget().isAlive()) {
-                LivingEntity target = (LivingEntity) event.getTarget();
-                if (target instanceof Entity) {
-
-                    Player player = event.getPlayer();
-                    target.addEffect(new MobEffectInstance(MobEffects.POISON, 10*20));
-                    target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
-
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onDamageEntityDualKatara(AttackEntityEvent event) {
-        if (event.getEntityLiving().getMainHandItem().getItem() == MapleModItems.DUAL_BLADE_KATARA.get()) {
-            if (event.getTarget().isAlive()) {
-                LivingEntity target = (LivingEntity) event.getTarget();
-                if (target instanceof Entity) {
-
-                    Player player = event.getPlayer();
-                    target.addEffect(new MobEffectInstance(MobEffects.POISON, 10*20));
-                    target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
-
-                }
-            }
-        }
-    }
+public class OgWarriorClientEvent {
 
     @SubscribeEvent
     public static void onDamageEntityAxe(AttackEntityEvent event) {
