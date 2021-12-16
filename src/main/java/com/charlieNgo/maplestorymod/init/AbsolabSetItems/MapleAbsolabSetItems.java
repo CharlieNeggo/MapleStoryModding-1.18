@@ -1,6 +1,12 @@
 package com.charlieNgo.maplestorymod.init.AbsolabSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Thief.AbsolabThiefBuff;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Thief.AbsolabThiefBuffTwo;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Thief.MapleAbsolabThiefMaterial;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Warrior.AbsolabWarriorBuff;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Warrior.AbsolabWarriorBuffTwo;
+import com.charlieNgo.maplestorymod.init.AbsolabSetItems.Warrior.MapleAbsolabWarriorMaterial;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,21 +31,21 @@ public class MapleAbsolabSetItems {
 
     //Armor for Thief
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_CAP = ITEMS.register("absolab_bandit_cap", () ->
-            new MapleAbsolabItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new AbsolabThiefBuff(MapleAbsolabThiefMaterial.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_CHEST = ITEMS.register("absolab_bandit_chest", () ->
-            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new ArmorItem(MapleAbsolabThiefMaterial.ABSOLAB, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ABSOLAB_BANDIT_LEGGINGS = ITEMS.register("absolab_bandit_leggings", () ->
-            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new ArmorItem(MapleAbsolabThiefMaterial.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_SHOES = ITEMS.register("absolab_knight_shoes", () ->
-            new MapleAbsolabItemTwo(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new AbsolabThiefBuffTwo(MapleAbsolabThiefMaterial.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Armor for
-//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_HELMET = ITEMS.register("absolab_knight_helmet", () ->
-//            new MapleAbsolabItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_CHEST = ITEMS.register("absolab_knight_chest", () ->
-//            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_LEGGINGS = ITEMS.register("absolab_bandit_leggings", () ->
-//            new ArmorItem(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-//    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_SHOE = ITEMS.register("absolab_knight_shoe", () ->
-//            new MapleAbsolabItemTwo(MapleAbsolabMaterialInit.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_HELMET = ITEMS.register("absolab_knight_helmet", () ->
+            new AbsolabWarriorBuff(MapleAbsolabWarriorMaterial.ABSOLAB, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_CHEST = ITEMS.register("absolab_knight_chest", () ->
+            new ArmorItem(MapleAbsolabWarriorMaterial.ABSOLAB, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_LEGGINGS = ITEMS.register("absolab_knight_leggings", () ->
+            new ArmorItem(MapleAbsolabWarriorMaterial.ABSOLAB, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> ABSOLAB_KNIGHT_SHOE = ITEMS.register("absolab_knight_shoe", () ->
+            new AbsolabWarriorBuffTwo(MapleAbsolabWarriorMaterial.ABSOLAB, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 }

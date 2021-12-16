@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "maplestorymod:items/cra/cra_warrior_chest"
+  }
+}

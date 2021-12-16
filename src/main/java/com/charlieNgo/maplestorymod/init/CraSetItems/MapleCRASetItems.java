@@ -1,9 +1,13 @@
 package com.charlieNgo.maplestorymod.init.CraSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneMaterialInit;
-import com.charlieNgo.maplestorymod.util.enums.armor.MapleCraArmorMaterial;
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleCraItemTier;
+import com.charlieNgo.maplestorymod.init.ArcaneSetItems.Thief.MapleArcaneThiefMaterial;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Thief.MapleCraThiefBuff;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Thief.MapleCraThiefBuffTwo;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Thief.MapleCraThiefMaterial;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Warrior.MapleCraWarriorBuff;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Warrior.MapleCraWarriorBuffTwo;
+import com.charlieNgo.maplestorymod.init.CraSetItems.Warrior.MapleCraWarriorMaterial;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,11 +31,19 @@ public class MapleCRASetItems {
     public static final RegistryObject<SwordItem> CRA_KATARA = ITEMS.register("cra_katara", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
-    //Armor for AbsoLab Set
+    //Thief
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_HOOD = ITEMS.register("cra_assassin_hood", () ->
-            new ArmorItem(MapleCraMaterialInit.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new MapleCraThiefBuffTwo(MapleCraThiefMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_CHEST = ITEMS.register("cra_assassin_chest", () ->
-            new ArmorItem(MapleCraMaterialInit.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new ArmorItem(MapleCraThiefMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_LEGGINGS = ITEMS.register("cra_assassin_leggings", () ->
-            new ArmorItem(MapleCraMaterialInit.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+            new MapleCraThiefBuff(MapleCraThiefMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Warrior
+    public static final RegistryObject<ArmorItem> CRA_WARRIOR_HELMET = ITEMS.register("cra_warrior_helmet", () ->
+            new MapleCraWarriorBuff(MapleCraWarriorMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> CRA_WARRIOR_CHEST = ITEMS.register("cra_warrior_chest", () ->
+            new ArmorItem(MapleCraWarriorMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> CRA_WARRIOR_PANTS = ITEMS.register("cra_warrior_pants", () ->
+            new MapleCraWarriorBuffTwo(MapleCraWarriorMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 }

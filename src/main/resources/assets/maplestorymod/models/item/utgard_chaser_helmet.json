@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "maplestorymod:items/utgard/utgard_chaser_helmet"
+  }
+}
