@@ -1,107 +1,50 @@
-[16Dec2021 14:30:43.514] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.0.5, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
-[16Dec2021 14:30:43.518] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 17.0.1 by Oracle Corporation
-[16Dec2021 14:30:43.697] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/Users/charliengo/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
-[16Dec2021 14:30:47.306] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
-[14:31:12] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.5_mapped_official_1.18.1/forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
-[14:31:12] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.5_mapped_official_1.18.1/forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
-[16Dec2021 14:31:12.907] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[14:31:12] [Render thread/INFO]: Setting user: Dev
-[14:31:13] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 SNAPSHOT
-[14:31:14] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.5, for MC 1.18.1 with MCP 20211210.034407
-[14:31:14] [modloading-worker-0/INFO]: MinecraftForge v39.0.5 Initialized
-[16Dec2021 14:31:17.990] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator : java.lang.NoClassDefFoundError: com/sun/jna/PointerTool
-[14:31:18] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
-[16Dec2021 14:33:36.678] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[16Dec2021 14:33:37.307] [Forge Version Check/WARN] [net.minecraftforge.fml.VersionChecker/]: Failed to process update information
-java.net.ConnectException: null
-	at jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573) ~[java.net.http:?]
-	at jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:119) ~[java.net.http:?]
-	at net.minecraftforge.fml.VersionChecker$1.openUrlString(VersionChecker.java:145) ~[fmlcore-1.18.1-39.0.5.jar%2379!:?]
-	at net.minecraftforge.fml.VersionChecker$1.process(VersionChecker.java:183) ~[fmlcore-1.18.1-39.0.5.jar%2379!:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) [?:?]
-	at net.minecraftforge.fml.VersionChecker$1.run(VersionChecker.java:128) [fmlcore-1.18.1-39.0.5.jar%2379!:?]
-Caused by: java.net.ConnectException
-	at jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047) ~[java.net.http:?]
-	at jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198) ~[java.net.http:?]
-	at jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128) ~[java.net.http:?]
-	at jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	at jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294) ~[java.net.http:?]
-	at jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654) ~[java.net.http:?]
-	at jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552) ~[java.net.http:?]
-	... 5 more
-Caused by: java.nio.channels.UnresolvedAddressException
-	at sun.nio.ch.Net.checkAddress(Net.java:149) ~[?:?]
-	at sun.nio.ch.Net.checkAddress(Net.java:157) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839) ~[?:?]
-	at jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183) ~[java.net.http:?]
-	at java.security.AccessController.doPrivileged(AccessController.java:569) ~[?:?]
-	at jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185) ~[java.net.http:?]
-	at jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128) ~[java.net.http:?]
-	at jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	at jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:157) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2673) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:294) ~[java.net.http:?]
-	at jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:654) ~[java.net.http:?]
-	at jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:552) ~[java.net.http:?]
-	... 5 more
-[14:33:44] [Worker-Main-11/WARN]: Exception loading blockstate definition: maplestorymod:blockstates/silver_block.json: java.io.FileNotFoundException: maplestorymod:blockstates/silver_block.json
-[14:33:44] [Worker-Main-11/WARN]: Exception loading blockstate definition: 'maplestorymod:blockstates/silver_block.json' missing model for variant: 'maplestorymod:silver_block#'
-[14:33:47] [Worker-Main-11/WARN]: Texture maplestorymod:items/maple_items/sparta with size 33x33 limits mip level from 4 to 0
-[14:33:54] [Render thread/INFO]: OpenAL initialized on device CoreAudio Default
-[14:33:54] [Render thread/INFO]: Sound engine started
-[14:33:54] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[14:33:54] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[14:33:56] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[14:33:56] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[14:33:56] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[14:34:06] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:06] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:06] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14:34:06] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14:34:06] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:06] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
-[14:34:10] [Render thread/INFO]: Loaded 7 recipes
-[14:34:11] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/silver_ore_block
+[16Dec2021 16:26:45.046] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.0.5, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
+[16Dec2021 16:26:45.051] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 17.0.1 by Oracle Corporation
+[16Dec2021 16:26:45.283] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/Users/charliengo/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
+[16Dec2021 16:26:48.565] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
+[16:27:04] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.5_mapped_official_1.18.1/forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
+[16:27:04] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.5_mapped_official_1.18.1/forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
+[16Dec2021 16:27:04.167] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:27:04] [Render thread/INFO]: Setting user: Dev
+[16:27:04] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 SNAPSHOT
+[16:27:04] [Render thread/ERROR]: GLFW error collected during initialization: GLFW error during init: [0x10008]13034453184
+[16:27:06] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.5, for MC 1.18.1 with MCP 20211210.034407
+[16:27:06] [modloading-worker-0/INFO]: MinecraftForge v39.0.5 Initialized
+[16Dec2021 16:27:10.575] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator : java.lang.NoClassDefFoundError: com/sun/jna/PointerTool
+[16:27:10] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
+[16:27:11] [Render thread/ERROR]: ########## GL ERROR ##########
+[16:27:11] [Render thread/ERROR]: @ Render
+[16:27:11] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
+[16Dec2021 16:27:13.686] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[16Dec2021 16:27:16.772] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 39.0.5 Target: 39.0.5
+[16:27:21] [Worker-Main-12/WARN]: Exception loading blockstate definition: maplestorymod:blockstates/silver_block.json: java.io.FileNotFoundException: maplestorymod:blockstates/silver_block.json
+[16:27:21] [Worker-Main-12/WARN]: Exception loading blockstate definition: 'maplestorymod:blockstates/silver_block.json' missing model for variant: 'maplestorymod:silver_block#'
+[16:27:22] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:utgard_sentinel_cap#inventory' referenced from: maplestorymod:utgard_sentinel_cap#inventory: java.io.FileNotFoundException: maplestorymod:models/item/utgard_sentinel_cap.json
+[16:27:22] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:utgard_sentinel_chest#inventory' referenced from: maplestorymod:utgard_sentinel_chest#inventory: java.io.FileNotFoundException: maplestorymod:models/item/utgard_sentinel_chest.json
+[16:27:22] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:utgard_sentinel_leggings#inventory' referenced from: maplestorymod:utgard_sentinel_leggings#inventory: java.io.FileNotFoundException: maplestorymod:models/item/utgard_sentinel_leggings.json
+[16:27:22] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:utgard_sentinel_boots#inventory' referenced from: maplestorymod:utgard_sentinel_boots#inventory: java.io.FileNotFoundException: maplestorymod:models/item/utgard_sentinel_boots.json
+[16:27:24] [Worker-Main-12/WARN]: Texture maplestorymod:items/maple_items/sparta with size 33x33 limits mip level from 4 to 0
+[16:27:32] [Render thread/INFO]: OpenAL initialized on device CoreAudio Default
+[16:27:32] [Render thread/INFO]: Sound engine started
+[16:27:32] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[16:27:32] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[16:27:34] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[16:27:34] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[16:27:34] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[16:27:34] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[16:27:40] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:40] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:40] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:27:40] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:27:40] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:40] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[16:27:41] [Render thread/INFO]: Loaded 7 recipes
+[16:27:42] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/silver_ore_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'tutorialmod:example_block'
 	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:99) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -167,9 +110,10 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
 	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3050) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:162) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:333) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1062) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
@@ -185,16 +129,20 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?]
-[14:34:11] [Render thread/INFO]: Loaded 1141 advancements
-[14:34:11] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[14:34:12] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:12] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:12] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14:34:12] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14:34:12] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14:34:12] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
-[14:34:16] [Render thread/INFO]: Loaded 7 recipes
-[14:34:16] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/silver_ore_block
+[16:27:42] [Render thread/INFO]: Loaded 1141 advancements
+[16:27:43] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[16:27:43] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_cap Expected: 1155 Got: 1189
+[16:27:43] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_chest Expected: 1156 Got: 1190
+[16:27:43] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_leggings Expected: 1157 Got: 1191
+[16:27:43] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_boots Expected: 1158 Got: 1192
+[16:27:44] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:44] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:44] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:27:44] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:27:44] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:27:44] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[16:27:45] [Render thread/INFO]: Loaded 7 recipes
+[16:27:45] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/silver_ore_block
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'tutorialmod:example_block'
 	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:99) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -260,9 +208,10 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
 	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3050) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:162) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:333) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1062) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
@@ -278,172 +227,55 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?]
-[14:34:17] [Render thread/INFO]: Loaded 1141 advancements
-[14:34:17] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[14:34:17] [Render thread/ERROR]: ########## GL ERROR ##########
-[14:34:17] [Render thread/ERROR]: @ Render
-[14:34:17] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[16Dec2021 14:34:18.246] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[14:34:18] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
-[14:34:18] [Server thread/INFO]: Generating keypair
-[14:34:18] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[14:34:19] [Render thread/INFO]: Preparing spawn area: 0%
-[14:34:19] [Render thread/INFO]: Preparing spawn area: 0%
-[14:34:19] [Render thread/INFO]: Preparing spawn area: 0%
-[14:34:20] [Render thread/INFO]: Preparing spawn area: 0%
-[14:34:21] [Render thread/INFO]: Preparing spawn area: 4%
-[14:34:21] [Render thread/INFO]: Preparing spawn area: 5%
-[14:34:21] [Render thread/INFO]: Preparing spawn area: 11%
-[14:34:22] [Render thread/INFO]: Preparing spawn area: 18%
-[14:34:22] [Render thread/INFO]: Preparing spawn area: 50%
-[14:34:23] [Render thread/INFO]: Preparing spawn area: 75%
-[14:34:24] [Render thread/INFO]: Time elapsed: 5089 ms
-[14:34:24] [Server thread/INFO]: Changing view distance to 7, from 10
-[14:34:24] [Server thread/INFO]: Changing simulation distance to 7, from 0
-[16Dec2021 14:34:24.490] [Render thread/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@5e537465[id=380df991-f603-344c-a090-369bad2a924a,name=Dev,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:126) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:100) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:194) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:187) ~[authlib-3.2.38.jar%2344!:?]
-	at net.minecraft.client.Minecraft.doLoadLevel(Minecraft.java:1987) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.Minecraft.loadLevel(Minecraft.java:1872) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:476) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:330) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:257) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:323) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:28) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:88) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.5.jar%230!:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?]
-Caused by: java.net.UnknownHostException: sessionserver.mojang.com
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
-	at java.net.Socket.connect(Socket.java:633) ~[?:?]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:299) ~[?:?]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:498) ~[?:?]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:603) ~[?:?]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266) ~[?:?]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380) ~[?:?]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[?:?]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[?:?]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:140) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:105) ~[authlib-3.2.38.jar%2344!:?]
-	... 36 more
-[14:34:24] [Netty Local Client IO #0/INFO]: Connected to a modded server.
-[14:34:24] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@47195da5
-[14:34:24] [Server thread/INFO]: Dev[local:E:1b8c9a2e] logged in with entity id 16 at (772.99591807481, -52.96739858358752, 172.09139132051752)
-[14:34:25] [Server thread/INFO]: Dev joined the game
-[16Dec2021 14:34:26.503] [Worker-Main-14/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@6339989d[id=380df991-f603-344c-a090-369bad2a924a,name=Dev,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:126) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:100) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:194) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:68) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:65) ~[authlib-3.2.38.jar%2344!:?]
-	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3533) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2282) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2159) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2049) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache.get(LocalCache.java:3966) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3989) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4950) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4956) ~[guava-31.0.1-jre.jar%231!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:184) ~[authlib-3.2.38.jar%2344!:?]
-	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:2360) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at net.minecraft.client.resources.SkinManager.lambda$registerSkins$4(SkinManager.java:96) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1-recomp.jar%2376!:?]
-	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395) [?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-Caused by: java.net.UnknownHostException: sessionserver.mojang.com
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
-	at java.net.Socket.connect(Socket.java:633) ~[?:?]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:299) ~[?:?]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:498) ~[?:?]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:603) ~[?:?]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266) ~[?:?]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380) ~[?:?]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665) ~[?:?]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[?:?]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[?:?]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:140) ~[authlib-3.2.38.jar%2344!:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:105) ~[authlib-3.2.38.jar%2344!:?]
-	... 21 more
-[14:34:26] [Render thread/INFO]: Loaded 84 advancements
-[14:34:30] [Render thread/ERROR]: ########## GL ERROR ##########
-[14:34:30] [Render thread/ERROR]: @ Render
-[14:34:30] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[14:35:48] [Render thread/ERROR]: ########## GL ERROR ##########
-[14:35:48] [Render thread/ERROR]: @ Render
-[14:35:48] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[14:36:15] [Server thread/INFO]: Saving and pausing game...
-[14:36:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[14:36:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[14:36:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[14:36:55] [Render thread/ERROR]: ########## GL ERROR ##########
-[14:36:55] [Render thread/ERROR]: @ Render
-[14:36:55] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[14:37:53] [Server thread/INFO]: Saving and pausing game...
-[14:37:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[14:37:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[14:37:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[14:37:56] [Server thread/INFO]: Saving and pausing game...
-[14:37:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[14:37:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[14:37:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[14:38:07] [Server thread/INFO]: Saving and pausing game...
-[14:38:07] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[14:38:07] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[14:38:07] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[14:38:07] [Server thread/INFO]: Dev lost connection: Disconnected
-[14:38:07] [Server thread/INFO]: Dev left the game
-[14:38:07] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[14:38:08] [Server thread/INFO]: Stopping server
-[14:38:08] [Server thread/INFO]: Saving players
-[14:38:08] [Server thread/INFO]: Saving worlds
-[14:38:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[14:38:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[14:38:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[14:38:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[14:38:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[14:38:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[14:38:08] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[14:38:15] [Render thread/INFO]: Stopping!
+[16:27:45] [Render thread/INFO]: Loaded 1141 advancements
+[16:27:45] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[16:27:45] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_cap Expected: 1155 Got: 1189
+[16:27:45] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_chest Expected: 1156 Got: 1190
+[16:27:45] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_leggings Expected: 1157 Got: 1191
+[16:27:45] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: maplestorymod:utgard_sentinel_boots Expected: 1158 Got: 1192
+[16Dec2021 16:27:46.650] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:27:46] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
+[16:27:46] [Server thread/INFO]: Generating keypair
+[16:27:47] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[16:27:48] [Render thread/INFO]: Preparing spawn area: 0%
+[16:27:48] [Render thread/INFO]: Preparing spawn area: 0%
+[16:27:48] [Render thread/INFO]: Preparing spawn area: 0%
+[16:27:48] [Render thread/INFO]: Preparing spawn area: 0%
+[16:27:49] [Render thread/INFO]: Preparing spawn area: 0%
+[16:27:49] [Render thread/INFO]: Preparing spawn area: 4%
+[16:27:50] [Render thread/INFO]: Preparing spawn area: 18%
+[16:27:50] [Render thread/INFO]: Preparing spawn area: 20%
+[16:27:51] [Render thread/INFO]: Preparing spawn area: 25%
+[16:27:51] [Render thread/INFO]: Preparing spawn area: 34%
+[16:27:52] [Render thread/INFO]: Preparing spawn area: 52%
+[16:27:52] [Render thread/INFO]: Preparing spawn area: 61%
+[16:27:53] [Render thread/INFO]: Time elapsed: 6066 ms
+[16:27:53] [Server thread/INFO]: Changing view distance to 7, from 10
+[16:27:53] [Server thread/INFO]: Changing simulation distance to 7, from 0
+[16:27:54] [Netty Local Client IO #0/INFO]: Connected to a modded server.
+[16:27:54] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@4fed10ac
+[16:27:54] [Server thread/INFO]: Dev[local:E:ece3b26b] logged in with entity id 16 at (769.8746459523352, -60.0, 212.14946825327206)
+[16:27:54] [Server thread/INFO]: Dev joined the game
+[16:27:56] [Render thread/INFO]: Loaded 84 advancements
+[16:28:02] [Server thread/INFO]: Saving and pausing game...
+[16:28:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16:28:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16:28:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16:31:00] [Server thread/INFO]: Saving and pausing game...
+[16:31:00] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16:31:00] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16:31:00] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16:31:01] [Server thread/INFO]: Dev lost connection: Disconnected
+[16:31:01] [Server thread/INFO]: Dev left the game
+[16:31:01] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[16:31:01] [Server thread/INFO]: Stopping server
+[16:31:01] [Server thread/INFO]: Saving players
+[16:31:01] [Server thread/INFO]: Saving worlds
+[16:31:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16:31:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16:31:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16:31:01] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[16:31:01] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:31:01] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:31:01] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16:31:03] [Render thread/INFO]: Stopping!

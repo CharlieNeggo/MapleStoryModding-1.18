@@ -33,7 +33,7 @@ public class ArcaneThiefClientEvent {
 
     @SubscribeEvent
     public static void onDamageEntityArcaneKatara(AttackEntityEvent event) {
-        if (event.getEntityLiving().getMainHandItem().getItem() == MapleArcaneSetItems.ARCANE_KATARA.get()) {
+        if (event.getEntityLiving().getOffhandItem().getItem() == MapleArcaneSetItems.ARCANE_KATARA.get()) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
                 if (target instanceof Entity) {
