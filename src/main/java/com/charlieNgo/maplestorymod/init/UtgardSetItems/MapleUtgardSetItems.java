@@ -5,6 +5,12 @@ import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleBowItem;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanBuff;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanBuffTwo;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanMaterial;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagicianBuff;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagicianBuffTwo;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagicianMaterial;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateBuff;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateBuffTwo;
+import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateMaterial;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Thief.MapleUtgardThiefBuff;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Thief.MapleUtgardThiefBuffTwo;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Thief.MapleUtgardThiefMaterial;
@@ -73,4 +79,24 @@ public class MapleUtgardSetItems {
             new ArmorItem(MapleUtgardBowmanMaterial.UTGARD, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> UTGARD_SENTINEL_BOOTS = ITEMS.register("utgard_sentinel_boots", () ->
             new MapleUtgardBowmanBuffTwo(MapleUtgardBowmanMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Armor Pirate
+    public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_HAT = ITEMS.register("utgard_skipper_hat", () ->
+            new MapleUtgardPirateBuff(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_COAT = ITEMS.register("utgard_skipper_coat", () ->
+            new ArmorItem(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_LEGGINGS = ITEMS.register("utgard_skipper_leggings", () ->
+            new ArmorItem(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_BOOTS = ITEMS.register("utgard_skipper_boots", () ->
+            new MapleUtgardPirateBuff(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Armor Magician
+    public static final RegistryObject<ArmorItem> UTGARD_MAGE_SALLET = ITEMS.register("utgard_mage_sallet", () ->
+            new MapleUtgardMagicianBuff(MapleUtgardMagicianMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_MAGE_ROBE = ITEMS.register("utgard_mage_robe", () ->
+            new ArmorItem(MapleUtgardMagicianMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_MAGE_LEGGINGS = ITEMS.register("utgard_mage_leggings", () ->
+            new ArmorItem(MapleUtgardMagicianMaterial.UTGARD, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> UTGARD_MAGE_BOOTS = ITEMS.register("utgard_mage_boots", () ->
+            new MapleUtgardMagicianBuffTwo(MapleUtgardMagicianMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 }
