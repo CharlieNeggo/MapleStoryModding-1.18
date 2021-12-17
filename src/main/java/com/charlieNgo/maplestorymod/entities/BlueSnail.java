@@ -42,7 +42,7 @@ public class BlueSnail extends Monster {
     }
 
     protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions BlueSnail) {
-        return 0.53F;
+        return 0.49F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {

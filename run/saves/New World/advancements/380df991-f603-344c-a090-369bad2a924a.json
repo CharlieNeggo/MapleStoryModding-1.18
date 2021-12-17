@@ -1,4 +1,16 @@
 {
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
       "has_gunpowder": "2021-12-16 07:46:12 -0500"
@@ -20,6 +32,12 @@
   "minecraft:recipes/combat/iron_sword": {
     "criteria": {
       "has_iron_ingot": "2021-12-16 11:29:43 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/loom": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
     },
     "done": true
   },
@@ -71,9 +89,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/candle": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/iron_hoe": {
     "criteria": {
       "has_iron_ingot": "2021-12-16 11:29:43 -0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2021-12-17 13:19:13 -0500"
     },
     "done": true
   },
@@ -107,6 +137,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/red_dye_from_poppy": {
+    "criteria": {
+      "has_poppy": "2021-12-16 19:04:30 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/acacia_boat": {
     "criteria": {
       "in_water": "2021-12-15 22:22:21 -0500"
@@ -116,6 +152,12 @@
   "minecraft:recipes/tools/iron_shovel": {
     "criteria": {
       "has_iron_ingot": "2021-12-16 11:29:43 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2021-12-17 12:47:13 -0500"
     },
     "done": true
   },
@@ -185,6 +227,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/white_wool_from_string": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2021-12-15 22:22:21 -0500"
@@ -200,6 +248,7 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:skeleton": "2021-12-16 06:44:10 -0500",
+      "minecraft:spider": "2021-12-16 18:55:03 -0500",
       "minecraft:creeper": "2021-12-16 07:46:11 -0500",
       "minecraft:slime": "2021-12-15 22:22:42 -0500",
       "minecraft:zombie": "2021-12-16 11:29:17 -0500",
@@ -246,6 +295,12 @@
   "minecraft:recipes/misc/bucket": {
     "criteria": {
       "has_iron_ingot": "2021-12-16 11:29:43 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2021-12-16 22:48:25 -0500"
     },
     "done": true
   },

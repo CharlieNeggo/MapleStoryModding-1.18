@@ -69,7 +69,7 @@ public class MushRoom extends Mob implements Enemy {
             this.setHealth(this.getMaxHealth());
         }
 
-        this.xpReward = i;
+        this.xpReward = 5;
     }
 
     public int getSize() {
@@ -104,7 +104,7 @@ public class MushRoom extends Mob implements Enemy {
             int i = this.getSize();
 
             if (spawnCustomParticles()) i = 0; // don't spawn particles if it's handled by the implementation itself
-            for(int j = 0; j < i * 8; ++j) {
+            for(int j = 0; j < i * 4; ++j) {
                 float f = this.random.nextFloat() * ((float)Math.PI * 2F);
                 float f1 = this.random.nextFloat() * 0.5F + 0.5F;
                 float f2 = Mth.sin(f) * (float)i * 0.5F * f1;
@@ -208,7 +208,7 @@ public class MushRoom extends Mob implements Enemy {
     }
 
     protected float getStandingEyeHeight(Pose p_33614_, EntityDimensions p_33615_) {
-        return 0.625F * p_33615_.height;
+        return 0.525F * p_33615_.height;
     }
 
     protected boolean isDealsDamage() {

@@ -9,7 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleUtgardWarriorMaterial {
     public static final ArmorMaterial UTGARD = new MapleUtgardArmorMaterial(20, new int[] { 950, 1400, 1800, 1000 },
-            new int[] { 4, 7, 9, 4 }, 4f, 6f, MapleStoryMod.MODID + ":utgard",
+            new int[] { 9, 12, 14, 9 }, 4f, 6f, MapleStoryMod.MODID + ":utgard",
             SoundEvents.ARMOR_EQUIP_GENERIC, () -> Ingredient.of(MapleModItems.UTGARD.get()));
 
     private MapleUtgardWarriorMaterial() {

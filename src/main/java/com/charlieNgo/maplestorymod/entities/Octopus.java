@@ -45,7 +45,7 @@ public class Octopus extends Monster {
     }
 
     protected float getStandingEyeHeight(Pose stupid, EntityDimensions p_32119_) {
-        return 1.62F;
+        return 1.50F;
     }
 
     protected void defineSynchedData() {

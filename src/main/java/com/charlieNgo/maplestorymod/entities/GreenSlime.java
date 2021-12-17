@@ -69,7 +69,7 @@ public class GreenSlime extends Mob implements Enemy {
             this.setHealth(this.getMaxHealth());
         }
 
-        this.xpReward = i;
+        this.xpReward = 3;
     }
 
     public int getSize() {

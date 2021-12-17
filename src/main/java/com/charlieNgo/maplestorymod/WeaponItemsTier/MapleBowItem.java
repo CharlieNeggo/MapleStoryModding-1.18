@@ -13,6 +13,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import org.lwjgl.system.CallbackI;
 
 public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
 
@@ -94,7 +95,14 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
    }
 
    public int getUseDuration(ItemStack p_40680_) {
-      return 10000;
+//      int ItemStack = 0;
+//      do {
+//         getUseDuration(ItemStack);
+//         ItemStack++;
+//      }
+//      while (ItemStack < 5);
+
+      return 1000;
    }
 
    public UseAnim getUseAnimation(ItemStack p_40678_) {
@@ -125,6 +133,6 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
    }
 
    public int getDefaultProjectileRange() {
-      return 100000;
+      return 15;
    }
 }

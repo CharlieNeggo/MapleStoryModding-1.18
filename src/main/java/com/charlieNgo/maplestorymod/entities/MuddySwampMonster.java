@@ -33,7 +33,7 @@ public class MuddySwampMonster extends Monster {
 
     public MuddySwampMonster(EntityType<? extends MuddySwampMonster> p_32591_, Level p_32592_) {
         super(p_32591_, p_32592_);
-        this.xpReward = 3;
+        this.xpReward = 30;
     }
 
     protected void registerGoals() {
@@ -47,7 +47,7 @@ public class MuddySwampMonster extends Monster {
     }
 
     protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
-        return 0.63F;
+        return 0.25F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {

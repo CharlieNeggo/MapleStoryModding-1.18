@@ -1,8 +1,11 @@
 package com.charlieNgo.maplestorymod.slots;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.IForgeRegistryEntry;
+import org.jetbrains.annotations.Nullable;
 
-public enum MapleSlot {
+public enum MapleSlot implements IForgeRegistryEntry<MapleSlot> {
     SHOULDER(MapleSlot.Type.ARMOR, 4, 5, "shoulder"),
     PENDANT(MapleSlot.Type.ARMOR, 5, 6, "pendant"),
     RING(MapleSlot.Type.ARMOR, 6, 7, "ring"),
@@ -61,6 +64,22 @@ public enum MapleSlot {
     }
 
     public void register(IEventBus modEventBus) {
+    }
+
+    @Override
+    public MapleSlot setRegistryName(ResourceLocation name) {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public ResourceLocation getRegistryName() {
+        return null;
+    }
+
+    @Override
+    public Class<MapleSlot> getRegistryType() {
+        return null;
     }
 
     public static enum Type {

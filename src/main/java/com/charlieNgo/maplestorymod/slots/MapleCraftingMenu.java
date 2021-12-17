@@ -16,13 +16,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 
 public class MapleCraftingMenu extends RecipeBookMenu<CraftingContainer> {
-    public static final int RESULT_SLOT = 0;
-    private static final int CRAFT_SLOT_START = 1;
-    private static final int CRAFT_SLOT_END = 10;
-    private static final int INV_SLOT_START = 10;
-    private static final int INV_SLOT_END = 37;
-    private static final int USE_ROW_SLOT_START = 37;
-    private static final int USE_ROW_SLOT_END = 46;
     private final CraftingContainer craftSlots = new CraftingContainer(this, 3, 3);
     private final ResultContainer resultSlots = new ResultContainer();
     private final ContainerLevelAccess access;

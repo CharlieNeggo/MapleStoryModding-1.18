@@ -30,7 +30,7 @@ public class DaggerItem extends TieredItem implements Vanishable {
         this.defaultModifiers = builder.build();
     }
 
-    public float getDamage() {
+    public float getAttackDamage() {
         return this.attackDamage;
     }
 
