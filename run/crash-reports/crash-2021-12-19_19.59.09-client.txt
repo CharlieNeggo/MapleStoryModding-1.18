@@ -1,0 +1,194 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 12/19/21, 7:59 PM
+Description: mouseClicked event handler
+
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "net.minecraftforge.resource.ResourcePackLoader.modResourcePacks" is null
+	at net.minecraftforge.resource.ResourcePackLoader.lambda$getPackFor$0(ResourcePackLoader.java:52) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at java.util.Optional.map(Optional.java:260) ~[?:?] {}
+	at net.minecraftforge.resource.ResourcePackLoader.getPackFor(ResourcePackLoader.java:52) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.ModListScreen.lambda$updateCache$12(ModListScreen.java:425) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at java.util.Optional.map(Optional.java:260) ~[?:?] {}
+	at net.minecraftforge.client.gui.ModListScreen.updateCache(ModListScreen.java:422) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.ModListScreen.setSelected(ModListScreen.java:406) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.widget.ModListWidget$ModEntry.mouseClicked(ModListWidget.java:116) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:323) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:27) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:88) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:101) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12] {}
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:220) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.5.jar%230!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraftforge.resource.ResourcePackLoader.lambda$getPackFor$0(ResourcePackLoader.java:52) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at java.util.Optional.map(Optional.java:260) ~[?:?] {}
+	at net.minecraftforge.resource.ResourcePackLoader.getPackFor(ResourcePackLoader.java:52) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.ModListScreen.lambda$updateCache$12(ModListScreen.java:425) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at java.util.Optional.map(Optional.java:260) ~[?:?] {}
+	at net.minecraftforge.client.gui.ModListScreen.updateCache(ModListScreen.java:422) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.ModListScreen.setSelected(ModListScreen.java:406) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraftforge.client.gui.widget.ModListWidget$ModEntry.mouseClicked(ModListWidget.java:116) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2375%2381!:?] {re:classloading}
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:323) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:27) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:88) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:101) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12] {}
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+-- Affected screen --
+Details:
+	Screen name: net.minecraftforge.client.gui.ModListScreen
+Stacktrace:
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:101) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.1.jar%2361!:build 12] {}
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3129) ~[lwjgl-glfw-3.2.1.jar%2355!:build 12] {}
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:220) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.5.jar%230!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default
+Stacktrace:
+	at net.minecraft.client.ResourceLoadStateTracker.fillCrashReport(ResourceLoadStateTracker.java:49) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2256) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:677) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.5_mapped_official_1.18.1.jar%2376!:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.5.jar%230!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.1
+	Minecraft Version ID: 1.18.1
+	Operating System: Mac OS X (x86_64) version 12.1
+	Java Version: 17.0.1, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1146023160 bytes (1092 MiB) / 1979711488 bytes (1888 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 8
+	Processor Vendor: Apple Inc.
+	Processor Name: Apple M1
+	Identifier: Apple Inc. Family 0x1b588bb3 Model 0 Stepping 0
+	Microarchitecture: ARM64 SoC: Firestorm + Icestorm
+	Frequency (GHz): 24.00
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 8
+	Graphics card #0 name: Apple G13G
+	Graphics card #0 vendor: Apple (0x106b)
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Memory slot #0 capacity (MB): 0.00
+	Memory slot #0 clockSpeed (GHz): 0.00
+	Memory slot #0 type: unknown
+	Virtual memory max (MB): 16384.00
+	Virtual memory used (MB): 10589.13
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 0 total; 
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.1 SNAPSHOT
+	Backend API: Apple M1 GL version 4.1 Metal - 76.3, Apple
+	Window size: 1708x960
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	GPU Warnings: version: Metal
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 8x Apple M1
+	ModLauncher: 9.0.7+91+master.8569cdf
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+	Mod List: 
+		forge-1.18.1-39.0.5_mapped_official_1.18.1.jar    |Minecraft                     |minecraft                     |1.18.1              |COMMON_SET|Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Maple story                   |maplestorymod                 |1.18.1-1.0.0        |COMMON_SET|Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |39.0.5              |COMMON_SET|Manifest: NOSIGNATURE
+	Crash Report UUID: 858a76ab-058e-443d-be71-63b3861b1488
+	FML: 39.0
+	Forge: net.minecraftforge:39.0.5

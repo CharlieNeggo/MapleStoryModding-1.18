@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " x ",
+    " w "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "maplestorymod:silver_ore"
+    },
+    "w":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:basic_twohanded_sword",
+    "count": 1
+  }
+}

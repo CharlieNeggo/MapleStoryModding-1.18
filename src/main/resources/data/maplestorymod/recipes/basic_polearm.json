@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xw ",
+    " w "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "maplestorymod:silver_ore"
+    },
+    "w":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:basic_polearm",
+    "count": 1
+  }
+}

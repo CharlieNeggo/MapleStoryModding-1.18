@@ -1,6 +1,7 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
+import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleDaggerItem;
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
@@ -51,11 +52,11 @@ public class MapleModItems {
     //Dual Blade Katara
     public static final RegistryObject<SwordItem> DUAL_BLADE_KATARA = ITEMS.register("dual_blade_katara", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    //Aran Polearm
+    //Aran Polearmw
     public static final RegistryObject<AxeItem> ARAN_AXE_ONE = ITEMS.register("aran_axe_one", () ->
             new AxeItem(MapleSetWeaponInit.MAPLE, 12, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
-    //Items for daggers levels 10-130
+    //Items for daggers/kataras levels 10-130
     public static final RegistryObject<SwordItem> BEGINNER_DAGGER = ITEMS.register("beginner_dagger", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 1, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> IRON_DAGGER = ITEMS.register("iron_dagger", () ->
@@ -66,6 +67,16 @@ public class MapleModItems {
             new SwordItem(MapleSetWeaponInit.MAPLE, 5, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> TIMELESS_PESCAS_DAGGER = ITEMS.register("timeless_pescas_dagger", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<MapleDaggerItem> CHAMPION_KATARA = ITEMS.register("champion_katara", () ->
+            new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 2, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<MapleDaggerItem> JUSTICE_KATARA = ITEMS.register("justice_katara", () ->
+            new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 3, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<MapleDaggerItem> MOONSLICER_KATARA= ITEMS.register("moonslicer_katara", () ->
+            new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 5, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<MapleDaggerItem> BLOODSOAKED_KATARA = ITEMS.register("bloodsoaked_katara", () ->
+            new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 6, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<MapleDaggerItem> TIMELESS_KATARA = ITEMS.register("timeless_katara", ()->
+            new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 7, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Items for Two handed swords 10-130
     public static final RegistryObject<SwordItem> SPARTA = ITEMS.register("sparta", () ->
@@ -79,8 +90,22 @@ public class MapleModItems {
     public static final RegistryObject<SwordItem> DEVIL_SUNRISE = ITEMS.register("devil_sunrise", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
+    //Items for Pole arms 10-130
+    public static final RegistryObject<SwordItem> BASIC_POLEARM = ITEMS.register("basic_polearm", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 4, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> STEEL_POLEARM = ITEMS.register("steel_polearm", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 5, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> SKYLAR_POLEARM = ITEMS.register("skylar_polearm", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 7, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> HELLSLAYER_POLEARM = ITEMS.register("hellslayer_polearm", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 8, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> TIMELESS_POLEARM = ITEMS.register("timeless_polearm", ()->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 9, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
     //Block Items
     public static final RegistryObject<BlockItem> SILVER_ORE_BLOCK = ITEMS.register("silver_ore_block",
             () -> new BlockItem(MapleStoryBlocks.SILVER_ORE_BLOCK.get(), new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE = ITEMS.register("deepslate_silver_ore",
+            () -> new BlockItem(MapleStoryBlocks.DEEPSLATE_SILVER_ORE.get(), new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
 }

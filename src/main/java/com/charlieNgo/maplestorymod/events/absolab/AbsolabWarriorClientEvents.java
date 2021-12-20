@@ -2,14 +2,6 @@ package com.charlieNgo.maplestorymod.events.absolab;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.init.AbsolabSetItems.MapleAbsolabSetItems;
-//import net.minecraft.entity.Entity;
-//import net.minecraft.entity.LivingEntity;
-//import net.minecraft.entity.player.PlayerEntity;
-//import net.minecraft.potion.EffectInstance;
-//import net.minecraft.potion.Effects;
-//import net.minecraft.util.text.StringTextComponent;
-//import net.minecraft.util.text.TextFormatting;
-import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;

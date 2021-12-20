@@ -15,4 +15,6 @@
 	treatEmptyTagsAsAir = false
 	#Fix advancement loading to use a proper topological sort. This may have visibility side-effects and can thus be turned off if needed for data-pack compatibility.
 	fixAdvancementLoading = true
+	#No comment
+	permissionHandler = "forge:default_handler"
 

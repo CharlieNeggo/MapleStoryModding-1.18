@@ -1,6 +1,9 @@
 package com.charlieNgo.maplestorymod.entities;
 
 import java.util.EnumSet;
+import java.util.Random;
+
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -14,12 +17,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.Goal;
@@ -28,6 +26,7 @@ import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.phys.Vec3;
 
@@ -64,7 +63,7 @@ public class GreenSlime extends Mob implements Enemy {
         this.refreshDimensions();
         this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10);
         this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2F + 0.1F * (float)i);
-        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(i);
+        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
         if (p_33595_) {
             this.setHealth(this.getMaxHealth());
         }
@@ -436,5 +435,9 @@ public class GreenSlime extends Mob implements Enemy {
 
             ((GreenSlime.GreenSlimeMoveControl)this.GreenSlime.getMoveControl()).setDirection(this.chosenDegrees, false);
         }
+    }
+    public static boolean canSpawnGreenSlime(EntityType<GreenSlime> entity, LevelAccessor levelAccess,
+                                           MobSpawnType spawnType, BlockPos pos, Random random) {
+        return checkMobSpawnRules(entity, levelAccess, spawnType, pos, random) && pos.getY() > 30;
     }
 }

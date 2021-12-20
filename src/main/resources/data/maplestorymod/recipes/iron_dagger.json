@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " i ",
+    " x ",
+    " w "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    "i":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "w":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:iron_dagger",
+    "count": 1
+  }
+}

@@ -1,8 +1,9 @@
 package com.charlieNgo.maplestorymod.entities;
 
 import java.util.Random;
+
+import com.charlieNgo.maplestorymod.entities.maplespawnbasic.MapleMonster;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -28,7 +29,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MuddySwampMonster extends Monster {
+public class MuddySwampMonster extends MapleMonster {
     private int life;
 
     public MuddySwampMonster(EntityType<? extends MuddySwampMonster> p_32591_, Level p_32592_) {
@@ -95,5 +96,10 @@ public class MuddySwampMonster extends Monster {
 
     public MobType getMobType() {
         return MobType.ARTHROPOD;
+    }
+
+    public static boolean canSpawnMuddySwampMonster(EntityType<MuddySwampMonster> entity, LevelAccessor levelAccess,
+                                             MobSpawnType spawnType, BlockPos pos, Random random) {
+        return checkMobSpawnRules(entity, levelAccess, spawnType, pos, random) && pos.getY() > 30;
     }
 }

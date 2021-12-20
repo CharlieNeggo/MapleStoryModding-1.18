@@ -18,7 +18,7 @@ import java.util.Map;
 public class AbsolabBowmanBuff extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffect>()
-                    .put(MapleAbsolabBowmanMaterial.ABSOLAB, MobEffects.MOVEMENT_SPEED).build());
+                    .put(MapleAbsolabBowmanMaterial.ABSOLAB, MobEffects.NIGHT_VISION).build());
 
     public AbsolabBowmanBuff(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -54,7 +54,7 @@ public class AbsolabBowmanBuff extends ArmorItem {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect, 10, 1));
+            player.addEffect(new MobEffectInstance(mapStatusEffect, 1, 2));
 
         }
     }

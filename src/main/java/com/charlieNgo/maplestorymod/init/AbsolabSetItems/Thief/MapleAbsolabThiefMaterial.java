@@ -9,7 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleAbsolabThiefMaterial {
     public static final ArmorMaterial ABSOLAB = new MapleAbsolabArmorMaterial(20, new int[] { 950, 1400, 1800, 1000 },
-            new int[] { 9, 12, 14, 9 }, 6f, 12f, MapleStoryMod.MODID + ":absolab",
+            new int[] { 14, 17, 19, 14 }, 1.2f, 12f, MapleStoryMod.MODID + ":absolab",
             SoundEvents.ARMOR_EQUIP_GENERIC, () -> Ingredient.of(MapleModItems.ABSOLAB_ESSENCE.get()));
 
     private MapleAbsolabThiefMaterial() {

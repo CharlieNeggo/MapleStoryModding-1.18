@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "maplestorymod:items/arcane/arcane_thief_chest"
-  }
-}

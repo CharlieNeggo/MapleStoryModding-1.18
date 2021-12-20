@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MapleMobAttributes {
+public class  MapleMobAttributes {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {

@@ -18,7 +18,7 @@ import java.util.Map;
 public class MapleUtgardBowmanBuffTwo extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffect>())
-                    .put(MapleUtgardBowmanMaterial.UTGARD, MobEffects.DAMAGE_BOOST).build();
+                    .put(MapleUtgardBowmanMaterial.UTGARD, MobEffects.MOVEMENT_SPEED).build();
 
     public MapleUtgardBowmanBuffTwo(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);

@@ -4,16 +4,15 @@ import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.model.*;
 import com.charlieNgo.maplestorymod.client.render.*;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.world.OreGeneration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MapleClientModEvents {
-
-    public MapleClientModEvents() {
-    }
 
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {

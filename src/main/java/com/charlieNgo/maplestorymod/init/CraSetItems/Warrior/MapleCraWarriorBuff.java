@@ -54,7 +54,7 @@ public class MapleCraWarriorBuff extends ArmorItem {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect, 1, 1));
+            player.addEffect(new MobEffectInstance(mapStatusEffect, 1));
 
 
         }

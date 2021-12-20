@@ -13,7 +13,6 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import org.lwjgl.system.CallbackI;
 
 public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
 
@@ -62,7 +61,9 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
                      abstractarrow.setSecondsOnFire(100);
                   }
 
-                  p_40667_.hurtAndBreak(1, player, (p_40665_) -> p_40665_.broadcastBreakEvent(player.getUsedItemHand()));
+                  p_40667_.hurtAndBreak(1, player, (p_40665_) -> {
+                     p_40665_.broadcastBreakEvent(player.getUsedItemHand());
+                  });
                   if (flag1 || player.getAbilities().instabuild && (itemstack.is(Items.SPECTRAL_ARROW) || itemstack.is(Items.TIPPED_ARROW))) {
                      abstractarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
                   }
@@ -85,24 +86,17 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
    }
 
    public static float getPowerForTime(int p_40662_) {
-      float f = (float)p_40662_ / 2.0F;
-      f = (f * f + f * 2.0F) / 3.0F;
-      if (f > 1.0F) {
-         f = 1.0F;
+      float f = (float)p_40662_ / 1.0F;
+      f = (f * f + f * 10.0F) / 11.0F;
+      if (f > 9.0F) {
+         f = 9.0F;
       }
 
       return f;
    }
 
    public int getUseDuration(ItemStack p_40680_) {
-//      int ItemStack = 0;
-//      do {
-//         getUseDuration(ItemStack);
-//         ItemStack++;
-//      }
-//      while (ItemStack < 5);
-
-      return 1000;
+      return 10000;
    }
 
    public UseAnim getUseAnimation(ItemStack p_40678_) {

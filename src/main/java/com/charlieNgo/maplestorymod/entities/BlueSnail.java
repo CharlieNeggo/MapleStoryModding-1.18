@@ -1,29 +1,26 @@
 package com.charlieNgo.maplestorymod.entities;
 
-import net.minecraft.world.entity.EntityType;
+import com.charlieNgo.maplestorymod.entities.maplespawnbasic.MapleMonster;
+import net.minecraft.world.entity.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BlueSnail extends Monster {
+import java.util.Random;
+
+public class BlueSnail extends MapleMonster {
     private int life;
 
     public BlueSnail(EntityType<? extends BlueSnail> p_32591_, Level p_32592_) {
@@ -41,12 +38,12 @@ public class BlueSnail extends Monster {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
-    protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions BlueSnail) {
-        return 0.49F;
+    protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
+        return 0.25F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 5.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 2.0D);
+        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 22.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 3.0D);
     }
 
     protected Entity.MovementEmission getMovementEmission() {
@@ -66,7 +63,7 @@ public class BlueSnail extends Monster {
     }
 
     protected void playStepSound(BlockPos p_32607_, BlockState p_32608_) {
-        this.playSound(SoundEvents.SILVERFISH_STEP, 0.15F, 1.0F);
+        this.playSound(SoundEvents.SHEEP_STEP, 0.15F, 1.0F);
     }
 
     public void readAdditionalSaveData(CompoundTag p_32595_) {
@@ -79,11 +76,6 @@ public class BlueSnail extends Monster {
         p_32610_.putInt("Lifetime", this.life);
     }
 
-    public void tick() {
-        this.yBodyRot = this.getYRot();
-        super.tick();
-    }
-
     public void setYBodyRot(float p_32621_) {
         this.setYRot(p_32621_);
         super.setYBodyRot(p_32621_);
@@ -93,4 +85,12 @@ public class BlueSnail extends Monster {
         return 0.1D;
     }
 
+    public MobType getMobType() {
+        return MobType.ARTHROPOD;
+    }
+
+    public static boolean canSpawnBlueSnail(EntityType<BlueSnail> entity, LevelAccessor levelAccess,
+                                   MobSpawnType spawnType, BlockPos pos, Random random) {
+        return checkMobSpawnRules(entity, levelAccess, spawnType, pos, random) && pos.getY() > 30;
+    }
 }

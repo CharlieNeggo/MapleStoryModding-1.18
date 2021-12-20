@@ -10,6 +10,11 @@ import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
 import com.charlieNgo.maplestorymod.slots.MapleSlot;
+import com.charlieNgo.maplestorymod.world.MapleBiomeProvider;
+import com.charlieNgo.maplestorymod.world.MapleChunkGenerator;
+import com.charlieNgo.maplestorymod.world.OreGeneration;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,6 +51,7 @@ public class MapleStoryMod {
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
+
     }
 
     public static final CreativeModeTab MAPLESTORY_TAB = new CreativeModeTab(MODID) { //maplestorymod
@@ -57,6 +63,14 @@ public class MapleStoryMod {
 
     private void setup(final FMLCommonSetupEvent event) {
 
+        event.enqueueWork(() -> {
+            Registry.register(Registry.CHUNK_GENERATOR, new ResourceLocation(MapleStoryMod.MODID, "chunkgen"),
+                    MapleChunkGenerator.CODEC);
+            Registry.register(Registry.BIOME_SOURCE, new ResourceLocation(MapleStoryMod.MODID, "biomes"),
+                    MapleBiomeProvider.CODEC);
+
+            event.enqueueWork(OreGeneration::registerOres);
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
