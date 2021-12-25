@@ -24,10 +24,10 @@ fov:0.5
 screenEffectScale:1.0
 fovEffectScale:0.63921446
 gamma:1.0
-renderDistance:10
-simulationDistance:10
+renderDistance:12
+simulationDistance:12
 entityDistanceScaling:5.0
-guiScale:5
+guiScale:3
 particles:0
 maxFps:260
 difficulty:2

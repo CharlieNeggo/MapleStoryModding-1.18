@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.init.UtgardSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleBowItem;
+//import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleBowItem;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanBuff;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanBuffTwo;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Bowman.MapleUtgardBowmanMaterial;
@@ -9,7 +9,6 @@ import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagi
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagicianBuffTwo;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Magician.MapleUtgardMagicianMaterial;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateBuff;
-import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateBuffTwo;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Pirate.MapleUtgardPirateMaterial;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Thief.MapleUtgardThiefBuff;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Thief.MapleUtgardThiefBuffTwo;
@@ -34,8 +33,8 @@ public class MapleUtgardSetItems {
     public static final RegistryObject<SwordItem> UTGARD_KATANA = ITEMS.register("utgard_katana", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 7, -1.8F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     //Weapons Bowman
-    public static final RegistryObject<MapleBowItem> UTGARD_BOW = ITEMS.register("utgard_bow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
+//    public static final RegistryObject<MapleBowItem> UTGARD_BOW = ITEMS.register("utgard_bow", () ->
+//            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     public static final RegistryObject<CrossbowItem> UTGARD_CROSSBOW = ITEMS.register("utgard_crossbow", () ->
             new CrossbowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
 

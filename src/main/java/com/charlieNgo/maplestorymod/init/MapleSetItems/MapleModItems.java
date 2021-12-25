@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleDaggerItem;
+import com.charlieNgo.maplestorymod.weaponitemstier.DaggerItem.MapleDaggerItem;
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
@@ -12,7 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class MapleModItems {
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapleStoryMod.MODID);
 
     // For Armor Sets/Weapons for what material their going to be made out of
@@ -41,6 +40,8 @@ public class MapleModItems {
     public static final RegistryObject<Item> OCTOPUS_TENTACLE = ITEMS.register("octopus_tentacle",()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> MUD_CLUMP = ITEMS.register("mud_clump",()->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<Item> SMIRKY_SEEDLING = ITEMS.register("smirky_seedling",()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
     //Kaiser Sword

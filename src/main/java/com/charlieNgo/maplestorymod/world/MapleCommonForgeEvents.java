@@ -45,5 +45,13 @@ public class MapleCommonForgeEvents {
             event.getSpawns().addSpawn(MobCategory.MONSTER,
                     new MobSpawnSettings.SpawnerData(MapleModEntityTypes.GREENSLIME.get(), 15, 5, 20));
         }
+        if (event.getName().equals(new ResourceLocation("minecraft:desert"))) {
+            event.getSpawns().addSpawn(MobCategory.MONSTER,
+                    new MobSpawnSettings.SpawnerData(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), 15, 5, 20));
+        }
+        if (event.getName().equals(new ResourceLocation("minecraft:dark_forest"))) {
+            event.getSpawns().addSpawn(MobCategory.MONSTER,
+                    new MobSpawnSettings.SpawnerData(MapleModEntityTypes.COPPERDRAKE.get(), 15, 5, 20));
+        }
     }
 }

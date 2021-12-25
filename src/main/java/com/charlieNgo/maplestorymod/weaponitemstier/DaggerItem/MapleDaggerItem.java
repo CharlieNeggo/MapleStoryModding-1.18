@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.WeaponItemsTier;
+package com.charlieNgo.maplestorymod.weaponitemstier.DaggerItem;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
@@ -28,10 +28,6 @@ public class MapleDaggerItem extends TieredItem implements Vanishable {
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", p_43271_, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
-    }
-
-    public float getAttackDamage() {
-        return this.attackDamage;
     }
 
     public boolean canAttackBlock(BlockState p_43291_, Level p_43292_, BlockPos p_43293_, Player p_43294_) {

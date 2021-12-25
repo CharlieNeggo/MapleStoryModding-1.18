@@ -1,9 +1,8 @@
 package com.charlieNgo.maplestorymod.init.CraSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleBowItem;
-import com.charlieNgo.maplestorymod.WeaponItemsTier.MapleCrossbowItem;
-import com.charlieNgo.maplestorymod.init.ArcaneSetItems.Thief.MapleArcaneThiefMaterial;
+//import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleBowItem;
+import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleCrossbowItem;
 import com.charlieNgo.maplestorymod.init.CraSetItems.Bowman.MapleCraBowmanBuff;
 import com.charlieNgo.maplestorymod.init.CraSetItems.Bowman.MapleCraBowmanBuffTwo;
 import com.charlieNgo.maplestorymod.init.CraSetItems.Bowman.MapleCraBowmanMaterial;
@@ -49,10 +48,10 @@ public class MapleCRASetItems {
             new SwordItem(MapleCraWeaponInit.CRA, 3, -2F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Bowman Items
+//    public static final RegistryObject<MapleBowItem> CRA_BOW = ITEMS.register("cra_bow", () ->
+//            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     public static final RegistryObject<MapleCrossbowItem> CRA_CROSSBOW = ITEMS.register("cra_crossbow", () ->
-            new MapleCrossbowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> CRA_BOW = ITEMS.register("cra_bow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
+            new MapleCrossbowItem(1, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
 
     //Thief
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_HOOD = ITEMS.register("cra_assassin_hood", () ->

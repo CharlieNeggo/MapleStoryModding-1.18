@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.events.MapleMobsAttributes;
+package com.charlieNgo.maplestorymod.client.maplemobattributes;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.entities.*;
@@ -28,6 +28,13 @@ public class  MapleMobAttributes {
         //Muddy Swamp Monster
         event.put(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonster.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.20F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+        //Smirky Ghost Stump
+        event.put(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), SmirkyGhostStump.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.20F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+        //Copper Drake
+        event.put(MapleModEntityTypes.COPPERDRAKE.get(), CopperDrake.createMobAttributes().add(Attributes.FOLLOW_RANGE, 35.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.20F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR).build());
+
 
     }
 }

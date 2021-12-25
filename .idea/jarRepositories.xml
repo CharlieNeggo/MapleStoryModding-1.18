@@ -26,5 +26,50 @@
       <option name="name" value="maven" />
       <option name="url" value="https://maven.minecraftforge.net/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="BintrayJCenter" />
+      <option name="name" value="BintrayJCenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="https://repo.repsy.io/mvn/gandiber/geckolib" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="https://maven.blamejared.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://maven.enginehub.org/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="CurseForge" />
+      <option name="name" value="CurseForge" />
+      <option name="url" value="https://minecraft.curseforge.com/api/maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jitpack" />
+      <option name="name" value="jitpack" />
+      <option name="url" value="https://jitpack.io" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://maven.cloudsmith.io/geckolib3/geckolib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://maven.minecraftforge.net" />
+    </remote-repository>
   </component>
 </project>

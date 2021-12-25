@@ -31,5 +31,11 @@ public class MapleModEntityTypes {
     //Muddy Swamp Monster
     public static final RegistryObject<EntityType<MuddySwampMonster>> MUDDYSWAMPMONSTER = ENTITIES.register("muddy_swamp_monster", () ->
             EntityType.Builder.of(MuddySwampMonster::new, MobCategory.MONSTER).sized(0.9f, 1.1f).build(new ResourceLocation(MapleStoryMod.MODID, "muddy_swamp_monster").toString()));
+    //Smirky Ghost Stump
+    public static final RegistryObject<EntityType<SmirkyGhostStump>> SMIRKYGHOSTSTUMP = ENTITIES.register("smirky_ghost_stump", () ->
+            EntityType.Builder.of(SmirkyGhostStump::new, MobCategory.MONSTER).sized(0.9f, 1.1f).build(new ResourceLocation(MapleStoryMod.MODID, "smirky_ghost_stump").toString()));
+    //Copper Drake
+    public static final RegistryObject<EntityType<CopperDrake>> COPPERDRAKE = ENTITIES.register("copper_drake", () ->
+            EntityType.Builder.of(CopperDrake::new, MobCategory.MONSTER).sized(0.9f, 1.1f).build(new ResourceLocation(MapleStoryMod.MODID, "copper_drake").toString()));
 
 }

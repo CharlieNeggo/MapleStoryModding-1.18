@@ -1,15 +1,13 @@
-package com.charlieNgo.maplestorymod.events.MapleMobsAttributes;
+package com.charlieNgo.maplestorymod.client.maplemobattributes;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.model.*;
 import com.charlieNgo.maplestorymod.client.render.*;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
-import com.charlieNgo.maplestorymod.world.OreGeneration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MapleClientModEvents {
@@ -21,6 +19,8 @@ public class MapleClientModEvents {
         event.registerLayerDefinition(BlueSnailModel.LAYER_LOCATION, BlueSnailModel::createBodyLayer);
         event.registerLayerDefinition(OctopusModel.LAYER_LOCATION, OctopusModel::createBodyLayer);
         event.registerLayerDefinition(MuddySwampMonsterModel.LAYER_LOCATION, MuddySwampMonsterModel::createBodyLayer);
+        event.registerLayerDefinition(SmirkyGhostStumpModel.LAYER_LOCATION, SmirkyGhostStumpModel::createBodyLayer);
+        event.registerLayerDefinition(CopperDrakeModel.LAYER_LOCATION, CopperDrakeModel::createBodyLayer);
 
     }
 
@@ -31,6 +31,8 @@ public class MapleClientModEvents {
         event.registerEntityRenderer(MapleModEntityTypes.MUSHROOM.get(), MushRoomRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.OCTOPUS.get(), OctopusRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonsterRender::new);
+        event.registerEntityRenderer(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), SmirkyGhostStumpRender::new);
+        event.registerEntityRenderer(MapleModEntityTypes.COPPERDRAKE.get(), CopperDrakeRender::new);
 
     }
 }

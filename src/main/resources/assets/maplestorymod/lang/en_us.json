@@ -5,9 +5,12 @@
   "item.maplestorymod.squishy_liquid": "Green Squishy Liquid",
   "item.maplestorymod.octopus_tentacle": "Octopus Tentacle",
   "item.maplestorymod.mud_clump": "Mud Clump",
+  "item.maplestory.smirky_seedling": "Smirking Seedling",
 
   "block.maplestorymod.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.maplestorymod.silver_ore_block": "Silver Ore Block",
+
+  "item.maplestorymod.flint_bullet": "Flint Bullet",
 
   "item.maplestorymod.arcane_essence": "Arcane Essence",
   "item.maplestorymod.absolab_essence": "AbsoLab Essence",
@@ -143,12 +146,16 @@
   "entity.maplestorymod.blue_snail": "Blue Snail",
   "entity.maplestorymod.octopus": "Octopus",
   "entity.maplestorymod.muddy_swamp_monster":"Muddy Swamp Monster",
+  "entity.maplestorymod.smirky_ghost_stump": "Smirky Ghost Stump",
+  "entity.maplestorymod.copper_drake":"Copper Drake",
 
   "item.maplestorymod.mushroom_spawn_egg": "Mushroom Spawn Egg",
   "item.maplestorymod.blue_snail_spawn_egg": "Blue Snail Spawn Egg",
   "item.maplestorymod.green_slime_spawn_egg": "Green Slime Spawn Egg",
   "item.maplestorymod.octopus_spawn_egg": "Octopus Spawn Egg",
   "item.maplestorymod.muddy_swamp_monster_spawn_egg": "Muddy Swamp Monster Egg",
+  "item.maplestorymod.smirky_ghost_stump_spawn_egg": "Smirking Ghost Stump Egg",
+  "item.maplestorymod.copper_drake_spawn_egg": "Copper Drake Egg",
 
   "itemGroup.maplestorymod": "Maple Story Mod"
 }

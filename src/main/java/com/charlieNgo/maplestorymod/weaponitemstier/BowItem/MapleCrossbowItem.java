@@ -1,9 +1,10 @@
-package com.charlieNgo.maplestorymod.WeaponItemsTier;
+package com.charlieNgo.maplestorymod.weaponitemstier.BowItem;
 
 import com.google.common.collect.Lists;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.function.Predicate;
 import javax.annotation.Nullable;
@@ -33,13 +34,24 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishable {
+public class MapleCrossbowItem extends ProjectileWeaponItem {
+    private static final String TAG_CHARGED = "Charged";
+    private static final String TAG_CHARGED_PROJECTILES = "ChargedProjectiles";
+    private static final int MAX_CHARGE_DURATION = 25;
+    public static final int DEFAULT_RANGE = 8;
+    protected int fireDelay;
     private boolean startSoundPlayed = false;
     private boolean midLoadSoundPlayed = false;
+    private static final float START_SOUND_PERCENT = 0.2F;
+    private static final float MID_SOUND_PERCENT = 0.5F;
+    private static final float ARROW_POWER = 3.15F;
+    private static final float FIREWORK_POWER = 1.6F;
 
-    public MapleCrossbowItem(Item.Properties p_40850_) {
+    public MapleCrossbowItem(int fireDelay, Properties p_40850_) {
         super(p_40850_);
+        this.fireDelay = fireDelay;
     }
+
 
     public Predicate<ItemStack> getSupportedHeldProjectiles() {
         return ARROW_OR_FIREWORK;
@@ -62,20 +74,23 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
                 p_40921_.startUsingItem(p_40922_);
             }
 
+            p_40921_.getCooldowns().addCooldown(this, getFireDelay(itemstack, p_40921_));
             return InteractionResultHolder.consume(itemstack);
         } else {
             return InteractionResultHolder.fail(itemstack);
         }
     }
 
+    public int getFireDelay(ItemStack stack, @Nullable Player player) {
+        return Math.max(1, fireDelay - (int)(fireDelay * 0.15));
+    }
+
     private static float getShootingPower(ItemStack p_40946_) {
-        return containsChargedProjectile(p_40946_, Items.FIREWORK_ROCKET) ? 1.6F : 10.15F;
+        return containsChargedProjectile(p_40946_, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
     }
 
     public void releaseUsing(ItemStack p_40875_, Level p_40876_, LivingEntity p_40877_, int p_40878_) {
-        int i = this.getUseDuration(p_40875_) - p_40878_;
-        float f = getPowerForTime(i, p_40875_);
-        if (f >= 1.0F && !isCharged(p_40875_) && tryLoadProjectiles(p_40877_, p_40875_)) {
+        if ( !isCharged(p_40875_) && tryLoadProjectiles(p_40877_, p_40875_)) {
             setCharged(p_40875_, true);
             SoundSource soundsource = p_40877_ instanceof Player ? SoundSource.PLAYERS : SoundSource.HOSTILE;
             p_40876_.playSound(null, p_40877_.getX(), p_40877_.getY(), p_40877_.getZ(), SoundEvents.CROSSBOW_LOADING_END, soundsource, 1.0F, 1.0F / (p_40876_.getRandom().nextFloat() * 0.5F + 1.0F) + 0.2F);
@@ -180,9 +195,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
     }
 
     public static boolean containsChargedProjectile(ItemStack p_40872_, Item p_40873_) {
-        return getChargedProjectiles(p_40872_).stream().anyMatch((p_40870_) -> {
-            return p_40870_.is(p_40873_);
-        });
+        return getChargedProjectiles(p_40872_).stream().anyMatch((p_40870_) -> p_40870_.is(p_40873_));
     }
 
     private static void shootProjectile(Level p_40895_, LivingEntity p_40896_, InteractionHand p_40897_, ItemStack p_40898_, ItemStack p_40899_, float p_40900_, boolean p_40901_, float p_40902_, float p_40903_, float p_40904_) {
@@ -198,21 +211,18 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
                 }
             }
 
-            if (p_40896_ instanceof CrossbowAttackMob) {
-                CrossbowAttackMob crossbowattackmob = (CrossbowAttackMob)p_40896_;
-                crossbowattackmob.shootCrossbowProjectile(crossbowattackmob.getTarget(), p_40898_, projectile, p_40904_);
+            if (p_40896_ instanceof CrossbowAttackMob crossbowattackmob) {
+                crossbowattackmob.shootCrossbowProjectile(Objects.requireNonNull(crossbowattackmob.getTarget()), p_40898_, projectile, p_40904_);
             } else {
                 Vec3 vec31 = p_40896_.getUpVector(1.0F);
                 Quaternion quaternion = new Quaternion(new Vector3f(vec31), p_40904_, true);
                 Vec3 vec3 = p_40896_.getViewVector(1.0F);
                 Vector3f vector3f = new Vector3f(vec3);
                 vector3f.transform(quaternion);
-                projectile.shoot((double)vector3f.x(), (double)vector3f.y(), (double)vector3f.z(), p_40902_, p_40903_);
+                projectile.shoot(vector3f.x(), vector3f.y(), vector3f.z(), p_40902_, p_40903_);
             }
 
-            p_40898_.hurtAndBreak(flag ? 3 : 1, p_40896_, (p_40858_) -> {
-                p_40858_.broadcastBreakEvent(p_40897_);
-            });
+            p_40898_.hurtAndBreak(flag ? 3 : 1, p_40896_, (p_40858_) -> p_40858_.broadcastBreakEvent(p_40897_));
             p_40895_.addFreshEntity(projectile);
             p_40895_.playSound(null, p_40896_.getX(), p_40896_.getY(), p_40896_.getZ(), SoundEvents.CROSSBOW_SHOOT, SoundSource.PLAYERS, 1.0F, p_40900_);
         }
@@ -246,9 +256,9 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
                 if (i == 0) {
                     shootProjectile(p_40888_, p_40889_, p_40890_, p_40891_, itemstack, afloat[i], flag, p_40892_, p_40893_, 0.0F);
                 } else if (i == 1) {
-                    shootProjectile(p_40888_, p_40889_, p_40890_, p_40891_, itemstack, afloat[i], flag, p_40892_, p_40893_, -10.0F);
+                    shootProjectile(p_40888_, p_40889_, p_40890_, p_40891_, itemstack, afloat[i], flag, p_40892_, p_40893_, -2.0F);
                 } else if (i == 2) {
-                    shootProjectile(p_40888_, p_40889_, p_40890_, p_40891_, itemstack, afloat[i], flag, p_40892_, p_40893_, 10.0F);
+                    shootProjectile(p_40888_, p_40889_, p_40890_, p_40891_, itemstack, afloat[i], flag, p_40892_, p_40893_, 2.0F);
                 }
             }
         }
@@ -292,24 +302,24 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
 
             if (f >= 0.2F && !this.startSoundPlayed) {
                 this.startSoundPlayed = true;
-                p_40910_.playSound((Player)null, p_40911_.getX(), p_40911_.getY(), p_40911_.getZ(), soundevent, SoundSource.PLAYERS, 0.5F, 1.0F);
+                p_40910_.playSound(null, p_40911_.getX(), p_40911_.getY(), p_40911_.getZ(), soundevent, SoundSource.PLAYERS, 0.5F, 1.0F);
             }
 
             if (f >= 0.5F && soundevent1 != null && !this.midLoadSoundPlayed) {
                 this.midLoadSoundPlayed = true;
-                p_40910_.playSound((Player)null, p_40911_.getX(), p_40911_.getY(), p_40911_.getZ(), soundevent1, SoundSource.PLAYERS, 0.5F, 1.0F);
+                p_40910_.playSound(null, p_40911_.getX(), p_40911_.getY(), p_40911_.getZ(), soundevent1, SoundSource.PLAYERS, 0.5F, 1.0F);
             }
         }
 
     }
 
     public int getUseDuration(ItemStack p_40938_) {
-        return getChargeDuration(p_40938_) + 3;
+        return getChargeDuration(p_40938_) + 1;
     }
 
     public static int getChargeDuration(ItemStack p_40940_) {
         int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.QUICK_CHARGE, p_40940_);
-        return i == 0 ? 1 : 1 - 5 * i;
+        return i == 0 ? 5 : 5 * i;
     }
 
     public UseAnim getUseAnimation(ItemStack p_40935_) {
@@ -329,19 +339,13 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
         }
     }
 
-    private static float getPowerForTime(int p_40854_, ItemStack p_40855_) {
-        float f = (float)p_40854_ / (float)getChargeDuration(p_40855_);
-        if (f > 1.0F) {
-            f = 1.0F;
-        }
-
-        return f;
-    }
-
     public void appendHoverText(ItemStack p_40880_, @Nullable Level p_40881_, List<Component> p_40882_, TooltipFlag p_40883_) {
         List<ItemStack> list = getChargedProjectiles(p_40880_);
         if (isCharged(p_40880_) && !list.isEmpty()) {
             ItemStack itemstack = list.get(0);
+
+            int fireDelay = getFireDelay(p_40880_, null);
+
             p_40882_.add((new TranslatableComponent("item.minecraft.crossbow.projectile")).append(" ").append(itemstack.getDisplayName()));
             if (p_40883_.isAdvanced() && itemstack.is(Items.FIREWORK_ROCKET)) {
                 List<Component> list1 = Lists.newArrayList();

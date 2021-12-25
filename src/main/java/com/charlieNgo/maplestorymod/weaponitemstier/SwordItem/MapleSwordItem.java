@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.WeaponItemsTier;
+package com.charlieNgo.maplestorymod.weaponitemstier.SwordItem;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;

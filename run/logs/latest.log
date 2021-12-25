@@ -1,334 +1,307 @@
-[20Dec2021 18:14:20.080] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.0.7, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
-[20Dec2021 18:14:20.088] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 17.0.1 by Oracle Corporation
-[20Dec2021 18:14:20.250] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/Users/charliengo/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
-[20Dec2021 18:14:24.081] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/charliengo/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
-[18:14:37] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.7_mapped_official_1.18.1/forge-1.18.1-39.0.7_mapped_official_1.18.1.jar%2376!/assets/.mcassetsroot' uses unexpected schema
-[18:14:38] [Render thread/WARN]: Assets URL 'union:/Users/charliengo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.7_mapped_official_1.18.1/forge-1.18.1-39.0.7_mapped_official_1.18.1.jar%2376!/data/.mcassetsroot' uses unexpected schema
-[20Dec2021 18:14:38.033] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[18:14:38] [Render thread/INFO]: Setting user: Dev
-[18:14:38] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 SNAPSHOT
-[18:14:38] [Render thread/ERROR]: GLFW error collected during initialization: GLFW error during init: [0x10008]13107939248
-[18:14:38] [Render thread/ERROR]: GLFW error collected during initialization: GLFW error during init: [0x10008]13107939248
-[18:14:38] [Render thread/ERROR]: Null comment for config option server, this is invalid and may be disallowed in the future.
-[18:14:39] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.7, for MC 1.18.1 with MCP 20211210.034407
-[18:14:39] [modloading-worker-0/INFO]: MinecraftForge v39.0.7 Initialized
-[20Dec2021 18:14:43.359] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator : java.lang.NoClassDefFoundError: com/sun/jna/PointerTool
-[18:14:43] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/chunk_generator / maplestorymod:chunkgen]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate value 'RecordCodec[UnitDecoder[com.charlieNgo.maplestorymod.world.MapleChunkGenerator$$Lambda$5249/0x00000008017bb838@7b52b18a] * RegistryLookupCodec[ResourceKey[minecraft:root / minecraft:worldgen/biome]] * Field[settings: RecordCodec[UnitDecoder[com.charlieNgo.maplestorymod.world.MapleChunkGenerator$$Lambda$5244/0x00000008017baf38@1bc6c20d] * Field[base: Int] * Field[verticalvariance: Float] * Field[horizontalvariance: Float]]]]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/biome_source / maplestorymod:biomes]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate value 'RegistryLookupCodec[ResourceKey[minecraft:root / minecraft:worldgen/biome]][xmapped]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/configured_feature / minecraft:deepslate_silver_ore_block]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/placed_feature / minecraft:deepslate_silver_ore_block]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/configured_feature / minecraft:silver_ore_block]' to registry
-[18:14:44] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/placed_feature / minecraft:silver_ore_block]' to registry
-[18:14:44] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:14:44] [Render thread/ERROR]: @ Render
-[18:14:44] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:14:44] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:14:44] [Render thread/ERROR]: @ Render
-[18:14:44] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[20Dec2021 18:14:45.069] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[20Dec2021 18:14:47.742] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 39.0.7 Target: 39.0.7
-[18:14:49] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:14:49] [Render thread/ERROR]: @ Render
-[18:14:49] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:14:49] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:14:49] [Render thread/ERROR]: @ Render
-[18:14:49] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:14:55] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:cra_staff#inventory' referenced from: maplestorymod:cra_staff#inventory: java.io.FileNotFoundException: maplestorymod:models/item/cra_staff.json
-[18:14:55] [Worker-Main-12/WARN]: Unable to load model: 'maplestorymod:cra_wand#inventory' referenced from: maplestorymod:cra_wand#inventory: java.io.FileNotFoundException: maplestorymod:models/item/cra_wand.json
-[18:14:55] [Worker-Main-12/WARN]: Unable to load model: 'minecraft:item/cra_crossbow' referenced from: maplestorymod:cra_crossbow#inventory: java.io.FileNotFoundException: minecraft:models/item/cra_crossbow.json
-[18:14:57] [Worker-Main-12/WARN]: Texture maplestorymod:items/utgard/utgard_bow with size 38x38 limits mip level from 4 to 1
-[18:14:57] [Worker-Main-12/WARN]: Texture maplestorymod:items/utgard/utgard_shining_rod with size 39x39 limits mip level from 1 to 0
-[18:15:03] [Render thread/INFO]: OpenAL initialized on device CoreAudio Default
-[18:15:03] [Render thread/INFO]: Sound engine started
-[18:15:03] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[18:15:03] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[18:15:06] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[18:15:06] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[18:15:06] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[18:15:06] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[18:15:08] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:15:08] [Render thread/ERROR]: @ Render
-[18:15:08] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:15:08] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:15:08] [Render thread/ERROR]: @ Render
-[18:15:08] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:15:15] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:15] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:15] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:15:15] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:15:15] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:15] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
-[18:15:22] [Render thread/INFO]: Loaded 7 recipes
-[18:15:25] [Render thread/INFO]: Loaded 1141 advancements
-[18:15:26] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[18:15:27] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:27] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:27] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:15:27] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:15:27] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:15:27] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
-[18:15:33] [Render thread/INFO]: Loaded 7 recipes
-[18:15:36] [Render thread/INFO]: Loaded 1141 advancements
-[18:15:36] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
-[20Dec2021 18:15:37.213] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[18:15:37] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
-[18:15:37] [Server thread/INFO]: Generating keypair
-[18:15:37] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[18:15:38] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:38] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:38] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:39] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:39] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:40] [Render thread/INFO]: Preparing spawn area: 0%
-[18:15:40] [Render thread/INFO]: Preparing spawn area: 4%
-[18:15:41] [Render thread/INFO]: Preparing spawn area: 13%
-[18:15:41] [Render thread/INFO]: Preparing spawn area: 19%
-[18:15:42] [Render thread/INFO]: Preparing spawn area: 34%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 45%
-[18:15:45] [Render thread/INFO]: Preparing spawn area: 46%
-[18:15:46] [Render thread/INFO]: Preparing spawn area: 86%
-[18:15:46] [Render thread/INFO]: Time elapsed: 8720 ms
-[18:15:46] [Server thread/INFO]: Successfully initialized permission handler forge:default_handler
-[18:15:46] [Server thread/INFO]: Changing view distance to 8, from 10
-[18:15:46] [Server thread/INFO]: Changing simulation distance to 8, from 0
-[18:15:47] [Netty Local Client IO #0/INFO]: Connected to a modded server.
-[18:15:47] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@f303430
-[18:15:47] [Server thread/INFO]: Dev[local:E:9c6be267] logged in with entity id 3 at (-4219.011672231859, 77.03260095913704, 859.7733133241613)
-[18:15:47] [Server thread/INFO]: Dev joined the game
-[18:15:49] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2004ms or 40 ticks behind
-[18:15:49] [Render thread/INFO]: Loaded 132 advancements
-[18:16:06] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2002ms or 40 ticks behind
-[18:16:26] [Server thread/INFO]: Saving and pausing game...
-[18:16:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:16:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:16:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:17:50] [Render thread/INFO]: Loaded 133 advancements
-[18:18:44] [Server thread/INFO]: Saving and pausing game...
-[18:18:44] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:18:44] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:18:44] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:18:54] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:54] [Render thread/ERROR]: @ Render
-[18:18:54] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:18:54] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:54] [Render thread/ERROR]: @ Render
-[18:18:54] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:18:58] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:58] [Render thread/ERROR]: @ Render
-[18:18:58] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:18:58] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:58] [Render thread/ERROR]: @ Render
-[18:18:58] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:18:59] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:59] [Render thread/ERROR]: @ Render
-[18:18:59] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:18:59] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:18:59] [Render thread/ERROR]: @ Render
-[18:18:59] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:19:03] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:19:03] [Render thread/ERROR]: @ Render
-[18:19:03] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:19:03] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:19:03] [Render thread/ERROR]: @ Render
-[18:19:03] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:28:30] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:28:30] [Render thread/ERROR]: @ Render
-[18:28:30] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:28:30] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:28:30] [Render thread/ERROR]: @ Render
-[18:28:30] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:33:38] [Server thread/INFO]: [Dev: Summoned new Iron Golem]
-[18:33:38] [Render thread/INFO]: [CHAT] Summoned new Iron Golem
-[18:33:48] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:33:48] [Render thread/ERROR]: @ Render
-[18:33:48] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:33:48] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:33:48] [Render thread/ERROR]: @ Render
-[18:33:48] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:34:06] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:34:06] [Render thread/ERROR]: @ Render
-[18:34:06] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:34:06] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:34:06] [Render thread/ERROR]: @ Render
-[18:34:06] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:35:12] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:35:12] [Render thread/ERROR]: @ Render
-[18:35:12] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:35:12] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:35:12] [Render thread/ERROR]: @ Render
-[18:35:12] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:35:41] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:35:41] [Render thread/ERROR]: @ Render
-[18:35:41] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:35:41] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:35:41] [Render thread/ERROR]: @ Render
-[18:35:41] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:36:47] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
-[18:37:26] [Render thread/INFO]: [CHAT] Unknown or incomplete command, see below for error
-[18:37:26] [Render thread/INFO]: [CHAT] ////////mmmmmmmmnnn<--[HERE]
-[18:37:38] [Server thread/INFO]: [Dev: Summoned new Iron Golem]
-[18:37:38] [Render thread/INFO]: [CHAT] Summoned new Iron Golem
-[18:38:01] [Server thread/INFO]: [Dev: Summoned new Wither]
-[18:38:01] [Render thread/INFO]: [CHAT] Summoned new Wither
-[18:39:06] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:39:06] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:39:35] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:39:35] [Render thread/ERROR]: @ Render
-[18:39:35] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:39:35] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:39:35] [Render thread/ERROR]: @ Render
-[18:39:35] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:39:55] [Server thread/INFO]: Dev fell out of the world
-[18:39:55] [Render thread/INFO]: [CHAT] Dev fell out of the world
-[18:39:55] [Server thread/INFO]: [Dev: Killed Dev]
-[18:39:55] [Render thread/INFO]: [CHAT] Killed Dev
-[18:39:56] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:39:56] [Render thread/ERROR]: @ Render
-[18:39:56] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:39:56] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:39:56] [Render thread/ERROR]: @ Render
-[18:39:56] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:40:03] [Server thread/INFO]: Dev fell out of the world
-[18:40:03] [Server thread/INFO]: [Dev: Killed Dev]
-[18:40:03] [Render thread/INFO]: [CHAT] Dev fell out of the world
-[18:40:03] [Render thread/INFO]: [CHAT] Killed Dev
-[18:40:09] [Server thread/INFO]: Dev fell out of the world
-[18:40:09] [Server thread/INFO]: [Dev: Killed Dev]
-[18:40:09] [Render thread/INFO]: [CHAT] Dev fell out of the world
-[18:40:09] [Render thread/INFO]: [CHAT] Killed Dev
-[18:40:27] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:40:27] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:40:30] [Server thread/INFO]: Villager Villager['Farmer'/9841, l='ServerLevel[New World]', x=-4188.50, y=64.00, z=871.70] died, message: 'Farmer was slain by Zombie'
-[18:40:55] [Server thread/INFO]: Saving and pausing game...
-[18:40:55] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:40:55] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:40:55] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:41:12] [Server thread/INFO]: Dev has made the advancement [Free the End]
-[18:41:12] [Render thread/INFO]: [CHAT] Dev has made the advancement [Free the End]
-[18:41:12] [Render thread/INFO]: Loaded 136 advancements
-[18:42:02] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:42:02] [Render thread/ERROR]: @ Render
-[18:42:02] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:42:02] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:42:02] [Render thread/ERROR]: @ Render
-[18:42:02] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:42:29] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:42:30] [Render thread/ERROR]: @ Render
-[18:42:30] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:42:30] [Render thread/ERROR]: ########## GL ERROR ##########
-[18:42:30] [Render thread/ERROR]: @ Render
-[18:42:30] [Render thread/ERROR]: 65544: Cocoa: Failed to find service port for display
-[18:42:49] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:42:49] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:42:50] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:42:50] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:42:51] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:42:51] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:42:52] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:42:52] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:42:53] [Server thread/INFO]: [Dev: Summoned new Ender Dragon]
-[18:42:53] [Render thread/INFO]: [CHAT] Summoned new Ender Dragon
-[18:42:55] [Render thread/INFO]: [CHAT] Expected whitespace to end one argument, but found trailing data
-[18:42:55] [Render thread/INFO]: [CHAT] ...der_dragon\<--[HERE]
-[18:42:56] [Server thread/INFO]: Saving and pausing game...
-[18:42:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:42:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:42:56] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:43:32] [Server thread/INFO]: Saving and pausing game...
-[18:43:32] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:43:32] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:43:32] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:43:38] [Server thread/INFO]: Changing view distance to 31, from 8
-[18:43:38] [Server thread/INFO]: Changing simulation distance to 31, from 8
-[18:45:57] [Server thread/INFO]: Saving and pausing game...
-[18:45:57] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:45:57] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:45:57] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:46:02] [Server thread/INFO]: Changing view distance to 32, from 31
-[18:46:02] [Server thread/INFO]: Changing simulation distance to 32, from 31
-[18:49:16] [Render thread/INFO]: Loaded 136 advancements
-[18:49:27] [Render thread/INFO]: Loaded 136 advancements
-[18:49:45] [Render thread/WARN]: Duplicate entity UUID 1711c3dc-0766-42b4-b46a-41a5681c937f: FallingBlockEntity['Falling Block'/30824, l='ClientLevel', x=-3396.50, y=31.02, z=980.50]
-[18:49:45] [Render thread/WARN]: Duplicate entity UUID 46938f74-0617-4ed9-9111-81460987cffe: FallingBlockEntity['Falling Block'/30825, l='ClientLevel', x=-3397.50, y=32.02, z=980.50]
-[18:50:32] [Server thread/INFO]: Dev fell out of the world
-[18:50:32] [Render thread/INFO]: [CHAT] Dev fell out of the world
-[18:50:32] [Server thread/INFO]: Villager Villager['Librarian'/32488, l='ServerLevel[New World]', x=-4165.70, y=66.00, z=909.48] died, message: 'Librarian fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Mason'/32546, l='ServerLevel[New World]', x=-4179.70, y=63.00, z=901.70] died, message: 'Mason fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Shepherd'/32564, l='ServerLevel[New World]', x=-4177.70, y=63.00, z=894.63] died, message: 'Shepherd fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Cleric'/32565, l='ServerLevel[New World]', x=-4190.83, y=64.00, z=881.79] died, message: 'Cleric fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Shepherd'/32566, l='ServerLevel[New World]', x=-4183.22, y=63.00, z=893.54] died, message: 'Shepherd fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/32659, l='ServerLevel[New World]', x=-4207.11, y=64.00, z=917.64] died, message: 'Farmer fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/32660, l='ServerLevel[New World]', x=-4198.19, y=66.00, z=915.02] died, message: 'Farmer fell out of the world'
-[18:50:32] [Render thread/INFO]: Villager Villager['Librarian'/32488, l='ClientLevel', x=-4165.70, y=66.00, z=909.48] died, message: 'Librarian died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Mason'/32546, l='ClientLevel', x=-4179.70, y=63.00, z=901.70] died, message: 'Mason died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Shepherd'/32564, l='ClientLevel', x=-4177.49, y=63.04, z=894.66] died, message: 'Shepherd died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Cleric'/32565, l='ClientLevel', x=-4190.75, y=64.00, z=881.80] died, message: 'Cleric died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Shepherd'/32566, l='ClientLevel', x=-4183.22, y=63.00, z=893.54] died, message: 'Shepherd died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/32659, l='ClientLevel', x=-4207.34, y=64.00, z=917.61] died, message: 'Farmer died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/32660, l='ClientLevel', x=-4198.05, y=66.00, z=915.25] died, message: 'Farmer died'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/34099, l='ServerLevel[New World]', x=-4618.72, y=63.94, z=634.40] died, message: 'Farmer fell out of the world'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/34099, l='ClientLevel', x=-4618.80, y=63.94, z=634.37] died, message: 'Farmer died'
-[18:50:32] [Server thread/INFO]: Villager Villager['Nitwit'/34195, l='ServerLevel[New World]', x=-4640.70, y=72.05, z=698.51] died, message: 'Nitwit fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Villager'/34209, l='ServerLevel[New World]', x=-4637.75, y=63.00, z=624.27] died, message: 'Villager fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Cleric'/34222, l='ServerLevel[New World]', x=-4630.04, y=64.02, z=652.50] died, message: 'Cleric fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Fletcher'/34224, l='ServerLevel[New World]', x=-4623.57, y=65.00, z=667.20] died, message: 'Fletcher fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/34268, l='ServerLevel[New World]', x=-4654.39, y=64.00, z=663.68] died, message: 'Farmer fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/34270, l='ServerLevel[New World]', x=-4650.45, y=64.00, z=645.06] died, message: 'Farmer fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Nitwit'/34292, l='ServerLevel[New World]', x=-4651.15, y=64.00, z=672.14] died, message: 'Nitwit fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Leatherworker'/34294, l='ServerLevel[New World]', x=-4651.24, y=66.00, z=688.82] died, message: 'Leatherworker fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/34373, l='ServerLevel[New World]', x=-4663.71, y=63.00, z=621.02] died, message: 'Farmer fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Nitwit'/34380, l='ServerLevel[New World]', x=-4664.50, y=64.00, z=644.30] died, message: 'Nitwit fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Villager'/34381, l='ServerLevel[New World]', x=-4657.50, y=64.00, z=642.07] died, message: 'Villager fell out of the world'
-[18:50:32] [Server thread/INFO]: Villager Villager['Farmer'/34382, l='ServerLevel[New World]', x=-4664.48, y=64.94, z=662.90] died, message: 'Farmer fell out of the world'
-[18:50:32] [Server thread/INFO]: [Dev: Killed 1159 entities]
-[18:50:32] [Render thread/INFO]: Villager Villager['Nitwit'/34195, l='ClientLevel', x=-4640.70, y=72.05, z=698.51] died, message: 'Nitwit died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Villager'/34209, l='ClientLevel', x=-4637.75, y=63.00, z=624.27] died, message: 'Villager died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Cleric'/34222, l='ClientLevel', x=-4630.18, y=64.25, z=652.50] died, message: 'Cleric died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Fletcher'/34224, l='ClientLevel', x=-4623.57, y=65.00, z=667.20] died, message: 'Fletcher died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/34268, l='ClientLevel', x=-4654.50, y=64.00, z=663.45] died, message: 'Farmer died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/34270, l='ClientLevel', x=-4650.61, y=64.00, z=645.20] died, message: 'Farmer died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Nitwit'/34292, l='ClientLevel', x=-4651.15, y=64.00, z=672.14] died, message: 'Nitwit died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Leatherworker'/34294, l='ClientLevel', x=-4651.24, y=66.00, z=688.82] died, message: 'Leatherworker died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/34373, l='ClientLevel', x=-4663.71, y=63.00, z=621.02] died, message: 'Farmer died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Nitwit'/34380, l='ClientLevel', x=-4664.50, y=64.00, z=644.30] died, message: 'Nitwit died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Villager'/34381, l='ClientLevel', x=-4657.50, y=64.00, z=642.07] died, message: 'Villager died'
-[18:50:32] [Render thread/INFO]: Villager Villager['Farmer'/34382, l='ClientLevel', x=-4664.48, y=64.94, z=662.90] died, message: 'Farmer died'
-[18:50:32] [Render thread/INFO]: [CHAT] Killed 1159 entities
-[18:50:41] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 6682ms or 133 ticks behind
-[18:51:19] [Server thread/INFO]: Saving and pausing game...
-[18:51:19] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:51:19] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:51:19] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:51:31] [Server thread/INFO]: Changing view distance to 10, from 32
-[18:51:31] [Server thread/INFO]: Changing simulation distance to 10, from 32
-[18:51:37] [Server thread/INFO]: Saving and pausing game...
-[18:51:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:51:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:51:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:51:38] [Server thread/INFO]: Dev lost connection: Disconnected
-[18:51:38] [Server thread/INFO]: Dev left the game
-[18:51:38] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[18:51:38] [Server thread/INFO]: Stopping server
-[18:51:38] [Server thread/INFO]: Saving players
-[18:51:38] [Server thread/INFO]: Saving worlds
-[18:51:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[18:51:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[18:51:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[18:51:38] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[18:51:38] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[18:51:38] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[18:51:38] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[18:51:41] [Render thread/INFO]: Stopping!
+[25Dec2021 10:42:15.126] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\charl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 39.0.7, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407]
+[25Dec2021 10:42:15.143] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 17.0.1 by Oracle Corporation
+[25Dec2021 10:42:15.300] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/charl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327! Service=ModLauncher Env=CLIENT
+[25Dec2021 10:42:17.154] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\charl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[10:42:22] [Render thread/WARN]: Assets URL 'union:/C:/Users/charl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.7_mapped_official_1.18.1/forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!/assets/.mcassetsroot' uses unexpected schema
+[10:42:22] [Render thread/WARN]: Assets URL 'union:/C:/Users/charl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.0.7_mapped_official_1.18.1/forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!/data/.mcassetsroot' uses unexpected schema
+[25Dec2021 10:42:22.813] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10:42:22] [Render thread/INFO]: Setting user: Dev
+[10:42:23] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[10:42:23] [Render thread/ERROR]: Null comment for config option server, this is invalid and may be disallowed in the future.
+[10:42:25] [modloading-worker-0/INFO]: Forge mod loading, version 39.0.7, for MC 1.18.1 with MCP 20211210.034407
+[10:42:25] [modloading-worker-0/INFO]: MinecraftForge v39.0.7 Initialized
+[25Dec2021 10:42:26.982] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[10:42:27] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/chunk_generator / maplestorymod:chunkgen]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate value 'RecordCodec[UnitDecoder[com.charlieNgo.maplestorymod.world.MapleChunkGenerator$$Lambda$5410/0x00000008018048e0@2cd5b19c] * RegistryLookupCodec[ResourceKey[minecraft:root / minecraft:worldgen/biome]] * Field[settings: RecordCodec[UnitDecoder[com.charlieNgo.maplestorymod.world.MapleChunkGenerator$$Lambda$5406/0x0000000801804000@7109b603] * Field[base: Int] * Field[verticalvariance: Float] * Field[horizontalvariance: Float]]]]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/biome_source / maplestorymod:biomes]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate value 'RegistryLookupCodec[ResourceKey[minecraft:root / minecraft:worldgen/biome]][xmapped]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/configured_feature / minecraft:deepslate_silver_ore_block]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/placed_feature / minecraft:deepslate_silver_ore_block]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/configured_feature / minecraft:silver_ore_block]' to registry
+[10:42:27] [Render thread/ERROR]: Adding duplicate key 'ResourceKey[minecraft:worldgen/placed_feature / minecraft:silver_ore_block]' to registry
+[25Dec2021 10:42:28.046] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[25Dec2021 10:42:28.967] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA_OUTDATED Current: 39.0.7 Target: 39.0.8
+[10:42:34] [Worker-Main-23/WARN]: Unable to load model: 'maplestorymod:cra_staff#inventory' referenced from: maplestorymod:cra_staff#inventory: java.io.FileNotFoundException: maplestorymod:models/item/cra_staff.json
+[10:42:34] [Worker-Main-23/WARN]: Unable to load model: 'maplestorymod:cra_wand#inventory' referenced from: maplestorymod:cra_wand#inventory: java.io.FileNotFoundException: maplestorymod:models/item/cra_wand.json
+[10:42:34] [Worker-Main-23/WARN]: Unable to load model: 'minecraft:item/cra_crossbow' referenced from: maplestorymod:cra_crossbow#inventory: java.io.FileNotFoundException: minecraft:models/item/cra_crossbow.json
+[10:42:35] [Worker-Main-23/WARN]: Texture maplestorymod:items/cra/cra_dagger with size 35x35 limits mip level from 4 to 0
+[10:42:37] [Render thread/INFO]: OpenAL initialized on device OpenAL Soft on 5 - DELL AW2518HF (AMD High Definition Audio Device)
+[10:42:37] [Render thread/INFO]: Sound engine started
+[10:42:38] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10:42:38] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10:42:39] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[10:42:44] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:44] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:44] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10:42:44] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10:42:44] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:44] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[10:42:46] [Render thread/INFO]: Loaded 7 recipes
+[10:42:46] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/deepslate_silver_ore
+com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'minecraft:deepslate_silver_ore'
+	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:99) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:98) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:108) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:51) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:39) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:138) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:118) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:83) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:72) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:96) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:374) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:47) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:41) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:83) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:72) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:96) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:374) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:190) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:187) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:383) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:255) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:252) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:975) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:789) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at net.minecraft.world.level.storage.loot.LootTables.lambda$apply$0(LootTables.java:41) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:39) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:17) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:12) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:139) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:112) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:122) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.makeServerStem(Minecraft.java:2071) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.doLoadLevel(Minecraft.java:1903) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.loadLevel(Minecraft.java:1872) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:476) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:330) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:257) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:323) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:28) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:88) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar%2355!:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar%2361!:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar%2355!:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:185) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.7.jar%230!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?]
+[10:42:47] [Render thread/INFO]: Loaded 1141 advancements
+[10:42:47] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[10:42:47] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:47] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:47] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10:42:47] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10:42:47] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10:42:47] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[10:42:49] [Render thread/INFO]: Loaded 7 recipes
+[10:42:49] [Render thread/ERROR]: Couldn't parse loot table maplestorymod:blocks/deepslate_silver_ore
+com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'minecraft:deepslate_silver_ore'
+	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:99) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:98) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:108) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:51) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:39) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:138) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:118) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:83) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:72) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:96) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:374) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:47) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:41) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:83) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:72) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:96) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:374) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:190) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:187) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:366) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:383) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:255) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:252) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:932) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1003) ~[gson-2.8.8.jar%2328!:?]
+	at com.google.gson.Gson.fromJson(Gson.java:975) ~[gson-2.8.8.jar%2328!:?]
+	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:789) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2376%2382!:?]
+	at net.minecraft.world.level.storage.loot.LootTables.lambda$apply$0(LootTables.java:41) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:39) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:17) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:12) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire$$$capture(CompletableFuture.java:718) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:67) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:139) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:112) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:122) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.makeServerStem(Minecraft.java:2071) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.doLoadLevel(Minecraft.java:1906) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.loadLevel(Minecraft.java:1872) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:476) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:330) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:257) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:323) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:28) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:88) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:527) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:85) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:185) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:184) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar%2355!:build 10]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar%2361!:build 10]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3174) ~[lwjgl-glfw-3.2.2.jar%2355!:build 10]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:185) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1065) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:660) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[forge-1.18.1-39.0.7_mapped_official_1.18.1-recomp.jar%2377!:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:38) ~[fmlloader-1.18.1-39.0.7.jar%230!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.0.7.jar%2310!:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:90) [bootstraplauncher-0.1.17.jar:?]
+[10:42:50] [Render thread/INFO]: Loaded 1141 advancements
+[10:42:50] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[25Dec2021 10:42:51.135] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10:42:51] [Server thread/INFO]: Starting integrated minecraft server version 1.18.1
+[10:42:51] [Server thread/INFO]: Generating keypair
+[10:42:51] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[10:42:51] [Render thread/INFO]: Preparing spawn area: 0%
+[10:42:51] [Render thread/INFO]: Preparing spawn area: 0%
+[10:42:52] [Render thread/INFO]: Preparing spawn area: 0%
+[10:42:52] [Render thread/INFO]: Preparing spawn area: 0%
+[10:42:53] [Render thread/INFO]: Preparing spawn area: 1%
+[10:42:53] [Render thread/INFO]: Preparing spawn area: 18%
+[10:42:55] [Render thread/INFO]: Preparing spawn area: 46%
+[10:42:55] [Render thread/INFO]: Preparing spawn area: 46%
+[10:42:55] [Render thread/INFO]: Preparing spawn area: 46%
+[10:42:55] [Render thread/INFO]: Preparing spawn area: 57%
+[10:42:56] [Server thread/INFO]: Successfully initialized permission handler forge:default_handler
+[10:42:56] [Render thread/INFO]: Time elapsed: 4970 ms
+[10:42:56] [Server thread/INFO]: Changing view distance to 12, from 10
+[10:42:56] [Server thread/INFO]: Changing simulation distance to 12, from 0
+[10:42:57] [Netty Local Client IO #0/INFO]: Connected to a modded server.
+[10:42:57] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@4bee0010
+[10:42:57] [Server thread/INFO]: Dev[local:E:912a70ec] logged in with entity id 3 at (-4451.9894533503775, 63.0, 510.1889136888071)
+[10:42:57] [Server thread/INFO]: Dev joined the game
+[10:42:58] [Render thread/INFO]: Loaded 134 advancements
+[10:43:14] [Server thread/INFO]: Dev has made the advancement [Isn't It Iron Pick]
+[10:43:14] [Render thread/INFO]: [CHAT] Dev has made the advancement [Isn't It Iron Pick]
+[10:43:14] [Render thread/INFO]: Loaded 138 advancements
+[10:43:21] [Server thread/INFO]: [Dev: Set own game mode to Survival Mode]
+[10:43:21] [Render thread/INFO]: [CHAT] Set own game mode to Survival Mode
+[10:44:10] [Render thread/INFO]: [CHAT] Unknown or incomplete command, see below for error
+[10:44:10] [Render thread/INFO]: [CHAT] /gamemode<--[HERE]
+[10:44:12] [Server thread/INFO]: [Dev: Set own game mode to Creative Mode]
+[10:44:12] [Render thread/INFO]: [CHAT] Set own game mode to Creative Mode
+[10:44:20] [Render thread/INFO]: Loaded 139 advancements
+[10:45:37] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[10:45:41] [Server thread/INFO]: Saving and pausing game...
+[10:45:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10:45:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10:45:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10:45:42] [Server thread/INFO]: Dev lost connection: Disconnected
+[10:45:42] [Server thread/INFO]: Dev left the game
+[10:45:42] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[10:45:42] [Server thread/INFO]: Stopping server
+[10:45:42] [Server thread/INFO]: Saving players
+[10:45:42] [Server thread/INFO]: Saving worlds
+[10:45:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10:45:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10:45:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10:45:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[10:45:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:45:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:45:42] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:46:00] [Render thread/INFO]: Stopping!

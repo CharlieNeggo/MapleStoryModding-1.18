@@ -21,5 +21,9 @@ public class MapleSpawnEggs {
             new ForgeSpawnEggItem (MapleModEntityTypes.OCTOPUS, 0xF1BF7B, 0xB21BFE, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<ForgeSpawnEggItem> MUDDY_SWAMP_MONSTER_SPAWN_EGG = ITEMS.register("muddy_swamp_monster_spawn_egg", () ->
             new ForgeSpawnEggItem (MapleModEntityTypes.MUDDYSWAMPMONSTER, 0xF1BF7B, 0x895500, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<ForgeSpawnEggItem> SMIRKY_GHOST_STUMP_SPAWN_EGG = ITEMS.register("smirky_ghost_stump_spawn_egg", () ->
+            new ForgeSpawnEggItem (MapleModEntityTypes.SMIRKYGHOSTSTUMP, 0xF1BF7B, 0xA27437, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<ForgeSpawnEggItem> COPPER_DRAKE_SPAWN_EGG = ITEMS.register("copper_drake_spawn_egg", () ->
+            new ForgeSpawnEggItem (MapleModEntityTypes.COPPERDRAKE, 0xF1BF7B, 0x0A3E00, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
 }

@@ -25,6 +25,10 @@ public class MapleCommonModEvents {
                     Heightmap.Types.WORLD_SURFACE, Octopus::canSpawnOctopus);
             SpawnPlacements.register(MapleModEntityTypes.GREENSLIME.get(), SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.WORLD_SURFACE, GreenSlime::canSpawnGreenSlime);
+            SpawnPlacements.register(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.WORLD_SURFACE, SmirkyGhostStump::canSpawnSmirkyGhostStump);
+            SpawnPlacements.register(MapleModEntityTypes.COPPERDRAKE.get(), SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.WORLD_SURFACE, CopperDrake::canSpawnCopperDrake);
         });
     }
 }
