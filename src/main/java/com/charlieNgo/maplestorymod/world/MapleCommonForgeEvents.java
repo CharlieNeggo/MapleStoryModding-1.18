@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.world;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -48,6 +48,10 @@ public class MapleCommonForgeEvents {
         if (event.getName().equals(new ResourceLocation("minecraft:desert"))) {
             event.getSpawns().addSpawn(MobCategory.MONSTER,
                     new MobSpawnSettings.SpawnerData(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), 15, 5, 20));
+        }
+        if (event.getName().equals(new ResourceLocation("minecraft:desert"))) {
+            event.getSpawns().addSpawn(MobCategory.MONSTER,
+                    new MobSpawnSettings.SpawnerData(MapleModEntityTypes.WOODENMASK.get(), 15, 5, 20));
         }
         if (event.getName().equals(new ResourceLocation("minecraft:dark_forest"))) {
             event.getSpawns().addSpawn(MobCategory.MONSTER,

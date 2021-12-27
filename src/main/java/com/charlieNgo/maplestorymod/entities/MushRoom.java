@@ -207,7 +207,7 @@ public class MushRoom extends Mob implements Enemy {
     }
 
     protected float getStandingEyeHeight(Pose p_33614_, EntityDimensions p_33615_) {
-        return 0.525F * p_33615_.height;
+        return 0.46F * p_33615_.height;
     }
 
     protected boolean isDealsDamage() {

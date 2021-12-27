@@ -6,10 +6,9 @@ import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
 import com.charlieNgo.maplestorymod.init.Consumables.Foods.MapleConsumables;
 import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCRASetItems;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
-import com.charlieNgo.maplestorymod.slots.MapleSlot;
 import com.charlieNgo.maplestorymod.world.MapleBiomeProvider;
 import com.charlieNgo.maplestorymod.world.MapleChunkGenerator;
 import com.charlieNgo.maplestorymod.world.OreGeneration;
@@ -46,7 +45,6 @@ public class MapleStoryMod {
         MapleCRASetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        MapleSlot.SHOULDER.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

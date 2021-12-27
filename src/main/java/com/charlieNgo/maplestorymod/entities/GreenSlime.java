@@ -207,7 +207,7 @@ public class GreenSlime extends Mob implements Enemy {
     }
 
     protected float getStandingEyeHeight(Pose p_33614_, EntityDimensions p_33615_) {
-        return 0.625F * p_33615_.height;
+        return 0.59F * p_33615_.height;
     }
 
     protected boolean isDealsDamage() {

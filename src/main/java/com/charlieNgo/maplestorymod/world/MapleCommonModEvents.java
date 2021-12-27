@@ -2,7 +2,7 @@ package com.charlieNgo.maplestorymod.world;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.entities.*;
-import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,6 +29,8 @@ public class MapleCommonModEvents {
                     Heightmap.Types.WORLD_SURFACE, SmirkyGhostStump::canSpawnSmirkyGhostStump);
             SpawnPlacements.register(MapleModEntityTypes.COPPERDRAKE.get(), SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.WORLD_SURFACE, CopperDrake::canSpawnCopperDrake);
+            SpawnPlacements.register(MapleModEntityTypes.WOODENMASK.get(), SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.WORLD_SURFACE, WoodenMask::canSpawnWoodenMask);
         });
     }
 }

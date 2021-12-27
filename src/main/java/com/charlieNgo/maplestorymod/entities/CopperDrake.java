@@ -36,7 +36,7 @@ public class CopperDrake extends MapleMonster{
     }
 
     protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
-        return 1.55F;
+        return 1.1F;
     }
 
     protected Entity.MovementEmission getMovementEmission() {

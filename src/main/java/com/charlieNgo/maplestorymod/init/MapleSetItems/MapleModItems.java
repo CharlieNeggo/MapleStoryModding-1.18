@@ -28,7 +28,7 @@ public class MapleModItems {
     public static final RegistryObject<Item> SILVER = ITEMS.register("silver_ore", ()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
-    // Items
+    //Items
     public static final RegistryObject<Item> ORANGEMUSHROOMCAP = ITEMS.register("orangemushroomcap", () ->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> SQUISHY_LIQUID = ITEMS.register("squishy_liquid", () ->
@@ -43,17 +43,17 @@ public class MapleModItems {
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
     public static final RegistryObject<Item> SMIRKY_SEEDLING = ITEMS.register("smirky_seedling",()->
             new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<Item> DRAKE_SKULL = ITEMS.register("drake_skull",()->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
+    public static final RegistryObject<Item> WOODEN_BOARD = ITEMS.register("wooden_board",()->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(64)));
 
-    //Kaiser Sword
     public static final RegistryObject<SwordItem> KAISER_KAISREUM = ITEMS.register("kaiser_kaisereum", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 15, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    //Dual Blade Dagger
     public static final RegistryObject<SwordItem> DUAL_BLADE_DAGGER = ITEMS.register("dual_blade_dagger", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    //Dual Blade Katara
     public static final RegistryObject<SwordItem> DUAL_BLADE_KATARA = ITEMS.register("dual_blade_katara", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-    //Aran Polearmw
     public static final RegistryObject<AxeItem> ARAN_AXE_ONE = ITEMS.register("aran_axe_one", () ->
             new AxeItem(MapleSetWeaponInit.MAPLE, 12, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
@@ -79,7 +79,7 @@ public class MapleModItems {
     public static final RegistryObject<MapleDaggerItem> TIMELESS_KATARA = ITEMS.register("timeless_katara", ()->
             new MapleDaggerItem(MapleSetWeaponInit.MAPLE, 7, 3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
-    //Items for Two handed swords 10-130
+    //Items for Two-handed swords 10-130
     public static final RegistryObject<SwordItem> SPARTA = ITEMS.register("sparta", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 3, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> BASIC_TWOHANDED_SWORD = ITEMS.register("basic_twohanded_sword", () ->
@@ -91,7 +91,7 @@ public class MapleModItems {
     public static final RegistryObject<SwordItem> DEVIL_SUNRISE = ITEMS.register("devil_sunrise", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
-    //Items for Pole arms 10-130
+    //Items for Pole-arms 10-130
     public static final RegistryObject<SwordItem> BASIC_POLEARM = ITEMS.register("basic_polearm", () ->
             new SwordItem(MapleSetWeaponInit.MAPLE, 4, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> STEEL_POLEARM = ITEMS.register("steel_polearm", () ->
@@ -102,6 +102,18 @@ public class MapleModItems {
             new SwordItem(MapleSetWeaponInit.MAPLE, 8, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> TIMELESS_POLEARM = ITEMS.register("timeless_polearm", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 9, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+
+    //Items for Shining Rods for 10-130
+    public static final RegistryObject<SwordItem> PLAIN = ITEMS.register("plain", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 1, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> DECOR = ITEMS.register("decor", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 2, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> LIGHT_SAGE_WING = ITEMS.register("light_sage_wing", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 3, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> GLEAMING_GOLD_WING = ITEMS.register("gleaming_gold_wing", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 4, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
+    public static final RegistryObject<SwordItem> TIMELESS_DEAD_END = ITEMS.register("timeless_dead_end", () ->
+            new SwordItem(MapleSetWeaponInit.MAPLE, 5, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
 
     //Block Items
     public static final RegistryObject<BlockItem> SILVER_ORE_BLOCK = ITEMS.register("silver_ore_block",

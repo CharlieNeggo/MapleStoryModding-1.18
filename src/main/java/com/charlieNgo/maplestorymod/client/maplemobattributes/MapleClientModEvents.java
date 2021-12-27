@@ -3,7 +3,6 @@ package com.charlieNgo.maplestorymod.client.maplemobattributes;
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.model.*;
 import com.charlieNgo.maplestorymod.client.render.*;
-import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleModEntityTypes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +20,7 @@ public class MapleClientModEvents {
         event.registerLayerDefinition(MuddySwampMonsterModel.LAYER_LOCATION, MuddySwampMonsterModel::createBodyLayer);
         event.registerLayerDefinition(SmirkyGhostStumpModel.LAYER_LOCATION, SmirkyGhostStumpModel::createBodyLayer);
         event.registerLayerDefinition(CopperDrakeModel.LAYER_LOCATION, CopperDrakeModel::createBodyLayer);
+        event.registerLayerDefinition(WoodenMaskModel.LAYER_LOCATION, WoodenMaskModel::createBodyLayer);
 
     }
 
@@ -33,6 +33,7 @@ public class MapleClientModEvents {
         event.registerEntityRenderer(MapleModEntityTypes.MUDDYSWAMPMONSTER.get(), MuddySwampMonsterRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.SMIRKYGHOSTSTUMP.get(), SmirkyGhostStumpRender::new);
         event.registerEntityRenderer(MapleModEntityTypes.COPPERDRAKE.get(), CopperDrakeRender::new);
+        event.registerEntityRenderer(MapleModEntityTypes.WOODENMASK.get(), WoodenMaskRender::new);
 
     }
 }

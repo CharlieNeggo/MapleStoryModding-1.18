@@ -5,12 +5,12 @@
   "item.maplestorymod.squishy_liquid": "Green Squishy Liquid",
   "item.maplestorymod.octopus_tentacle": "Octopus Tentacle",
   "item.maplestorymod.mud_clump": "Mud Clump",
-  "item.maplestory.smirky_seedling": "Smirking Seedling",
+  "item.maplestorymod.smirky_seedling": "Smirking Seedling",
+  "item.maplestorymod.wooden_board": "Wooden Board",
+  "item.maplestorymod.drake_skull": "Drake Skull",
 
   "block.maplestorymod.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.maplestorymod.silver_ore_block": "Silver Ore Block",
-
-  "item.maplestorymod.flint_bullet": "Flint Bullet",
 
   "item.maplestorymod.arcane_essence": "Arcane Essence",
   "item.maplestorymod.absolab_essence": "AbsoLab Essence",
@@ -41,6 +41,7 @@
   "item.maplestorymod.power_elixir": "Power Elixir",
   "item.maplestorymod.melting_cheese": "Melting Cheese",
   "item.maplestorymod.reindeer_milk": "Reindeer Milk",
+  "item.maplestorymod.unagi": "Unagi",
 
   "item.maplestorymod.utgard_polearm": "Utgard Polearm",
   "item.maplestorymod.utgard_twohanded_sword": "Utgard Two Handed Sword",
@@ -71,6 +72,12 @@
   "item.maplestorymod.arcane_twohanded_sword": "Arcane Two Handed Sword",
   "item.maplestorymod.arcane_dagger": "Arcane Dagger",
   "item.maplestorymod.arcane_katara": "Arcane Katara",
+
+  "item.maplestorymod.plain": "Plain",
+  "item.maplestorymod.decor": "Decor",
+  "item.maplestorymod.light_sage_wing": "Light Sage Wing",
+  "item.maplestorymod.gleaming_gold_wing": "Gleaming Gold Wing",
+  "item.maplestorymod.timeless_dead_end": "Timeless Dead End",
 
   "item.maplestorymod.beginner_dagger": "Beginner Dagger",
   "item.maplestorymod.cursayer_dagger": "Cursayer Dagger",
@@ -124,6 +131,8 @@
   "item.maplestorymod.cra_twohanded_sword": "Fafnir Moon Glaive",
   "item.maplestorymod.cra_crossbow": "Fafnir Windwing Shooter",
   "item.maplestorymod.cra_bow": "Fafnir Wind Chaser",
+  "item.maplestorymod.cra_staff": "Fafnir Mana Crown",
+  "item.maplestorymod.cra_shining_rod": "Fafnir Mana Cradle",
 
   "item.maplestorymod.arcane_thief_hat": "Arcane Thief Hat",
   "item.maplestorymod.arcane_thief_suit": "Arcane Thief Suit",
@@ -148,6 +157,7 @@
   "entity.maplestorymod.muddy_swamp_monster":"Muddy Swamp Monster",
   "entity.maplestorymod.smirky_ghost_stump": "Smirky Ghost Stump",
   "entity.maplestorymod.copper_drake":"Copper Drake",
+  "entity.maplestorymod.wooden_mask": "Wooden Mask",
 
   "item.maplestorymod.mushroom_spawn_egg": "Mushroom Spawn Egg",
   "item.maplestorymod.blue_snail_spawn_egg": "Blue Snail Spawn Egg",
@@ -156,6 +166,7 @@
   "item.maplestorymod.muddy_swamp_monster_spawn_egg": "Muddy Swamp Monster Egg",
   "item.maplestorymod.smirky_ghost_stump_spawn_egg": "Smirking Ghost Stump Egg",
   "item.maplestorymod.copper_drake_spawn_egg": "Copper Drake Egg",
+  "item.maplestorymod.wooden_mask_spawn_egg": "Wooden Mask Egg",
 
   "itemGroup.maplestorymod": "Maple Story Mod"
 }

@@ -35,8 +35,11 @@ public class MapleConsumables {
 
     //Foods
     public static final RegistryObject<Item> MELTING_CHEESE = ITEMS.register("melting_cheese", () ->
-            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB) .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB) .food(new FoodProperties.Builder().nutrition(4).saturationMod(0.4f).
                     fast().alwaysEat().effect(new MobEffectInstance(MobEffects.HEAL, 2), 2).build())));
+    public static final RegistryObject<Item> UNAGI = ITEMS.register("unagi", () ->
+            new Item(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB) .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).
+                    fast().alwaysEat().effect(new MobEffectInstance(MobEffects.HEAL, 1), 1).build())));
 }
 
 

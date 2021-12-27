@@ -13,7 +13,7 @@ realmsNotifications:true
 reducedDebugInfo:false
 showSubtitles:false
 touchscreen:false
-fullscreen:false
+fullscreen:true
 bobView:true
 toggleCrouch:false
 toggleSprint:false
@@ -26,7 +26,7 @@ fovEffectScale:0.63921446
 gamma:1.0
 renderDistance:12
 simulationDistance:12
-entityDistanceScaling:5.0
+entityDistanceScaling:2.5
 guiScale:3
 particles:0
 maxFps:260

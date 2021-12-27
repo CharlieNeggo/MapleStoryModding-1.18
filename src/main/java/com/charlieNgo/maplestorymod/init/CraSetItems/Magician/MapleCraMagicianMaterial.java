@@ -9,7 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class MapleCraMagicianMaterial {
     public static final ArmorMaterial CRA = new MapleCraArmorMaterial(20, new int[] { 950, 1400, 1800, 1000 },
-            new int[] { 8, 11, 13, 8 }, 0.2f, 9f, MapleStoryMod.MODID + ":cra",
+            new int[] { 1, 11, 21, 8 }, 0.2f, 9f, MapleStoryMod.MODID + ":cra",
             SoundEvents.ARMOR_EQUIP_GENERIC, () -> Ingredient.of(MapleModItems.CRA.get()));
 
     private MapleCraMagicianMaterial() {

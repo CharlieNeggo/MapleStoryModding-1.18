@@ -79,13 +79,13 @@ public abstract class MapleMonster extends PathfinderMob implements Enemy {
     }
 
     public static boolean isDarkEnoughToSpawn(ServerLevelAccessor p_33009_, BlockPos p_33010_, Random p_33011_) {
-        if (p_33009_.getBrightness(LightLayer.SKY, p_33010_) > p_33011_.nextInt(72)) {
+        if (p_33009_.getBrightness(LightLayer.SKY, p_33010_) > p_33011_.nextInt(45)) {
             return false;
-        } else if (p_33009_.getBrightness(LightLayer.BLOCK, p_33010_) > 0) {
+        } else if (p_33009_.getBrightness(LightLayer.BLOCK, p_33010_) > 35) {
             return false;
         } else {
-            int i = p_33009_.getLevel().isThundering() ? p_33009_.getMaxLocalRawBrightness(p_33010_, 10) : p_33009_.getMaxLocalRawBrightness(p_33010_);
-            return i <= p_33011_.nextInt(8);
+            int i = p_33009_.getLevel().isThundering() ? p_33009_.getMaxLocalRawBrightness(p_33010_, 45) : p_33009_.getMaxLocalRawBrightness(p_33010_);
+            return i <= p_33011_.nextInt(45);
         }
     }
 
@@ -106,10 +106,6 @@ public abstract class MapleMonster extends PathfinderMob implements Enemy {
     }
 
     protected boolean shouldDropLoot() {
-        return true;
-    }
-
-    public boolean isPreventingPlayerRest(Player p_33036_) {
         return true;
     }
 

@@ -39,11 +39,7 @@ public class BlueSnail extends MapleMonster {
     }
 
     protected float getStandingEyeHeight(Pose p_32604_, EntityDimensions p_32605_) {
-        return 0.55F;
-    }
-
-    public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 22.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 3.0D);
+        return 0.45F;
     }
 
     protected Entity.MovementEmission getMovementEmission() {

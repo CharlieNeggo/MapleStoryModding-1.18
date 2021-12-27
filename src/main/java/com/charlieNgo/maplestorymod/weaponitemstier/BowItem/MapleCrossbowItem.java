@@ -40,6 +40,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem {
     private static final int MAX_CHARGE_DURATION = 25;
     public static final int DEFAULT_RANGE = 8;
     protected int fireDelay;
+    protected float getShootingPower;
     private boolean startSoundPlayed = false;
     private boolean midLoadSoundPlayed = false;
     private static final float START_SOUND_PERCENT = 0.2F;
@@ -47,9 +48,11 @@ public class MapleCrossbowItem extends ProjectileWeaponItem {
     private static final float ARROW_POWER = 3.15F;
     private static final float FIREWORK_POWER = 1.6F;
 
-    public MapleCrossbowItem(int fireDelay, Properties p_40850_) {
+    public MapleCrossbowItem(int fireDelay, float getShootingPower, Properties p_40850_) {
         super(p_40850_);
         this.fireDelay = fireDelay;
+        this.getShootingPower = getShootingPower;
+
     }
 
 
@@ -86,7 +89,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem {
     }
 
     private static float getShootingPower(ItemStack p_40946_) {
-        return containsChargedProjectile(p_40946_, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
+        return containsChargedProjectile(p_40946_, Items.FIREWORK_ROCKET) ? 1.6F : 10.15F;
     }
 
     public void releaseUsing(ItemStack p_40875_, Level p_40876_, LivingEntity p_40877_, int p_40878_) {
@@ -95,7 +98,6 @@ public class MapleCrossbowItem extends ProjectileWeaponItem {
             SoundSource soundsource = p_40877_ instanceof Player ? SoundSource.PLAYERS : SoundSource.HOSTILE;
             p_40876_.playSound(null, p_40877_.getX(), p_40877_.getY(), p_40877_.getZ(), SoundEvents.CROSSBOW_LOADING_END, soundsource, 1.0F, 1.0F / (p_40876_.getRandom().nextFloat() * 0.5F + 1.0F) + 0.2F);
         }
-
     }
 
     private static boolean tryLoadProjectiles(LivingEntity p_40860_, ItemStack p_40861_) {
@@ -345,6 +347,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem {
             ItemStack itemstack = list.get(0);
 
             int fireDelay = getFireDelay(p_40880_, null);
+            float shootingPower = getShootingPower(p_40880_);
 
             p_40882_.add((new TranslatableComponent("item.minecraft.crossbow.projectile")).append(" ").append(itemstack.getDisplayName()));
             if (p_40883_.isAdvanced() && itemstack.is(Items.FIREWORK_ROCKET)) {
