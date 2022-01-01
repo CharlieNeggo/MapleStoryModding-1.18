@@ -17,6 +17,7 @@ import com.charlieNgo.maplestorymod.init.UtgardSetItems.Warrior.MapleUtgardWarri
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Warrior.MapleUtgardWarriorMaterial;
 import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleBowItem;
 import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.weaponitemstier.BowItem.MapleStoryBow;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,22 +36,19 @@ public class MapleUtgardSetItems {
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 7, -1.8F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     //Weapons Bowman
     public static final RegistryObject<MapleBowItem> UTGARD_BOW = ITEMS.register("utgard_bow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
+            new MapleBowItem(1, 1, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     public static final RegistryObject<MapleCrossbowItem> UTGARD_CROSSBOW = ITEMS.register("utgard_crossbow", () ->
-            new MapleCrossbowItem(1, 1, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
-
+            new MapleCrossbowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     //Weapons Magicians
     public static final RegistryObject<SwordItem> UTGARD_STAFF = ITEMS.register("utgard_staff", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 2, -2F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> UTGARD_SHINING_ROD = ITEMS.register("utgard_shining_rod", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 2, -2F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Weapons Thief
     public static final RegistryObject<SwordItem> UTGARD_DAGGER = ITEMS.register("utgard_dagger", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> UTGARD_KATARA = ITEMS.register("utgard_katara", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 6, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Armor Thief
     public static final RegistryObject<ArmorItem> UTGARD_CHASER_HAT = ITEMS.register("utgard_chaser_hat", () ->
             new MapleUtgardThiefBuff(MapleUtgardThiefMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -58,7 +56,6 @@ public class MapleUtgardSetItems {
             new ArmorItem(MapleUtgardThiefMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> UTGARD_CHASER_BOOTS = ITEMS.register("utgard_chaser_boots", () ->
             new MapleUtgardThiefBuffTwo(MapleUtgardThiefMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Armor Warrior
     public static final RegistryObject<ArmorItem> UTGARD_BATTLE_HELMET = ITEMS.register("utgard_battle_helmet", () ->
             new MapleUtgardWarriorBuff(MapleUtgardWarriorMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -66,7 +63,6 @@ public class MapleUtgardSetItems {
             new ArmorItem(MapleUtgardWarriorMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> UTGARD_BATTLE_BOOTS = ITEMS.register("utgard_battle_boots", () ->
             new MapleUtgardWarriorBuffTwo(MapleUtgardWarriorMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Armor Bowman
     public static final RegistryObject<ArmorItem> UTGARD_SENTINEL_CAP = ITEMS.register("utgard_sentinel_cap", () ->
             new MapleUtgardBowmanBuff(MapleUtgardBowmanMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -74,7 +70,6 @@ public class MapleUtgardSetItems {
             new ArmorItem(MapleUtgardBowmanMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> UTGARD_SENTINEL_BOOTS = ITEMS.register("utgard_sentinel_boots", () ->
             new MapleUtgardBowmanBuffTwo(MapleUtgardBowmanMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Armor Pirate
     public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_HAT = ITEMS.register("utgard_skipper_hat", () ->
             new MapleUtgardPirateBuff(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -82,7 +77,6 @@ public class MapleUtgardSetItems {
             new ArmorItem(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> UTGARD_SKIPPER_BOOTS = ITEMS.register("utgard_skipper_boots", () ->
             new MapleUtgardPirateBuff(MapleUtgardPirateMaterial.UTGARD, EquipmentSlot.FEET, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Armor Magician
     public static final RegistryObject<ArmorItem> UTGARD_MAGE_SALLET = ITEMS.register("utgard_mage_sallet", () ->
             new MapleUtgardMagicianBuff(MapleUtgardMagicianMaterial.UTGARD, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));

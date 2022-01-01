@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " xw",
+    "x w",
+    " xw"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "maplestorymod:silver_ore"
+    },
+    "w":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:beginner_bowman_bow",
+    "count": 1
+  }
+}

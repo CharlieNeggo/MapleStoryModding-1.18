@@ -35,25 +35,21 @@ public class MapleCRASetItems {
             new AxeItem(MapleCraWeaponInit.CRA, 16, -3.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> CRA_TWOHANDED_SWORD = ITEMS.register("cra_twohanded_sword", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 13, -2.0F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Thief Weapons
     public static final RegistryObject<SwordItem> CRA_DAGGER = ITEMS.register("cra_dagger", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> CRA_KATARA = ITEMS.register("cra_katara", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Magician Items
     public static final RegistryObject<SwordItem> CRA_STAFF = ITEMS.register("cra_staff", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 3, -2F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<SwordItem> CRA_SHINING_ROD = ITEMS.register("cra_shining_rod", ()->
             new SwordItem(MapleCraWeaponInit.CRA, 3, -2F, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Bowman Items
     public static final RegistryObject<MapleBowItem> CRA_BOW = ITEMS.register("cra_bow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
+            new MapleBowItem(1, 12000, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     public static final RegistryObject<MapleCrossbowItem> CRA_CROSSBOW = ITEMS.register("cra_crossbow", () ->
-            new MapleCrossbowItem(1, 2, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
-
+            new MapleCrossbowItem(new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB).stacksTo(1)));
     //Thief
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_HOOD = ITEMS.register("cra_assassin_hood", () ->
             new MapleCraThiefBuffTwo(MapleCraThiefMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -61,7 +57,6 @@ public class MapleCRASetItems {
             new ArmorItem(MapleCraThiefMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_ASSASSIN_LEGGINGS = ITEMS.register("cra_assassin_leggings", () ->
             new MapleCraThiefBuff(MapleCraThiefMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Warrior
     public static final RegistryObject<ArmorItem> CRA_WARRIOR_HELMET = ITEMS.register("cra_warrior_helmet", () ->
             new MapleCraWarriorBuff(MapleCraWarriorMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -69,7 +64,6 @@ public class MapleCRASetItems {
             new ArmorItem(MapleCraWarriorMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_WARRIOR_PANTS = ITEMS.register("cra_warrior_pants", () ->
             new MapleCraWarriorBuffTwo(MapleCraWarriorMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Magician
     public static final RegistryObject<ArmorItem> CRA_DUNWITCH_HAT = ITEMS.register("cra_dunwitch_hat", () ->
             new MapleCraMagicianBuff(MapleCraMagicianMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -77,7 +71,6 @@ public class MapleCRASetItems {
             new ArmorItem(MapleCraMagicianMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_DUNWITCH_PANTS = ITEMS.register("cra_dunwitch_pants", () ->
             new MapleCraMagicianBuffTwo(MapleCraMagicianMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Pirate
     public static final RegistryObject<ArmorItem> CRA_WANDERER_HAT = ITEMS.register("cra_wanderer_hat", () ->
             new MapleCraPirateBuff(MapleCraPirateMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
@@ -85,7 +78,6 @@ public class MapleCRASetItems {
             new ArmorItem(MapleCraPirateMaterial.CRA, EquipmentSlot.CHEST, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> CRA_WANDERER_PANTS = ITEMS.register("cra_wanderer_pants", () ->
             new MapleCraPirateBuffTwo(MapleCraPirateMaterial.CRA, EquipmentSlot.LEGS, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));
-
     //Bowman
     public static final RegistryObject<ArmorItem> CRA_RANGER_BERET = ITEMS.register("cra_ranger_beret", () ->
             new MapleCraBowmanBuff(MapleCraBowmanMaterial.CRA, EquipmentSlot.HEAD, new Item.Properties().tab(MapleStoryMod.MAPLESTORY_TAB)));

@@ -1,22 +1,25 @@
 package com.charlieNgo.maplestorymod;
 
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
+import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.enchantment.MapleModEnchantments;
 import com.charlieNgo.maplestorymod.init.AbsolabSetItems.MapleAbsolabSetItems;
 import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
 import com.charlieNgo.maplestorymod.init.Consumables.Foods.MapleConsumables;
 import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCRASetItems;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
 import com.charlieNgo.maplestorymod.world.MapleBiomeProvider;
 import com.charlieNgo.maplestorymod.world.MapleChunkGenerator;
 import com.charlieNgo.maplestorymod.world.OreGeneration;
+import com.charlieNgo.maplestorymod.world.structures.Structures;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -24,6 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 @Mod("maplestorymod")
 public class MapleStoryMod {
@@ -36,6 +40,7 @@ public class MapleStoryMod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        MapleModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleStoryBlocks.BLOCK.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleConsumables.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -47,14 +52,16 @@ public class MapleStoryMod {
         MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
 
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus bus = MinecraftForge.EVENT_BUS;
         bus.addListener(this::setup);
+//        bus.addListener(EventPriority.NORMAL, Structures::addDimensionalSpacing);
+//        bus.addListener(EventPriority.NORMAL, Structures::setupStructureSpawns);
 
     }
 
     public static final CreativeModeTab MAPLESTORY_TAB = new CreativeModeTab(MODID) { //maplestorymod
         @Override
-        public ItemStack makeIcon() {
+        public @NotNull ItemStack makeIcon() {
             return MapleModItems.ORANGEMUSHROOMCAP.get().getDefaultInstance();
         }
     };
@@ -68,6 +75,8 @@ public class MapleStoryMod {
                     MapleBiomeProvider.CODEC);
 
             event.enqueueWork(OreGeneration::registerOres);
+            Structures.setupStructures();
+            Structures.registerConfiguredStructures();
         });
     }
 

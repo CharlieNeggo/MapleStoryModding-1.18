@@ -27,7 +27,6 @@ public class CraWarriorClientEvents {
                     target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
                     target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 10*30));
                     target.addEffect(new MobEffectInstance(MobEffects.WITHER, 10*30));
-
                 }
             }
         }

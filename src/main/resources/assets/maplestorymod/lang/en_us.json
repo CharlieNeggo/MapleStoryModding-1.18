@@ -100,7 +100,7 @@
   "item.maplestorymod.absolab_knight_helmet": "AbsoLab Knight Helmet",
   "item.maplestorymod.absolab_knight_chest": "AbsoLab Knight Chest",
   "item.maplestorymod.absolab_knight_shoe": "AbsoLab Knight Shoe",
-  "item.maplestorymod.absolab_archer_hood": "AbsoLab Archer_hood",
+  "item.maplestorymod.absolab_archer_hood": "AbsoLab Archer Hood",
   "item.maplestorymod.absolab_archer_suit": "AbsoLab Archer Suit",
   "item.maplestorymod.absolab_archer_shoes": "AbsoLab Archer Shoes",
   "item.maplestorymod.absolab_mage_crown": "AbsoLab Mage Crown",
@@ -167,6 +167,26 @@
   "item.maplestorymod.smirky_ghost_stump_spawn_egg": "Smirking Ghost Stump Egg",
   "item.maplestorymod.copper_drake_spawn_egg": "Copper Drake Egg",
   "item.maplestorymod.wooden_mask_spawn_egg": "Wooden Mask Egg",
+
+  "item.maplestorymod.beginner_bowman_bow": "Beginner Bowman's Bow",
+  "item.maplestorymod.ryden": "Ryden",
+  "item.maplestorymod.red_hinkel": "Red Hinkel",
+  "item.maplestorymod.metus": "Metus",
+  "item.maplestorymod.timeless_engaw": "Timeless Engaw",
+
+  "item.maplestorymod.red_duke": "Red Duke",
+  "item.maplestorymod.yellow_jangoon_armor": "Yellow Jangoon Armor",
+  "item.maplestorymod.brown_jangoon_pants": "Brown Jangoon Pants",
+  "item.maplestorymod.maroon_jangoon_shoes": "Maroon Jangoon Shoes",
+
+  "item.maplestorymod.meso_zero": "Meso Zero",
+  "item.maplestorymod.meso_one": "Meso One",
+  "item.maplestorymod.meso_two": "Meso Two",
+  "item.maplestorymod.meso_three": "Meso Three",
+  "enchantment.maplestorymod.lightning_striker": "Lightning Striker",
+  "enchantment.maplestorymod.dragon_breathe": "Dragon Breathe",
+  "enchantment.maplestorymod.tnt": "TNT",
+  "enchantment.maplestorymod.fireball": "Fireball",
 
   "itemGroup.maplestorymod": "Maple Story Mod"
 }

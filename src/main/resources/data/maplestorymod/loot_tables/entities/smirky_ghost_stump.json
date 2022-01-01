@@ -65,7 +65,36 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:iron_dagger"
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 5.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            }
+          ],
+          "name": "maplestorymod:meso_zero"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:beginner_dagger"
         }
       ],
       "conditions": [
@@ -74,7 +103,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.10,
+          "chance": 0.05,
           "looting_multiplier": 0.1
         }
       ]
@@ -85,7 +114,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:sparta"
+          "name": "maplestorymod:basic_twohanded_sword"
         }
       ],
       "conditions": [
@@ -94,7 +123,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.10,
+          "chance": 0.05,
           "looting_multiplier": 0.1
         }
       ]
@@ -105,7 +134,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:steel_polearm"
+          "name": "maplestorymod:basic_polearm"
         }
       ],
       "conditions": [
@@ -114,7 +143,47 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.10,
+          "chance": 0.05,
+          "looting_multiplier": 0.1
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:plain"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.05,
+          "looting_multiplier": 0.1
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:beginner_bowman_bow"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.05,
           "looting_multiplier": 0.1
         }
       ]

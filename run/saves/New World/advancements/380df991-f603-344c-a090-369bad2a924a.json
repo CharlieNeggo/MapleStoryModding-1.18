@@ -1,78 +1,209 @@
 {
-  "minecraft:recipes/transportation/acacia_boat": {
+  "minecraft:recipes/building_blocks/light_blue_wool": {
     "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/oak_boat": {
+  "minecraft:recipes/food/cooked_mutton_from_campfire_cooking": {
     "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "has_mutton": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purple_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
+    "criteria": {
+      "has_porkchop": "2021-12-31 22:28:06 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "in_water": "2021-12-31 22:27:39 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/birch_boat": {
+  "minecraft:recipes/building_blocks/pink_wool": {
     "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:adventure/root": {
+  "minecraft:recipes/building_blocks/gray_wool": {
     "criteria": {
-      "killed_something": "2021-12-27 09:28:42 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:adventure/kill_a_mob": {
+  "minecraft:recipes/building_blocks/black_wool": {
     "criteria": {
-      "minecraft:creeper": "2021-12-27 10:06:52 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/jungle_boat": {
+  "minecraft:recipes/building_blocks/blue_wool": {
     "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:adventure/kill_all_mobs": {
+  "minecraft:recipes/decorations/white_bed": {
     "criteria": {
-      "minecraft:skeleton": "2021-12-27 10:07:07 -0500",
-      "minecraft:spider": "2021-12-27 10:07:12 -0500",
-      "minecraft:creeper": "2021-12-27 10:06:52 -0500",
-      "minecraft:witch": "2021-12-27 10:08:25 -0500",
-      "minecraft:zombie": "2021-12-27 10:07:05 -0500"
-    },
-    "done": false
-  },
-  "minecraft:recipes/transportation/spruce_boat": {
-    "criteria": {
-      "in_water": "2021-12-27 09:19:47 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
-  "minecraft:adventure/shoot_arrow": {
+  "minecraft:recipes/building_blocks/green_wool": {
     "criteria": {
-      "shot_arrow": "2021-12-27 09:28:35 -0500"
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_carpet": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brown_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_mutton_from_smoking": {
+    "criteria": {
+      "has_mutton": "2021-12-31 22:27:33 -0500"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:snowy_slopes": "2021-12-27 09:18:00 -0500",
-      "minecraft:river": "2021-12-27 09:19:29 -0500",
-      "minecraft:stony_shore": "2021-12-27 09:16:49 -0500",
-      "minecraft:forest": "2021-12-27 09:18:49 -0500",
-      "minecraft:frozen_peaks": "2021-12-27 09:18:03 -0500",
-      "minecraft:plains": "2021-12-27 09:16:53 -0500"
+      "minecraft:river": "2021-12-31 22:26:39 -0500",
+      "minecraft:forest": "2021-12-31 22:26:20 -0500",
+      "minecraft:plains": "2021-12-31 22:26:41 -0500"
     },
     "done": false
+  },
+  "minecraft:recipes/building_blocks/magenta_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2021-12-31 22:27:29 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2021-12-31 22:27:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/painting": {
+    "criteria": {
+      "has_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_banner": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2021-12-31 22:27:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2021-12-31 22:27:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/yellow_wool": {
+    "criteria": {
+      "has_white_wool": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_mutton": {
+    "criteria": {
+      "has_mutton": "2021-12-31 22:27:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_smoking": {
+    "criteria": {
+      "has_porkchop": "2021-12-31 22:28:06 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop": {
+    "criteria": {
+      "has_porkchop": "2021-12-31 22:28:06 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2021-12-31 22:26:56 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2021-12-31 22:27:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2021-12-31 22:27:39 -0500"
+    },
+    "done": true
   },
   "DataVersion": 2865
 }

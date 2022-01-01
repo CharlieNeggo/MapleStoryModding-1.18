@@ -17,9 +17,13 @@ import net.minecraft.world.level.Level;
 public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
     public static final int MAX_DRAW_DURATION = 20;
     public static final int DEFAULT_RANGE = 15;
+    protected static int powerForTime;
+    protected static int useDuration;
 
-    public MapleBowItem(Item.Properties p_40660_) {
+    public MapleBowItem( int powerForTime, int useDuration, Item.Properties p_40660_) {
         super(p_40660_);
+        this.powerForTime = powerForTime;
+        this.useDuration = useDuration;
     }
 
     public void releaseUsing(ItemStack p_40667_, Level p_40668_, LivingEntity p_40669_, int p_40670_) {
@@ -44,14 +48,14 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
                         ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                         AbstractArrow abstractarrow = arrowitem.createArrow(p_40668_, itemstack, player);
                         abstractarrow = customArrow(abstractarrow);
-                        abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);
+                        abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 5.0F, 1.0F);
                         if (f == 1.0F) {
                             abstractarrow.setCritArrow(true);
                         }
 
                         int j = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, p_40667_);
                         if (j > 0) {
-                            abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 0.5D + 0.5D);
+                            abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 1.5D + 1.5D);
                         }
 
                         int k = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PUNCH_ARROWS, p_40667_);
@@ -63,7 +67,7 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
                             abstractarrow.setSecondsOnFire(100);
                         }
 
-                        p_40667_.hurtAndBreak(1, player, (p_40665_) -> {
+                        p_40667_.hurtAndBreak(2, player, (p_40665_) -> {
                             p_40665_.broadcastBreakEvent(player.getUsedItemHand());
                         });
                         if (flag1 || player.getAbilities().instabuild && (itemstack.is(Items.SPECTRAL_ARROW) || itemstack.is(Items.TIPPED_ARROW))) {
@@ -87,18 +91,12 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
         }
     }
 
-    public static float getPowerForTime(int p_40662_) {
-        float f = (float)p_40662_ / 10.0F;
-        f = (f * f + f * 2.0F) / 3.0F;
-        if (f > 1.0F) {
-            f = 1.0F;
-        }
-
-        return f;
+    public static float getPowerForTime(int i) {
+        return powerForTime;
     }
 
     public int getUseDuration(ItemStack p_40680_) {
-        return 72000;
+        return useDuration;
     }
 
     public UseAnim getUseAnimation(ItemStack p_40678_) {

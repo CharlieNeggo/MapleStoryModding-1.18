@@ -1,3 +1,16 @@
+Build: 1.18.1-39.0.9 - Mon Dec 27 16:24:00 GMT 2021
+	sciwhiz12:
+		Re-add missing default spawn lists in features (#8285)
+		
+		Fixes #8265
+		Fixes #8301
+
+=========
+Build: 1.18.1-39.0.8 - Wed Dec 22 13:22:32 GMT 2021
+	JTK222:
+		Fixed incorrect generic in PermissionAPI (#8317)
+
+=========
 Build: 1.18.1-39.0.7 - Mon Dec 20 18:35:11 GMT 2021
 	JTK222:
 		Redo of the whole PermissionAPI (#7780)

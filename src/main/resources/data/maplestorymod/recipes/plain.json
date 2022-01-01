@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " w ",
+    " x "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "maplestorymod:silver_ore"
+    },
+    "w":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "maplestorymod:plain",
+    "count": 1
+  }
+}
