@@ -67,14 +67,14 @@ public class HenesyStructure extends StructureFeature<JigsawConfiguration> {
         );
 
         // Create a new context with the new config that has our json pool. We will pass this into JigsawPlacement.addPieces
-        var newContext = Structures.createContextWithConfig(context, newConfig);
+        var newContext = MapleStructures.createContextWithConfig(context, newConfig);
         // Last 'true' parameter means the structure will automatically be placed at ground level
         var generator = JigsawPlacement.addPieces(newContext,
                 PoolElementStructurePiece::new, blockpos, false, true);
 
         if (generator.isPresent()) {
             // Debugging help to quickly find our structures
-            MapleStoryMod.LOGGER.log(Level.INFO, "Thiefden at " + blockpos);
+            MapleStoryMod.LOGGER.log(Level.INFO, "Henesy house at " + blockpos);
         }
 
         // Return the pieces generator that is now set up so that the game runs it when it needs to create the layout of structure pieces.

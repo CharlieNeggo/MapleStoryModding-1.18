@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.util.enums.armor.MapleSetArmorMaterial;
+import com.charlieNgo.maplestorymod.util.armor.MapleSetArmorMaterial;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;

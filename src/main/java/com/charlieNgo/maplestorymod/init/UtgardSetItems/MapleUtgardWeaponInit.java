@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.init.UtgardSetItems;
 
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleUtgardItemTier;
+import com.charlieNgo.maplestorymod.util.weapon.MapleUtgardItemTier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 

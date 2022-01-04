@@ -52,7 +52,7 @@ public class PortalStructure extends StructureFeature<JigsawConfiguration> {
         );
 
         // Create a new context with the new config that has our json pool. We will pass this into JigsawPlacement.addPieces
-        var newContext = Structures.createContextWithConfig(context, newConfig);
+        var newContext = MapleStructures.createContextWithConfig(context, newConfig);
         var generator = JigsawPlacement.addPieces(newContext,
                 PoolElementStructurePiece::new, blockpos, false, !overworld);
 

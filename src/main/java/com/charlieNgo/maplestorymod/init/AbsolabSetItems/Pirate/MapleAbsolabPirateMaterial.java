@@ -2,7 +2,7 @@ package com.charlieNgo.maplestorymod.init.AbsolabSetItems.Pirate;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.util.enums.armor.MapleAbsolabArmorMaterial;
+import com.charlieNgo.maplestorymod.util.armor.MapleAbsolabArmorMaterial;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;

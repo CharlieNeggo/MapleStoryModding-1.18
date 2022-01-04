@@ -1,8 +1,7 @@
 package com.charlieNgo.maplestorymod.init.AbsolabSetItems;
 
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleAbsolabItemTier;
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleUtgardItemTier;
+import com.charlieNgo.maplestorymod.util.weapon.MapleAbsolabItemTier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 

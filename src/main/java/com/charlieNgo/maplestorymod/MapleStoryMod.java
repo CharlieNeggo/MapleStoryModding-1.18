@@ -10,24 +10,16 @@ import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCRASetItems;
 import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
-import com.charlieNgo.maplestorymod.world.MapleBiomeProvider;
-import com.charlieNgo.maplestorymod.world.MapleChunkGenerator;
-import com.charlieNgo.maplestorymod.world.OreGeneration;
-import com.charlieNgo.maplestorymod.world.structures.Structures;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import com.charlieNgo.maplestorymod.setup.MapleClientSetup;
+import com.charlieNgo.maplestorymod.setup.MapleSetup;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 
 @Mod("maplestorymod")
 public class MapleStoryMod {
@@ -35,10 +27,16 @@ public class MapleStoryMod {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger("Maple Story");
     public static final String MODID = "maplestorymod";
+
     public MapleStoryMod() {
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        // Register the deferred registry
+        MapleSetup.setup();
+
+        // Register the setup method for modloading
+        IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
+        modbus.addListener(MapleSetup::init);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(MapleClientSetup::init));
 
         MapleModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleStoryBlocks.BLOCK.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -51,36 +49,6 @@ public class MapleStoryMod {
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
-
-        IEventBus bus = MinecraftForge.EVENT_BUS;
-        bus.addListener(this::setup);
-//        bus.addListener(EventPriority.NORMAL, Structures::addDimensionalSpacing);
-//        bus.addListener(EventPriority.NORMAL, Structures::setupStructureSpawns);
-
-    }
-
-    public static final CreativeModeTab MAPLESTORY_TAB = new CreativeModeTab(MODID) { //maplestorymod
-        @Override
-        public @NotNull ItemStack makeIcon() {
-            return MapleModItems.ORANGEMUSHROOMCAP.get().getDefaultInstance();
-        }
-    };
-
-    private void setup(final FMLCommonSetupEvent event) {
-
-        event.enqueueWork(() -> {
-            Registry.register(Registry.CHUNK_GENERATOR, new ResourceLocation(MapleStoryMod.MODID, "chunkgen"),
-                    MapleChunkGenerator.CODEC);
-            Registry.register(Registry.BIOME_SOURCE, new ResourceLocation(MapleStoryMod.MODID, "biomes"),
-                    MapleBiomeProvider.CODEC);
-
-            event.enqueueWork(OreGeneration::registerOres);
-            Structures.setupStructures();
-            Structures.registerConfiguredStructures();
-        });
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
 
     }
 }

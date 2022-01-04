@@ -1,7 +1,6 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleArcaneItemTier;
-import com.charlieNgo.maplestorymod.util.enums.weapon.MapleModItemTier;
+import com.charlieNgo.maplestorymod.util.weapon.MapleModItemTier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
