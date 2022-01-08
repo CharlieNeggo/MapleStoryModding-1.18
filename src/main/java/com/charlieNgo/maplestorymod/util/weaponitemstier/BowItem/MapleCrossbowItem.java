@@ -77,7 +77,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
     }
 
     private static float getShootingPower(ItemStack p_40946_) {
-        return containsChargedProjectile(p_40946_, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
+        return containsChargedProjectile(p_40946_, Items.TNT) ? 4.15F : 4.15F;
     }
 
     public void releaseUsing(ItemStack p_40875_, Level p_40876_, LivingEntity p_40877_, int p_40878_) {
@@ -195,7 +195,7 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
 
     private static void shootProjectile(Level p_40895_, LivingEntity p_40896_, InteractionHand p_40897_, ItemStack p_40898_, ItemStack p_40899_, float p_40900_, boolean p_40901_, float p_40902_, float p_40903_, float p_40904_) {
         if (!p_40895_.isClientSide) {
-            boolean flag = p_40899_.is(Items.FIREWORK_ROCKET);
+            boolean flag = p_40899_.is(Items.TNT);
             Projectile projectile;
             if (flag) {
                 projectile = new FireworkRocketEntity(p_40895_, p_40899_, p_40896_, p_40896_.getX(), p_40896_.getEyeY() - (double)0.15F, p_40896_.getZ(), true);
@@ -351,9 +351,9 @@ public class MapleCrossbowItem extends ProjectileWeaponItem implements Vanishabl
         if (isCharged(p_40880_) && !list.isEmpty()) {
             ItemStack itemstack = list.get(0);
             p_40882_.add((new TranslatableComponent("item.minecraft.crossbow.projectile")).append(" ").append(itemstack.getDisplayName()));
-            if (p_40883_.isAdvanced() && itemstack.is(Items.FIREWORK_ROCKET)) {
+            if (p_40883_.isAdvanced() && itemstack.is(Items.TNT)) {
                 List<Component> list1 = Lists.newArrayList();
-                Items.FIREWORK_ROCKET.appendHoverText(itemstack, p_40881_, list1, p_40883_);
+                Items.TNT.appendHoverText(itemstack, p_40881_, list1, p_40883_);
                 if (!list1.isEmpty()) {
                     for(int i = 0; i < list1.size(); ++i) {
                         list1.set(i, (new TextComponent("  ")).append(list1.get(i)).withStyle(ChatFormatting.GRAY));

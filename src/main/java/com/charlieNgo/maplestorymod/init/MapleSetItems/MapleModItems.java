@@ -9,6 +9,7 @@ import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
 import com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem.MapleDaggerItem;
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import com.charlieNgo.maplestorymod.world.structures.HenesyStructure;
+import com.charlieNgo.maplestorymod.world.structures.MapleStructures;
 import com.charlieNgo.maplestorymod.world.structures.PortalStructure;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -25,6 +26,7 @@ import static com.charlieNgo.maplestorymod.MapleStoryMod.MODID;
 public class MapleModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<StructureFeature<?>> STRUCTURES = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, MODID);
+
 
     // For Armor Sets/Weapons for what material their going to be made out of
     public static final RegistryObject<Item> MAPLE = ITEMS.register("maple", () ->
@@ -165,6 +167,4 @@ public class MapleModItems {
             () -> new BlockItem(MapleStoryBlocks.DEEPSLATE_SILVER_ORE.get(), new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Structures
     public static final RegistryObject<StructureFeature<JigsawConfiguration>> HENESY = STRUCTURES.register("henesy", HenesyStructure::new);
-    public static final RegistryObject<StructureFeature<JigsawConfiguration>> PORTAL_OVERWORLD = STRUCTURES.register("portal_overworld", () -> new PortalStructure(true));
-
 }

@@ -48,6 +48,7 @@ public class MapleStoryMod {
         MapleCRASetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        MapleModItems.STRUCTURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
 
     }

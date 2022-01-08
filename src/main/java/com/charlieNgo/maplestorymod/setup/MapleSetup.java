@@ -24,8 +24,8 @@ public class MapleSetup {
 
     public static void setup() {
         IEventBus bus = MinecraftForge.EVENT_BUS;
-//        bus.addListener(EventPriority.NORMAL, MapleStructures::addDimensionalSpacing);
-//        bus.addListener(EventPriority.NORMAL, MapleStructures::setupStructureSpawns);
+        bus.addListener(EventPriority.NORMAL, MapleStructures::addDimensionalSpacing);
+        bus.addListener(EventPriority.NORMAL, MapleStructures::setupStructureSpawns);
     }
 
     public static void init(FMLCommonSetupEvent event) {

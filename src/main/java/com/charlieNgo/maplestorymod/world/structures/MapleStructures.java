@@ -44,8 +44,6 @@ public class MapleStructures {
      */
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_HENESY = MapleModItems.HENESY.get()
             .configured(new JigsawConfiguration(() -> PlainVillagePools.START, 0));
-    public static ConfiguredStructureFeature<?, ?> CONFIGURED_PORTAL_OVERWORLD = MapleModItems.PORTAL_OVERWORLD.get()
-            .configured(new JigsawConfiguration(() -> PlainVillagePools.START, 0));
 
     /**
      * Registers the configured structure which is what gets added to the biomes.
@@ -56,7 +54,6 @@ public class MapleStructures {
      */
     public static void registerConfiguredStructures() {
         Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "henesy"), CONFIGURED_HENESY);
-        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "portal_overworld"), CONFIGURED_PORTAL_OVERWORLD);
     }
 
     /**
@@ -66,20 +63,10 @@ public class MapleStructures {
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 MapleModItems.HENESY.get(),
-                new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
-                        5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
+                new StructureFeatureConfiguration(20, // average distance apart in chunks between spawn attempts
+                        10,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
                         1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
-
-        setupMapSpacingAndLand(
-                MapleModItems.PORTAL_OVERWORLD.get(),
-                new StructureFeatureConfiguration(10,5,1294567890),
-                false);
-
-//        setupMapSpacingAndLand(
-//                Registration.PORTAL_MYSTERIOUS.get(),
-//                new StructureFeatureConfiguration(10,5,1294567890), // By using the same seed our portals in the overworld and other dimension will be at the same spot
-//                true);
     }
 
     /**
@@ -150,13 +137,6 @@ public class MapleStructures {
                 return;
             }
 
-            ConfiguredStructureFeature<?, ?> portalFeature = null;
-            if (serverLevel.dimension().equals(Level.OVERWORLD)) {
-                portalFeature = CONFIGURED_PORTAL_OVERWORLD;
-//            } else if (serverLevel.dimension().equals(Dimensions.MYSTERIOUS)) {
-//                portalFeature = CONFIGURED_PORTAL_MYSTERIOUS;
-            }
-
             StructureSettings worldStructureConfig = chunkGenerator.getSettings();
 
             /*
@@ -175,11 +155,6 @@ public class MapleStructures {
                 BiomeCategory category = biomeEntry.getValue().getBiomeCategory();
                 if (category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND && category != BiomeCategory.NETHER && category != BiomeCategory.NONE) {
                     associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_HENESY, biomeEntry.getKey());
-                }
-                if (portalFeature != null) {
-                    if (category != BiomeCategory.THEEND && category != BiomeCategory.NETHER && category != BiomeCategory.NONE) {
-                        associateBiomeToConfiguredStructure(structureToMultimap, portalFeature, biomeEntry.getKey());
-                    }
                 }
             }
 
@@ -240,12 +215,11 @@ public class MapleStructures {
     }
 
     private static final Lazy<List<MobSpawnSettings.SpawnerData>> STRUCTURE_MONSTERS = Lazy.of(() -> ImmutableList.of(
-            new MobSpawnSettings.SpawnerData(EntityType.ILLUSIONER, 200, 4, 9),
-            new MobSpawnSettings.SpawnerData(EntityType.VINDICATOR, 200, 4, 9)
+            new MobSpawnSettings.SpawnerData(EntityType.VILLAGER, 200, 4, 9)
     ));
 
     public static void setupStructureSpawns(final StructureSpawnListGatherEvent event) {
-        if (event.getStructure() == MapleModItems.PORTAL_OVERWORLD.get()) {
+        if (event.getStructure() == MapleModItems.HENESY.get()) {
             event.addEntitySpawns(MobCategory.MONSTER, STRUCTURE_MONSTERS.get());
         }
     }
