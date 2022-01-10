@@ -1,6 +1,5 @@
 package com.charlieNgo.maplestorymod.init.MapleSetItems;
 
-import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.init.MapleSilverMaterial;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Warrior.MapleUtgardWarriorBuff;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.Warrior.MapleUtgardWarriorBuffTwo;
@@ -9,14 +8,11 @@ import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
 import com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem.MapleDaggerItem;
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
 import com.charlieNgo.maplestorymod.world.structures.HenesyStructure;
-import com.charlieNgo.maplestorymod.world.structures.MapleStructures;
-import com.charlieNgo.maplestorymod.world.structures.PortalStructure;
+import com.charlieNgo.maplestorymod.world.structures.LithHarborStructure;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.JigsawConfiguration;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -167,4 +163,5 @@ public class MapleModItems {
             () -> new BlockItem(MapleStoryBlocks.DEEPSLATE_SILVER_ORE.get(), new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Structures
     public static final RegistryObject<StructureFeature<JigsawConfiguration>> HENESY = STRUCTURES.register("henesy", HenesyStructure::new);
+    public static final RegistryObject<StructureFeature<JigsawConfiguration>> LITH_HARBOR = STRUCTURES.register("lith_harbor", LithHarborStructure::new);
 }

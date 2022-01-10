@@ -1,7 +1,6 @@
 package com.charlieNgo.maplestorymod.setup;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.world.OreGeneration;
 import com.charlieNgo.maplestorymod.world.structures.MapleStructures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
@@ -14,7 +13,6 @@ public class MapleClientSetup {
         event.enqueueWork(() -> {
             MapleStructures.setupStructures();
             MapleStructures.registerConfiguredStructures();
-            OreGeneration.registerOres();
         });
     }
 }

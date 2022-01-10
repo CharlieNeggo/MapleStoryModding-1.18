@@ -15,15 +15,10 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.List;
 import java.util.function.Supplier;
 
-
 @Mod.EventBusSubscriber(modid = MapleStoryMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class MapleCommonForgeEvents {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void biomeLoading(BiomeLoadingEvent event) {
-        final List<Supplier<PlacedFeature>> features = event.getGeneration()
-                .getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
-
-        OreGeneration.OVERWORLD_ORES.forEach(ore -> features.add(() -> ore));
 
         if (event.getName().equals(new ResourceLocation("minecraft:plains"))) {
             event.getSpawns().addSpawn(MobCategory.MONSTER,

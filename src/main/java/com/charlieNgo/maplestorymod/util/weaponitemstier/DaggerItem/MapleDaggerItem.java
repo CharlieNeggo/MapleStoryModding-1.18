@@ -18,14 +18,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
 public class MapleDaggerItem extends TieredItem implements Vanishable {
-    private final float attackDamage;
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
     public MapleDaggerItem(Tier p_43269_, int p_43270_, float p_43271_, Item.Properties p_43272_) {
         super(p_43269_, p_43272_);
-        this.attackDamage = (float)p_43270_ + p_43269_.getAttackDamageBonus();
+        float attackDamage = (float) p_43270_ + p_43269_.getAttackDamageBonus();
         Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", p_43271_, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
     }

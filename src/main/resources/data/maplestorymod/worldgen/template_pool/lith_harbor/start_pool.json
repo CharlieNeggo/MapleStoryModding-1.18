@@ -1,0 +1,16 @@
+{
+  "name": "maplestorymod:lith_harbor/start_pool",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+  {
+    "weight": 1,
+    "element": {
+      "location": "maplestorymod:lith_harbor",
+      "processors": "minecraft:empty",
+      "projection": "rigid",
+      "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

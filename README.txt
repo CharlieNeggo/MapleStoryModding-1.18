@@ -9,11 +9,8 @@ Note also that the patches are built against "un-renamed" MCP source code (aka
 SRG Names) - this means that you will not be able to read them directly against
 normal code.
 
-What's included and planning to work on:
+Setup Process:
 ==============================
-1. Armor sets from level 10-140 so far
-2. Added a few mobs from maplestory
-3. Working on weapons for all classes
 
 Step 1: Open your command-line and browse to the folder where you extracted the zip file.
 
