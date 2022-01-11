@@ -21,8 +21,6 @@ import static com.charlieNgo.maplestorymod.MapleStoryMod.MODID;
 
 public class MapleModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<StructureFeature<?>> STRUCTURES = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, MODID);
-
 
     // For Armor Sets/Weapons for what material their going to be made out of
     public static final RegistryObject<Item> MAPLE = ITEMS.register("maple", () ->
@@ -161,7 +159,4 @@ public class MapleModItems {
             () -> new BlockItem(MapleStoryBlocks.SILVER_ORE_BLOCK.get(), new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE = ITEMS.register("deepslate_silver_ore",
             () -> new BlockItem(MapleStoryBlocks.DEEPSLATE_SILVER_ORE.get(), new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    //Structures
-    public static final RegistryObject<StructureFeature<JigsawConfiguration>> HENESY = STRUCTURES.register("henesy", HenesyStructure::new);
-    public static final RegistryObject<StructureFeature<JigsawConfiguration>> LITH_HARBOR = STRUCTURES.register("lith_harbor", LithHarborStructure::new);
 }

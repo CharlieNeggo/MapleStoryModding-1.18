@@ -73,7 +73,7 @@ public class MapleStoryBow extends ProjectileWeaponItem {
                         p_40668_.addFreshEntity(abstractarrow);
                     }
 
-                    p_40668_.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                    p_40668_.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!flag1 && !player.getAbilities().instabuild) {
                         itemstack.shrink(1);
                         if (itemstack.isEmpty()) {

@@ -11,6 +11,7 @@ import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
 import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
 import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
 import com.charlieNgo.maplestorymod.setup.MapleClientSetup;
+import com.charlieNgo.maplestorymod.setup.MapleRegistry;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,6 +33,7 @@ public class MapleStoryMod {
 
         // Register the deferred registry
         MapleSetup.setup();
+        MapleRegistry.init();
 
         // Register the setup method for modloading
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -48,7 +50,6 @@ public class MapleStoryMod {
         MapleCRASetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleAbsolabSetItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MapleModEntityTypes.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        MapleModItems.STRUCTURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
 
     }

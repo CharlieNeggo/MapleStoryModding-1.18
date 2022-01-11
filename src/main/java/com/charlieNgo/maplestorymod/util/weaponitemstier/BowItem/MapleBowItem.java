@@ -22,8 +22,8 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
 
     public MapleBowItem( int powerForTime, int useDuration, Item.Properties p_40660_) {
         super(p_40660_);
-        this.powerForTime = powerForTime;
-        this.useDuration = useDuration;
+        MapleBowItem.powerForTime = powerForTime;
+        MapleBowItem.useDuration = useDuration;
     }
 
     public void releaseUsing(ItemStack p_40667_, Level p_40668_, LivingEntity p_40669_, int p_40670_) {
@@ -77,7 +77,7 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
                         p_40668_.addFreshEntity(abstractarrow);
                     }
 
-                    p_40668_.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                    p_40668_.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!flag1 && !player.getAbilities().instabuild) {
                         itemstack.shrink(1);
                         if (itemstack.isEmpty()) {

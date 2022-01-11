@@ -1,8 +1,11 @@
 package com.charlieNgo.maplestorymod.world.structures;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.google.common.collect.*;
+import com.charlieNgo.maplestorymod.setup.MapleRegistry;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMultimap;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.PlainVillagePools;
@@ -14,7 +17,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biome.BiomeCategory;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.FlatLevelSource;
@@ -29,8 +31,10 @@ import net.minecraftforge.event.world.StructureSpawnListGatherEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
-import java.util.function.BiConsumer;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class MapleStructures {
     /**
@@ -38,9 +42,9 @@ public class MapleStructures {
      * We cannot get our own pool here at mod init so we use PlainVillagePools.START.
      * We will modify this pool at runtime later in createPiecesGenerator
      */
-    public static ConfiguredStructureFeature<?, ?> CONFIGURED_HENESY = MapleModItems.HENESY.get()
+    public static ConfiguredStructureFeature<?, ?> CONFIGURED_HENESY = MapleRegistry.HENESY.get()
             .configured(new JigsawConfiguration(() -> PlainVillagePools.START, 6));
-    public static ConfiguredStructureFeature<?, ?> CONFIGURED_LITH_HARBOR = MapleModItems.LITH_HARBOR.get()
+    public static ConfiguredStructureFeature<?, ?> CONFIGURED_LITH_HARBOR = MapleRegistry.LITH_HARBOR.get()
             .configured(new JigsawConfiguration(() -> PlainVillagePools.START, 6));
 
     /**
@@ -51,8 +55,8 @@ public class MapleStructures {
      * But the best time to register configured features by code is honestly to do it in FMLCommonSetupEvent.
      */
     public static void registerConfiguredStructures() {
-        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "henesy"), CONFIGURED_HENESY);
-        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "lith_harbor"), CONFIGURED_LITH_HARBOR);
+        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/houses/henesy"), CONFIGURED_HENESY);
+        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "beach/lith_harbor/houses/lith_harbor"), CONFIGURED_LITH_HARBOR);
     }
 
     /**
@@ -61,14 +65,14 @@ public class MapleStructures {
      */
     public static void setupStructures() {
         setupMapSpacingAndLand(
-                MapleModItems.HENESY.get(),
+                MapleRegistry.HENESY.get(),
                 new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
                         5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
                         1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
 
         setupMapSpacingAndLand(
-                MapleModItems.LITH_HARBOR.get(),
+                MapleRegistry.LITH_HARBOR.get(),
                 new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
                         5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
                         1999967890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
@@ -138,32 +142,6 @@ public class MapleStructures {
      * Basically use this to make absolutely sure the chunkgenerator can or cannot spawn your structure.
      */
 
-    private static void register(BiConsumer<ConfiguredStructureFeature<?, ?>, ResourceKey<Biome>> p_194760_, ConfiguredStructureFeature<?, ?> p_194761_, Set<ResourceKey<Biome>> p_194762_) {
-        p_194762_.forEach((p_194770_) -> {
-            p_194760_.accept(p_194761_, p_194770_);
-        });
-    }
-    private static void register(BiConsumer<ConfiguredStructureFeature<?, ?>, ResourceKey<Biome>> p_194764_, ConfiguredStructureFeature<?, ?> p_194765_, ResourceKey<Biome> p_194766_) {
-        p_194764_.accept(p_194765_, p_194766_);
-    }
-
-    public static void registerStructures(BiConsumer<ConfiguredStructureFeature<?, ?>, ResourceKey<Biome>> p_194758_) {
-        Set<ResourceKey<Biome>> set = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.DEEP_FROZEN_OCEAN).add(Biomes.DEEP_COLD_OCEAN).add(Biomes.DEEP_OCEAN).add(Biomes.DEEP_LUKEWARM_OCEAN).build();
-        Set<ResourceKey<Biome>> set1 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.FROZEN_OCEAN).add(Biomes.OCEAN).add(Biomes.COLD_OCEAN).add(Biomes.LUKEWARM_OCEAN).add(Biomes.WARM_OCEAN).addAll(set).build();
-        Set<ResourceKey<Biome>> set2 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.BEACH).add(Biomes.SNOWY_BEACH).build();
-        Set<ResourceKey<Biome>> set3 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.RIVER).add(Biomes.FROZEN_RIVER).build();
-        Set<ResourceKey<Biome>> set4 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.MEADOW).add(Biomes.FROZEN_PEAKS).add(Biomes.JAGGED_PEAKS).add(Biomes.STONY_PEAKS).add(Biomes.SNOWY_SLOPES).build();
-        Set<ResourceKey<Biome>> set5 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.BADLANDS).add(Biomes.ERODED_BADLANDS).add(Biomes.WOODED_BADLANDS).build();
-        Set<ResourceKey<Biome>> set6 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.WINDSWEPT_HILLS).add(Biomes.WINDSWEPT_FOREST).add(Biomes.WINDSWEPT_GRAVELLY_HILLS).build();
-        Set<ResourceKey<Biome>> set7 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.TAIGA).add(Biomes.SNOWY_TAIGA).add(Biomes.OLD_GROWTH_PINE_TAIGA).add(Biomes.OLD_GROWTH_SPRUCE_TAIGA).build();
-        Set<ResourceKey<Biome>> set8 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.BAMBOO_JUNGLE).add(Biomes.JUNGLE).add(Biomes.SPARSE_JUNGLE).build();
-        Set<ResourceKey<Biome>> set9 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.FOREST).add(Biomes.FLOWER_FOREST).add(Biomes.BIRCH_FOREST).add(Biomes.OLD_GROWTH_BIRCH_FOREST).add(Biomes.DARK_FOREST).add(Biomes.GROVE).build();
-        Set<ResourceKey<Biome>> set10 = ImmutableSet.<ResourceKey<Biome>>builder().add(Biomes.NETHER_WASTES).add(Biomes.BASALT_DELTAS).add(Biomes.SOUL_SAND_VALLEY).add(Biomes.CRIMSON_FOREST).add(Biomes.WARPED_FOREST).build();
-
-        register(p_194758_, CONFIGURED_HENESY, Biomes.PLAINS);
-        register(p_194758_, CONFIGURED_LITH_HARBOR, Biomes.BEACH);
-    }
-
     public static void addDimensionalSpacing(final WorldEvent.Load event) {
         if (event.getWorld() instanceof ServerLevel serverLevel) {
             ChunkGenerator chunkGenerator = serverLevel.getChunkSource().getGenerator();
@@ -188,13 +166,33 @@ public class MapleStructures {
                 // Skip all ocean, end, nether, and none category biomes.
                 // You can do checks for other traits that the biome has.
                 BiomeCategory category = biomeEntry.getValue().getBiomeCategory();
-                boolean b = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND && category != BiomeCategory.NETHER &&
-                        category != BiomeCategory.FOREST  &&  category != BiomeCategory.RIVER && category != BiomeCategory.NONE;
-                if (b) {
+                /*
+                This is for checking if the biomes allow the structures to spawn in
+                 */
+                boolean plains = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
+                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
+                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
+                        category != BiomeCategory.BEACH && category != BiomeCategory.MESA &&
+                        category != BiomeCategory.JUNGLE && category != BiomeCategory.SAVANNA &&
+                        category != BiomeCategory.NONE;
+                boolean beach = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
+                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
+                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
+                        category != BiomeCategory.PLAINS && category != BiomeCategory.MESA &&
+                        category != BiomeCategory.JUNGLE && category != BiomeCategory.SAVANNA &&
+                        category != BiomeCategory.TAIGA && category != BiomeCategory.NONE;
+                boolean jungle = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
+                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
+                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
+                        category != BiomeCategory.PLAINS && category != BiomeCategory.MESA &&
+                        category != BiomeCategory.BEACH && category != BiomeCategory.SAVANNA &&
+                        category != BiomeCategory.TAIGA && category != BiomeCategory.NONE;
+
+                if (plains) {
                     associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_HENESY, biomeEntry.getKey());
                 }
 
-                if (b) {
+                if (beach) {
                     associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_LITH_HARBOR, biomeEntry.getKey());
                 }
             }
@@ -260,7 +258,7 @@ public class MapleStructures {
     ));
 
     public static void setupStructureSpawns(final StructureSpawnListGatherEvent event) {
-        if (event.getStructure() == MapleModItems.HENESY.get() || event.getStructure() == MapleModItems.LITH_HARBOR.get()) {
+        if (event.getStructure() == MapleRegistry.HENESY.get() || event.getStructure() == MapleRegistry.LITH_HARBOR.get()) {
             event.addEntitySpawns(MobCategory.MONSTER, STRUCTURE_MONSTERS.get());
         }
     }
