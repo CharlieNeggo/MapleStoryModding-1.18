@@ -28,7 +28,7 @@ public class MapleStoryMod {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger("Maple Story");
     public static final String MODID = "maplestorymod";
-
+    public static final boolean Mod = true;
     public MapleStoryMod() {
 
         // Register the deferred registry
