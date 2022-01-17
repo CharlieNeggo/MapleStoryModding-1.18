@@ -1,8 +1,8 @@
 package com.charlieNgo.maplestorymod.world;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.entities.*;
-import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.entities.maplemobattributes.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.entities.mobs.*;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

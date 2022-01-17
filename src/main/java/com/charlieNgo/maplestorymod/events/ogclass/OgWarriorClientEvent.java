@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.events.ogclass;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.MapleModItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -28,8 +28,6 @@ public class OgWarriorClientEvent {
                     target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 10*30));
                     target.addEffect(new MobEffectInstance(MobEffects.WITHER, 10*30));
 
-
-
                 }
             }
         }
@@ -45,7 +43,6 @@ public class OgWarriorClientEvent {
 
                     Player player = event.getPlayer();
                     target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
-
 
                 }
             }

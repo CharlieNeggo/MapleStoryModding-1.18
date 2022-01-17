@@ -1,6 +1,5 @@
 package com.charlieNgo.maplestorymod.util.weapon;
 
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 

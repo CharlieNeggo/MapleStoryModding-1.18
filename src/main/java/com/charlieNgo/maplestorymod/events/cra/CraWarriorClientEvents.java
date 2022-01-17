@@ -1,8 +1,7 @@
 package com.charlieNgo.maplestorymod.events.cra;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCRASetItems;
-import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCraWeaponInit;
+import com.charlieNgo.maplestorymod.client.init.CraSetItems.MapleCRASetItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;

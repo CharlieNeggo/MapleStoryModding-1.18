@@ -29,9 +29,9 @@ displayName="Maple story" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="maplestory.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to Yonni Gashu, Charlie Ngo, and Bryce for models" #optional
+credits="Thanks to Yonni Gashu and Charlie Ngo for adding all of the mechanics and items in-game\nand Bryce for creating the structures and models \n" #optional
 # A text field displayed in the mod UI
-authors="Yonni, Charlie, Bryce" #optional
+authors="Yonni, Charlie, Bryce\n" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''Addon to your game where it adds new weapons, consumables, mobs, and etc from Maple Story
 '''

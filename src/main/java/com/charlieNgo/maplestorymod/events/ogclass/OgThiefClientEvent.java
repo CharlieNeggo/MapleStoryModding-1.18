@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.events.ogclass;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.MapleModItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;

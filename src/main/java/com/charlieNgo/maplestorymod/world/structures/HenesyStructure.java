@@ -63,6 +63,7 @@ public class HenesyStructure extends StructureFeature<JigsawConfiguration> {
         var newConfig = new JigsawConfiguration(
                 () -> context.registryAccess().ownedRegistryOrThrow(Registry.TEMPLATE_POOL_REGISTRY)
                         .get(new ResourceLocation(MapleStoryMod.MODID, "henesy/start_pool")),
+
                 5       // In our case our structure is 1 chunk only but by using 5 here it can be replaced with something larger in datapacks
         );
 

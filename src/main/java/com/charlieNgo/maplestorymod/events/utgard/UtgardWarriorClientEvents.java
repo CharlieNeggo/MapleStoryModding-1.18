@@ -1,7 +1,7 @@
 package com.charlieNgo.maplestorymod.events.utgard;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
-import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
+import com.charlieNgo.maplestorymod.client.init.UtgardSetItems.MapleUtgardSetItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;

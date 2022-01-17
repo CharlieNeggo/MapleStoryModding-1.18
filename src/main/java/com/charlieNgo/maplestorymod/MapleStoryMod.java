@@ -1,15 +1,15 @@
 package com.charlieNgo.maplestorymod;
 
 import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
-import com.charlieNgo.maplestorymod.client.maplemobattributes.MapleModEntityTypes;
-import com.charlieNgo.maplestorymod.enchantment.MapleModEnchantments;
-import com.charlieNgo.maplestorymod.init.AbsolabSetItems.MapleAbsolabSetItems;
-import com.charlieNgo.maplestorymod.init.ArcaneSetItems.MapleArcaneSetItems;
-import com.charlieNgo.maplestorymod.init.Consumables.Foods.MapleConsumables;
-import com.charlieNgo.maplestorymod.init.CraSetItems.MapleCRASetItems;
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
-import com.charlieNgo.maplestorymod.init.SpawnEggs.MapleSpawnEggs;
-import com.charlieNgo.maplestorymod.init.UtgardSetItems.MapleUtgardSetItems;
+import com.charlieNgo.maplestorymod.entities.maplemobattributes.MapleModEntityTypes;
+import com.charlieNgo.maplestorymod.client.enchantment.MapleModEnchantments;
+import com.charlieNgo.maplestorymod.client.init.AbsolabSetItems.MapleAbsolabSetItems;
+import com.charlieNgo.maplestorymod.client.init.ArcaneSetItems.MapleArcaneSetItems;
+import com.charlieNgo.maplestorymod.client.init.Consumables.Foods.MapleConsumables;
+import com.charlieNgo.maplestorymod.client.init.CraSetItems.MapleCRASetItems;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.MapleModItems;
+import com.charlieNgo.maplestorymod.client.init.SpawnEggs.MapleSpawnEggs;
+import com.charlieNgo.maplestorymod.client.init.UtgardSetItems.MapleUtgardSetItems;
 import com.charlieNgo.maplestorymod.setup.MapleClientSetup;
 import com.charlieNgo.maplestorymod.setup.MapleRegistry;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;

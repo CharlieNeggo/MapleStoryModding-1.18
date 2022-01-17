@@ -1,6 +1,6 @@
 package com.charlieNgo.maplestorymod.setup;
 
-import com.charlieNgo.maplestorymod.init.MapleSetItems.MapleModItems;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.MapleModItems;
 import com.charlieNgo.maplestorymod.world.structures.MapleStructures;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
