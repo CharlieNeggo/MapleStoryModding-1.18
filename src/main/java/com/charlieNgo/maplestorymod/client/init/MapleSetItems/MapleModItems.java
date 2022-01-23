@@ -1,11 +1,14 @@
 package com.charlieNgo.maplestorymod.client.init.MapleSetItems;
 
+import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.BeginnerSet.WarriorBeginnerSet;
+import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.FifthSet.WarriorFilthSet;
 import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.FirstSet.WarriorFirstSet;
 import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.ThirdSet.WarriorThirdSet;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
 import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
 import com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem.MapleDaggerItem;
-import com.charlieNgo.maplestorymod.blocks.MapleStoryBlocks;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItems.StaffItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -119,16 +122,16 @@ public class MapleModItems {
     public static final RegistryObject<SwordItem> TIMELESS_POLEARM = ITEMS.register("timeless_polearm", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 9, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Items for Shining Rods for 10-130
-    public static final RegistryObject<SwordItem> PLAIN = ITEMS.register("plain", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 1, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> DECOR = ITEMS.register("decor", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 2, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> LIGHT_SAGE_WING = ITEMS.register("light_sage_wing", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 3, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> GLEAMING_GOLD_WING = ITEMS.register("gleaming_gold_wing", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 4, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> TIMELESS_DEAD_END = ITEMS.register("timeless_dead_end", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 5, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<StaffItem> PLAIN = ITEMS.register("plain", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<StaffItem> DECOR = ITEMS.register("decor", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<StaffItem> LIGHT_SAGE_WING = ITEMS.register("light_sage_wing", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<StaffItem> GLEAMING_GOLD_WING = ITEMS.register("gleaming_gold_wing", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<StaffItem> TIMELESS_DEAD_END = ITEMS.register("timeless_dead_end", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
     //Item for Bowman for 10-130
     public static final RegistryObject<MapleBowItem> BEGINNER_BOWMAN_BOW = ITEMS.register("beginner_bowman_bow", () ->
             new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
@@ -152,6 +155,14 @@ public class MapleModItems {
             new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
 
     //Armor for warriors 10-130
+    public static final RegistryObject<ArmorItem> IRON_VIKING_HELMET = ITEMS.register("iron_viking_helmet", () ->
+            new ArmorItem(WarriorBeginnerSet.BRONZE, EquipmentSlot.HEAD, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> BLUE_SERGEANT = ITEMS.register("blue_sergeant", () ->
+            new ArmorItem(WarriorBeginnerSet.BRONZE, EquipmentSlot.CHEST, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> STEEL_SERGEANT_BOTTOMS = ITEMS.register("steel_sergeant_bottoms", () ->
+            new ArmorItem(WarriorBeginnerSet.BRONZE, EquipmentSlot.LEGS, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> BROWN_HIGH_BOOTS = ITEMS.register("brown_high_boots", () ->
+            new ArmorItem(WarriorBeginnerSet.BRONZE, EquipmentSlot.FEET, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> RED_DUKE = ITEMS.register("red_duke", () ->
             new ArmorItem(WarriorFirstSet.SILVER, EquipmentSlot.HEAD, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> YELLOW_JANGOON_ARMOR = ITEMS.register("yellow_jangoon_armor", () ->
@@ -166,6 +177,12 @@ public class MapleModItems {
             new ArmorItem(WarriorThirdSet.MITHRIL, EquipmentSlot.CHEST, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     public static final RegistryObject<ArmorItem> RED_RIVER_BOOTS = ITEMS.register("red_river_boots", () ->
             new ArmorItem(WarriorThirdSet.MITHRIL, EquipmentSlot.FEET, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> BLUE_DRAGON_HELMET = ITEMS.register("blue_dragon_helmet", () ->
+            new ArmorItem(WarriorFilthSet.DARK_CRYSTAL, EquipmentSlot.HEAD, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> BLUE_DRAGON_ARMOR = ITEMS.register("blue_dragon_armor", () ->
+            new ArmorItem(WarriorFilthSet.DARK_CRYSTAL, EquipmentSlot.CHEST, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<ArmorItem> BLUE_DRAGON_BOOTS = ITEMS.register("blue_dragon_boots", () ->
+            new ArmorItem(WarriorFilthSet.DARK_CRYSTAL, EquipmentSlot.FEET, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Armor for pirates 10-130
 
     //Armor for magicians 10-130

@@ -1,6 +1,5 @@
 package com.charlieNgo.maplestorymod.client.init.Consumables.Potions;
 
-import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

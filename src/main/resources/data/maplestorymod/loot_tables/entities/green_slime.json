@@ -124,26 +124,22 @@
         {
           "type": "minecraft:item",
           "name": "maplestorymod:beginner_dagger"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
         {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.02,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
+          "type": "minecraft:item",
+          "name": "maplestorymod:beginner_bowman_bow"
+        },
         {
           "type": "minecraft:item",
           "name": "maplestorymod:basic_twohanded_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:basic_polearm"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:plain"
         }
       ],
       "conditions": [
@@ -152,9 +148,10 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.02,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
+
       ]
     },
     {
@@ -163,7 +160,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:basic_polearm"
+          "name": "maplestorymod:iron_viking_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:blue_sergeant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:steel_sergeant_bottoms"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:brown_high_boots"
         }
       ],
       "conditions": [
@@ -172,10 +181,10 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.02,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
       ]
-    }
+    }w
   ]
 }

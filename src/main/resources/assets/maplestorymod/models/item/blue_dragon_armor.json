@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "maplestorymod:items/maple_items/blue_dragon_armor"
+  }
+}

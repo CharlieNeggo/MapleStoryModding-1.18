@@ -35,7 +35,7 @@ public class MapleStoryMod {
         MapleSetup.setup();
         MapleRegistry.init();
 
-        // Register the setup method for modloading
+        // Register the setup method for mod loading
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
         modbus.addListener(MapleSetup::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(MapleClientSetup::init));

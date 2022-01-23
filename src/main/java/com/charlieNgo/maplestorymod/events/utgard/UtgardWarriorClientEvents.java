@@ -42,7 +42,6 @@ public class UtgardWarriorClientEvents {
                     Player player = event.getPlayer();
                     target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10*20));
                     target.setSecondsOnFire(2);
-
                 }
             }
         }

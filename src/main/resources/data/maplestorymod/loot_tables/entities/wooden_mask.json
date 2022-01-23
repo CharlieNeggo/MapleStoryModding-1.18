@@ -94,84 +94,20 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:doombringer"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
+          "name": "maplestorymod:dragon_toenail_dagger"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:cursayer_dagger"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
+          "name": "maplestorymod:zard"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:hellslayer_polearm"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
+          "name": "maplestorymod:skylar_polearm"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:light_sage_wing"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:red_hinkel"
@@ -183,9 +119,10 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
+
       ]
     },
     {
@@ -195,63 +132,15 @@
         {
           "type": "minecraft:item",
           "name": "maplestorymod:red_duke"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:yellow_jangoon_armor"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:brown_jangoon_pants"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:maroon_jangoon_shoes"
@@ -263,7 +152,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
       ]

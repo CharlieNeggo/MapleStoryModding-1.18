@@ -194,7 +194,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "maplestorymod:red_duke"
+          "name": "maplestorymod:dragon_toenail_dagger"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:zard"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:skylar_polearm"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:light_sage_wing"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:red_hinkel"
         }
       ],
       "conditions": [
@@ -203,55 +219,28 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
+
       ]
     },
     {
       "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "maplestorymod:red_duke"
+        },
         {
           "type": "minecraft:item",
           "name": "maplestorymod:yellow_jangoon_armor"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:brown_jangoon_pants"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
         },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
         {
           "type": "minecraft:item",
           "name": "maplestorymod:maroon_jangoon_shoes"
@@ -263,7 +252,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
+          "chance": 0.1,
           "looting_multiplier": 0.1
         }
       ]

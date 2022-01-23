@@ -13,6 +13,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
     public static final int MAX_DRAW_DURATION = 20;
@@ -39,7 +40,8 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
 
                 float f = getPowerForTime();
                 if (!((double)f < 0.5D)) {
-                    boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, p_40667_, player));
+                    boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof ArrowItem &&
+                            ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, p_40667_, player));
                     if (!p_40668_.isClientSide) {
                         ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                         AbstractArrow abstractarrow = arrowitem.createArrow(p_40668_, itemstack, player);
@@ -69,7 +71,8 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
                         p_40668_.addFreshEntity(abstractarrow);
                     }
 
-                    p_40668_.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                    p_40668_.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS
+                            , 1.0F, 1.0F / (p_40668_.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!flag1 && !player.getAbilities().instabuild) {
                         itemstack.shrink(1);
                         if (itemstack.isEmpty()) {
@@ -110,7 +113,7 @@ public class MapleBowItem extends ProjectileWeaponItem implements Vanishable {
         }
     }
 
-    public Predicate<ItemStack> getAllSupportedProjectiles() {
+    public @NotNull Predicate<ItemStack> getAllSupportedProjectiles() {
         return ARROW_ONLY;
     }
 
