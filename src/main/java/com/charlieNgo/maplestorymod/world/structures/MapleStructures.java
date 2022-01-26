@@ -6,9 +6,12 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.PlainVillagePools;
+import net.minecraft.data.worldgen.Pools;
+import net.minecraft.data.worldgen.ProcessorLists;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -25,6 +28,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.JigsawConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.StructureFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.structures.StructurePoolElement;
+import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
 import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.event.world.StructureSpawnListGatherEvent;
@@ -55,7 +60,44 @@ public class MapleStructures {
      * But the best time to register configured features by code is honestly to do it in FMLCommonSetupEvent.
      */
     public static void registerConfiguredStructures() {
-        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/houses/henesy"), CONFIGURED_HENESY);
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/houses"), new ResourceLocation("plains/henesy/terminators"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_01", ProcessorLists.EMPTY), 0),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_02", ProcessorLists.EMPTY), 0 ),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_03", ProcessorLists.EMPTY), 0 ),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_04", ProcessorLists.EMPTY), 0 ),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_05", ProcessorLists.EMPTY), 0 ),
+                        Pair.of(StructurePoolElement.empty(), 10)),
+                StructureTemplatePool.Projection.RIGID));
+
+        Pools.register(new StructureTemplatePool(new ResourceLocation("village/plains/terminators"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("village/plains/terminators/terminator_01",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_02",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_03",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_04",
+                        ProcessorLists.STREET_PLAINS), 1)),
+                StructureTemplatePool.Projection.TERRAIN_MATCHING));
+
+        Pools.register(new StructureTemplatePool(new ResourceLocation("village/plains/streets"), new ResourceLocation("village/plains/terminators"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_02", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_01", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_02", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_03", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_04", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_05", ProcessorLists.STREET_PLAINS), 3),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_06", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_02", ProcessorLists.STREET_PLAINS), 1),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_04", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_05", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_06", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("village/plains/streets/turn_01", ProcessorLists.STREET_PLAINS), 3)),
+                StructureTemplatePool.Projection.TERRAIN_MATCHING));
+
+
+//        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/houses/henesy"), CONFIGURED_HENESY);
         Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "beach/lith_harbor/houses/lith_harbor"), CONFIGURED_LITH_HARBOR);
     }
 
@@ -66,8 +108,8 @@ public class MapleStructures {
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 MapleRegistry.HENESY.get(),
-                new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
-                        5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
+                new StructureFeatureConfiguration(5, // average distance apart in chunks between spawn attempts
+                        1,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
                         1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
 
