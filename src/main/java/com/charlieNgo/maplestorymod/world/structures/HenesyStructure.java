@@ -59,18 +59,17 @@ public class HenesyStructure extends StructureFeature<JigsawConfiguration> {
     private static Optional<PieceGenerator<JigsawConfiguration>> createPiecesGenerator(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
         // Turns the chunk coordinates into actual coordinates we can use. (center of that chunk)
         BlockPos blockpos = context.chunkPos().getMiddleBlockPosition(0);
-
         var newConfig = new JigsawConfiguration(
                 () -> context.registryAccess().ownedRegistryOrThrow(Registry.TEMPLATE_POOL_REGISTRY)
-                        .get(new ResourceLocation(MapleStoryMod.MODID, "henesy/start_pool")),
-                5       // In our case our structure is 1 chunk only but by using 5 here it can be replaced with something larger in datapacks
+                        .get(new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/start_pool")),
+                5 // In our case our structure is 1 chunk only but by using 5 here it can be replaced with something larger in datapacks
         );
 
         // Create a new context with the new config that has our json pool. We will pass this into JigsawPlacement.addPieces
         var newContext = MapleStructures.createContextWithConfig(context, newConfig);
         // Last 'true' parameter means the structure will automatically be placed at ground level
         var generator = JigsawPlacement.addPieces(newContext,
-                PoolElementStructurePiece::new, blockpos, false, true);
+                PoolElementStructurePiece::new, blockpos, true, true);
 
         if (generator.isPresent()) {
             // Debugging help to quickly find our structures

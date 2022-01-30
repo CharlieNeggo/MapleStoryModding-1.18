@@ -6,14 +6,15 @@
         <autoDetectTypes>
           <platformType>FORGE</platformType>
           <platformType>MIXIN</platformType>
+          <platformType>MCP</platformType>
         </autoDetectTypes>
       </configuration>
     </facet>
   </component>
   <component name="McpModuleSettings">
     <option name="mappingFile" value="$MODULE_DIR$/../../build/createMcpToSrg/output.tsrg" />
-    <option name="mcpVersion" value="official_1.18" />
-    <option name="minecraftVersion" value="1.18" />
+    <option name="mcpVersion" value="parchment_2021.12.19-1.18.1" />
+    <option name="minecraftVersion" value="1.18.1" />
     <option name="srgType" value="TSRG" />
   </component>
 </module>

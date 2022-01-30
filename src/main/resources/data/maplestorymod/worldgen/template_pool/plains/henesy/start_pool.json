@@ -1,0 +1,297 @@
+{
+  "name": "maplestorymod:henesy/start_pool",
+  "fallback": "maplestorymod:henesy/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesyhouse_01",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesyhouse_02",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesyhouse_03",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesyhouse_04",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesyhouse_05",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/town_center/henesy_towncenter_01",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight":1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/town_center/henesy_towncenter_02",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight":1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/houses/henesy_tower_01",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/corner_01",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/corner_02",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/corner_03",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_01",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_02",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 7,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_03",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 7,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_04",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_05",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/straight_06",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_01",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_02",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_03",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_04",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_05",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/crossroad_06",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "maplestorymod:plains/henesy/streets/turn_01",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:henesy/terminators/terminator_01",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:henesy/terminators/terminator_02",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:henesy/terminators/terminator_03",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:henesy/terminators/terminator_04",
+        "processors": "minecraft:street_plains",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "maplestorymod:plains/henesy/plains_lamp_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "feature": "minecraft:oak",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "feature": "minecraft:flower_plain",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "feature": "minecraft:pile_hay",
+        "projection": "rigid",
+        "element_type": "minecraft:feature_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    }
+  ]
+}

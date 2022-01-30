@@ -2,16 +2,11 @@ package com.charlieNgo.maplestorymod.world.structures;
 
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.setup.MapleRegistry;
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.*;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.PlainVillagePools;
-import net.minecraft.data.worldgen.Pools;
-import net.minecraft.data.worldgen.ProcessorLists;
+import net.minecraft.data.worldgen.*;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -20,6 +15,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biome.BiomeCategory;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.FlatLevelSource;
@@ -42,6 +38,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class MapleStructures {
+
     /**
      * Static instances of our structures so we can reference it and add it to biomes easily.
      * We cannot get our own pool here at mod init so we use PlainVillagePools.START.
@@ -60,40 +57,40 @@ public class MapleStructures {
      * But the best time to register configured features by code is honestly to do it in FMLCommonSetupEvent.
      */
     public static void registerConfiguredStructures() {
-        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/houses"), new ResourceLocation("plains/henesy/terminators"),
+        final StructureTemplatePool START = Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/houses"), new ResourceLocation("plains/henesy/terminators"),
                 ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_01", ProcessorLists.EMPTY), 0),
                         Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_02", ProcessorLists.EMPTY), 0 ),
                         Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_03", ProcessorLists.EMPTY), 0 ),
                         Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_04", ProcessorLists.EMPTY), 0 ),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_05", ProcessorLists.EMPTY), 0 ),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_05", ProcessorLists.HOUSING), 1 ),
                         Pair.of(StructurePoolElement.empty(), 10)),
                 StructureTemplatePool.Projection.RIGID));
 
-        Pools.register(new StructureTemplatePool(new ResourceLocation("village/plains/terminators"), new ResourceLocation("empty"),
-                ImmutableList.of(Pair.of(StructurePoolElement.legacy("village/plains/terminators/terminator_01",
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/terminators"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_01",
                         ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_02",
                         ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_03",
                         ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_04",
                         ProcessorLists.STREET_PLAINS), 1)),
                 StructureTemplatePool.Projection.TERRAIN_MATCHING));
 
-        Pools.register(new StructureTemplatePool(new ResourceLocation("village/plains/streets"), new ResourceLocation("village/plains/terminators"),
-                ImmutableList.of(Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_01", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_02", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/corner_03", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_01", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_02", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_03", ProcessorLists.STREET_PLAINS), 7),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_04", ProcessorLists.STREET_PLAINS), 7),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_05", ProcessorLists.STREET_PLAINS), 3),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/straight_06", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_01", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_02", ProcessorLists.STREET_PLAINS), 1),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_03", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_04", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_05", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/crossroad_06", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("village/plains/streets/turn_01", ProcessorLists.STREET_PLAINS), 3)),
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/streets"), new ResourceLocation("plains/henesy/terminators"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_02", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_01", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_02", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_03", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_04", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_05", ProcessorLists.STREET_PLAINS), 3),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_06", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_02", ProcessorLists.STREET_PLAINS), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_04", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_05", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_06", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/turn_01", ProcessorLists.STREET_PLAINS), 3)),
                 StructureTemplatePool.Projection.TERRAIN_MATCHING));
 
 
@@ -108,8 +105,8 @@ public class MapleStructures {
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 MapleRegistry.HENESY.get(),
-                new StructureFeatureConfiguration(5, // average distance apart in chunks between spawn attempts
-                        1,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
+                new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
+                        5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
                         1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
 
@@ -117,7 +114,7 @@ public class MapleStructures {
                 MapleRegistry.LITH_HARBOR.get(),
                 new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
                         5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
-                        1999967890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
+                        1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
     }
 
@@ -211,32 +208,17 @@ public class MapleStructures {
                 /*
                 This is for checking if the biomes allow the structures to spawn in
                  */
-                boolean plains = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
-                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
-                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
-                        category != BiomeCategory.BEACH && category != BiomeCategory.MESA &&
-                        category != BiomeCategory.JUNGLE && category != BiomeCategory.SAVANNA &&
-                        category != BiomeCategory.NONE;
-                boolean beach = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
-                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
-                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
-                        category != BiomeCategory.PLAINS && category != BiomeCategory.MESA &&
-                        category != BiomeCategory.JUNGLE && category != BiomeCategory.SAVANNA &&
-                        category != BiomeCategory.TAIGA && category != BiomeCategory.NONE;
-                boolean jungle = category != BiomeCategory.OCEAN && category != BiomeCategory.THEEND &&
-                        category != BiomeCategory.NETHER && category != BiomeCategory.FOREST  &&
-                        category != BiomeCategory.DESERT && category != BiomeCategory.RIVER &&
-                        category != BiomeCategory.PLAINS && category != BiomeCategory.MESA &&
-                        category != BiomeCategory.BEACH && category != BiomeCategory.SAVANNA &&
-                        category != BiomeCategory.TAIGA && category != BiomeCategory.NONE;
 
-                if (plains) {
-                    associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_HENESY, biomeEntry.getKey());
-                }
+                 ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("maplestorymod", "plains"));
+            ImmutableSet<ResourceKey<Biome>> overworldBiomes = ImmutableSet.<ResourceKey<Biome>>builder()
+                    .add(Biomes.PLAINS)
+                    .build();
+            overworldBiomes.forEach(biomeKey -> associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_HENESY, biomeKey));
+                ImmutableSet<ResourceKey<Biome>> overworldBiomes1 = ImmutableSet.<ResourceKey<Biome>>builder()
+                        .add(Biomes.BEACH)
+                        .build();
+            overworldBiomes1.forEach(biomeKey -> associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_LITH_HARBOR, biomeKey));
 
-                if (beach) {
-                    associateBiomeToConfiguredStructure(structureToMultimap, CONFIGURED_LITH_HARBOR, biomeEntry.getKey());
-                }
             }
 
             // Grab the map that holds what ConfigureStructures a structure has and what biomes it can spawn in.
