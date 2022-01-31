@@ -61,8 +61,8 @@ public class HenesyStructure extends StructureFeature<JigsawConfiguration> {
         BlockPos blockpos = context.chunkPos().getMiddleBlockPosition(0);
         var newConfig = new JigsawConfiguration(
                 () -> context.registryAccess().ownedRegistryOrThrow(Registry.TEMPLATE_POOL_REGISTRY)
-                        .get(new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/start_pool")),
-                5 // In our case our structure is 1 chunk only but by using 5 here it can be replaced with something larger in datapacks
+                        .get(new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/town_centers")),
+                7 // In our case our structure is 1 chunk only but by using 5 here it can be replaced with something larger in datapacks
         );
 
         // Create a new context with the new config that has our json pool. We will pass this into JigsawPlacement.addPieces

@@ -3,7 +3,7 @@
   "fallback": "maplestorymod:plains/henesy/terminators",
     "elements": [
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
           "location": "maplestorymod:plains/henesy/houses/henesyhouse_01",
           "processors": "minecraft:empty",
@@ -12,7 +12,7 @@
         }
       },
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
           "location": "maplestorymod:plains/henesy/houses/henesyhouse_02",
           "processors": "minecraft:empty",
@@ -21,7 +21,7 @@
         }
       },
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
           "location": "maplestorymod:plains/henesy/houses/henesyhouse_03",
           "processors": "minecraft:empty",
@@ -30,7 +30,7 @@
         }
       },
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
           "location": "maplestorymod:plains/henesy/houses/henesyhouse_04",
           "processors": "minecraft:empty",
@@ -39,7 +39,7 @@
         }
       },
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
           "location": "maplestorymod:plains/henesy/houses/henesyhouse_05",
           "processors": "minecraft:empty",
@@ -48,27 +48,72 @@
         }
       },
       {
-        "weight": 1,
+        "weight": 2,
         "element": {
-          "location": "maplestorymod:plains/henesy/town_center/henesy_towncenter_01",
+          "location": "maplestorymod:plains/henesy/houses/henesyhouse_06",
           "processors": "minecraft:empty",
           "projection": "rigid",
           "element_type": "minecraft:legacy_single_pool_element"
         }
       },
       {
-        "weight":1,
+        "weight": 2,
         "element": {
-          "location": "maplestorymod:plains/henesy/town_center/henesy_towncenter_02",
+          "location": "maplestorymod:plains/henesy/houses/henesyhouse_07",
           "processors": "minecraft:empty",
           "projection": "rigid",
           "element_type": "minecraft:legacy_single_pool_element"
         }
       },
       {
-        "weight":1,
+        "weight": 3,
         "element": {
-          "location": "maplestorymod:plains/henesy/houses/henesy_tower_01",
+          "location": "maplestorymod:plains/henesy/houses/henesy_towncenter_01",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:legacy_single_pool_element"
+        }
+      },
+      {
+        "weight":3,
+        "element": {
+          "location": "maplestorymod:plains/henesy/houses/henesy_towncenter_02",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:legacy_single_pool_element"
+        }
+      },
+      {
+        "weight":4,
+        "element": {
+          "location": "maplestorymod:plains/henesy/houses/henesytower_01",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:legacy_single_pool_element"
+        }
+      },
+      {
+        "weight":5,
+        "element": {
+          "location": "maplestorymod:plains/henesy/houses/henesy_ardent_mill",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:legacy_single_pool_element"
+        }
+      },
+      {
+        "weight":5,
+        "element": {
+          "location": "maplestorymod:plains/henesy/houses/henesy_houses",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:legacy_single_pool_element"
+        }
+      },
+      {
+        "weight":4,
+        "element": {
+          "location": "maplestorymod:plains/henesy/houses/mushroom_park",
           "processors": "minecraft:empty",
           "projection": "rigid",
           "element_type": "minecraft:legacy_single_pool_element"

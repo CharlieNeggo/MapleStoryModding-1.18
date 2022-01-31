@@ -1,11 +1,20 @@
 {
-  "name": "maplestorymod:plains/henesy/decor",
-  "fallback": "maplestorymod:empty",
+  "name": "maplestorymod:plains/henesy/decoration",
+  "fallback": "minecraft:empty",
   "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "maplestorymod:plains/henesy/decoration/henesy_bench_01",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
     {
       "weight": 2,
       "element": {
-        "location": "maplestorymod:plains/henesy/plains_lamp_1",
+        "location": "maplestorymod:plains/henesy/decoration/henesy_lamp_01",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:legacy_single_pool_element"

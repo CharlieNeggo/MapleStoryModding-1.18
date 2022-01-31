@@ -6,17 +6,17 @@ import com.google.common.collect.*;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.*;
+import net.minecraft.data.worldgen.PlainVillagePools;
+import net.minecraft.data.worldgen.Pools;
+import net.minecraft.data.worldgen.ProcessorLists;
+import net.minecraft.data.worldgen.placement.VillagePlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biome.BiomeCategory;
 import net.minecraft.world.level.biome.Biomes;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.FlatLevelSource;
 import net.minecraft.world.level.levelgen.StructureSettings;
@@ -27,13 +27,11 @@ import net.minecraft.world.level.levelgen.feature.configurations.StructureFeatur
 import net.minecraft.world.level.levelgen.feature.structures.StructurePoolElement;
 import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
-import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.event.world.StructureSpawnListGatherEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -57,44 +55,81 @@ public class MapleStructures {
      * But the best time to register configured features by code is honestly to do it in FMLCommonSetupEvent.
      */
     public static void registerConfiguredStructures() {
-        final StructureTemplatePool START = Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/houses"), new ResourceLocation("plains/henesy/terminators"),
-                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_01", ProcessorLists.EMPTY), 0),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_02", ProcessorLists.EMPTY), 0 ),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_03", ProcessorLists.EMPTY), 0 ),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_04", ProcessorLists.EMPTY), 0 ),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_05", ProcessorLists.HOUSING), 1 ),
-                        Pair.of(StructurePoolElement.empty(), 10)),
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/houses"), new ResourceLocation("plains/henesy/terminators"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_01", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_02", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_03", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_04", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_05", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_06", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesyhouse_07", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesytower_01", ProcessorLists.HOUSING), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesytower_01", ProcessorLists.HOUSING), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesy_towncenter_01", ProcessorLists.HOUSING), 3),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesy_towncenter_02", ProcessorLists.HOUSING), 3),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesy_ardent_mill", ProcessorLists.HOUSING), 5),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/henesy_houses", ProcessorLists.HOUSING), 5),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/houses/mushroom_park", ProcessorLists.HOUSING), 4)),
                 StructureTemplatePool.Projection.RIGID));
 
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/town_centers"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/town_centers/henesy_fountain_01", ProcessorLists.MOSSIFY_20_PERCENT), 50),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/town_centers/henesy_meeting_point_1", ProcessorLists.MOSSIFY_20_PERCENT), 50),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/town_centers/henesy_meeting_point_2"), 50)),
+                StructureTemplatePool.Projection.RIGID));
+
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/villagers"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/villagers/nitwit"), 1),
+                Pair.of(StructurePoolElement.legacy("plains/henesy/villagers/baby"), 1),
+                Pair.of(StructurePoolElement.legacy("plains/henesy/villagers/unemployed"), 10)), StructureTemplatePool.Projection.RIGID));
+
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/common/cats"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_black"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_british"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_calico"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_persian"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_ragdoll"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_red"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_siamese"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_tabby"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_white"), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/common/animals/cat_jellie"), 1),
+                        Pair.of(StructurePoolElement.empty(), 3)), StructureTemplatePool.Projection.RIGID));
+
         Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/terminators"), new ResourceLocation("empty"),
-                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_01",
-                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_02",
-                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_03",
-                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/terminator_04",
-                        ProcessorLists.STREET_PLAINS), 1)),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/henesy_terminator_01",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/henesy_terminator_02",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/henesy_terminator_03",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.legacy("plains/henesy/terminators/henesy_terminator_04",
+                        ProcessorLists.STREET_PLAINS), 1), Pair.of(StructurePoolElement.empty(), 10)),
                 StructureTemplatePool.Projection.TERRAIN_MATCHING));
+
+        Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/decoration"), new ResourceLocation("empty"),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/decoration/henesy_lamp_01"), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/decoration/henesy_bench_01"), 2),
+                        Pair.of(StructurePoolElement.feature(VillagePlacements.OAK_VILLAGE), 1),
+                        Pair.of(StructurePoolElement.feature(VillagePlacements.FLOWER_PLAIN_VILLAGE), 1),
+                        Pair.of(StructurePoolElement.feature(VillagePlacements.PILE_HAY_VILLAGE), 1),
+                        Pair.of(StructurePoolElement.empty(), 2)), StructureTemplatePool.Projection.RIGID));
 
         Pools.register(new StructureTemplatePool(new ResourceLocation("plains/henesy/streets"), new ResourceLocation("plains/henesy/terminators"),
-                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_01", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_02", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/corner_03", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_01", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_02", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_03", ProcessorLists.STREET_PLAINS), 7),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_04", ProcessorLists.STREET_PLAINS), 7),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_05", ProcessorLists.STREET_PLAINS), 3),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/straight_06", ProcessorLists.STREET_PLAINS), 4),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_01", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_02", ProcessorLists.STREET_PLAINS), 1),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_03", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_04", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_05", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/crossroad_06", ProcessorLists.STREET_PLAINS), 2),
-                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/turn_01", ProcessorLists.STREET_PLAINS), 3)),
+                ImmutableList.of(Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_corner_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_corner_02", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_corner_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_straight_01", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_straight_02", ProcessorLists.STREET_PLAINS), 4),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_straight_03", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_straight_04", ProcessorLists.STREET_PLAINS), 7),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_straight_05", ProcessorLists.STREET_PLAINS), 3),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_01", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_02", ProcessorLists.STREET_PLAINS), 1),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_03", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_04", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_05", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_crossroad_06", ProcessorLists.STREET_PLAINS), 2),
+                        Pair.of(StructurePoolElement.legacy("plains/henesy/streets/henesy_turn_01", ProcessorLists.STREET_PLAINS), 3)),
                 StructureTemplatePool.Projection.TERRAIN_MATCHING));
 
-
-//        Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "plains/henesy/houses/henesy"), CONFIGURED_HENESY);
         Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new ResourceLocation(MapleStoryMod.MODID, "beach/lith_harbor/houses/lith_harbor"), CONFIGURED_LITH_HARBOR);
     }
 
@@ -105,9 +140,9 @@ public class MapleStructures {
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 MapleRegistry.HENESY.get(),
-                new StructureFeatureConfiguration(10, // average distance apart in chunks between spawn attempts
-                        5,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
-                        1234567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
+                new StructureFeatureConfiguration(15, // average distance apart in chunks between spawn attempts
+                        10,            // minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE
+                        1934567890),  // this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */
                 true);
 
         setupMapSpacingAndLand(
@@ -277,13 +312,13 @@ public class MapleStructures {
         );
     }
 
-    private static final Lazy<List<MobSpawnSettings.SpawnerData>> STRUCTURE_MONSTERS = Lazy.of(() -> ImmutableList.of(
-            new MobSpawnSettings.SpawnerData(EntityType.VILLAGER, 200, 4, 9)
-    ));
+//    private static final Lazy<List<MobSpawnSettings.SpawnerData>> STRUCTURE_MONSTERS = Lazy.of(() -> ImmutableList.of(
+//            new MobSpawnSettings.SpawnerData(EntityType.VILLAGER, 200, 4, 9)
+//    ));
 
     public static void setupStructureSpawns(final StructureSpawnListGatherEvent event) {
         if (event.getStructure() == MapleRegistry.HENESY.get() || event.getStructure() == MapleRegistry.LITH_HARBOR.get()) {
-            event.addEntitySpawns(MobCategory.MONSTER, STRUCTURE_MONSTERS.get());
+//            event.addEntitySpawns(MobCategory.MONSTER, STRUCTURE_MONSTERS.get());
         }
     }
 }
