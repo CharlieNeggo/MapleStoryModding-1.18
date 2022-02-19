@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem;
+package com.charlieNgo.maplestorymod.util.weaponitemstier;
 
 import java.util.function.Predicate;
 import net.minecraft.sounds.SoundEvents;

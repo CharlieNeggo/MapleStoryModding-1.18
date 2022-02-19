@@ -18,8 +18,9 @@ import com.charlieNgo.maplestorymod.client.init.CraSetItems.Warrior.MapleCraWarr
 import com.charlieNgo.maplestorymod.client.init.CraSetItems.Warrior.MapleCraWarriorBuffTwo;
 import com.charlieNgo.maplestorymod.client.init.CraSetItems.Warrior.MapleCraWarriorMaterial;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleBowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -42,10 +43,10 @@ public class MapleCRASetItems {
     public static final RegistryObject<SwordItem> CRA_KATARA = ITEMS.register("cra_katara", () ->
             new SwordItem(MapleCraWeaponInit.CRA, 9, 0.5F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Magician Items
-    public static final RegistryObject<SwordItem> CRA_STAFF = ITEMS.register("cra_staff", () ->
-            new SwordItem(MapleCraWeaponInit.CRA, 3, -2F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> CRA_SHINING_ROD = ITEMS.register("cra_shining_rod", ()->
-            new SwordItem(MapleCraWeaponInit.CRA, 3, -2F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<StaffItem> CRA_STAFF = ITEMS.register("cra_staff", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<StaffItem> CRA_SHINING_ROD = ITEMS.register("cra_shining_rod", ()->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Bowman Items
     public static final RegistryObject<MapleBowItem> CRA_BOW = ITEMS.register("cra_bow", () ->
             new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));

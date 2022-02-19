@@ -13,7 +13,7 @@
   </component>
   <component name="McpModuleSettings">
     <option name="mappingFile" value="$MODULE_DIR$/../../build/createMcpToSrg/output.tsrg" />
-    <option name="mcpVersion" value="parchment_2021.12.19-1.18.1" />
+    <option name="mcpVersion" value="parchment_2022.02.13-1.18.1" />
     <option name="minecraftVersion" value="1.18.1" />
     <option name="srgType" value="TSRG" />
   </component>

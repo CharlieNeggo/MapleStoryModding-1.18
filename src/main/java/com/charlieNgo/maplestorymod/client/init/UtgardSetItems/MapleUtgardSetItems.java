@@ -16,8 +16,9 @@ import com.charlieNgo.maplestorymod.client.init.UtgardSetItems.Warrior.MapleUtga
 import com.charlieNgo.maplestorymod.client.init.UtgardSetItems.Warrior.MapleUtgardWarriorBuffTwo;
 import com.charlieNgo.maplestorymod.client.init.UtgardSetItems.Warrior.MapleUtgardWarriorMaterial;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleBowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,10 +41,10 @@ public class MapleUtgardSetItems {
     public static final RegistryObject<MapleCrossbowItem> UTGARD_CROSSBOW = ITEMS.register("utgard_crossbow", () ->
             new MapleCrossbowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
     //Weapons Magicians
-    public static final RegistryObject<SwordItem> UTGARD_STAFF = ITEMS.register("utgard_staff", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 2, -2F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> UTGARD_SHINING_ROD = ITEMS.register("utgard_shining_rod", () ->
-            new SwordItem(MapleUtgardWeaponInit.UTGARD, 2, -2F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<StaffItem> UTGARD_STAFF = ITEMS.register("utgard_staff", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<StaffItem> UTGARD_SHINING_ROD = ITEMS.register("utgard_shining_rod", () ->
+            new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Weapons Thief
     public static final RegistryObject<SwordItem> UTGARD_DAGGER = ITEMS.register("utgard_dagger", () ->
             new SwordItem(MapleUtgardWeaponInit.UTGARD, 6, 0.5F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));

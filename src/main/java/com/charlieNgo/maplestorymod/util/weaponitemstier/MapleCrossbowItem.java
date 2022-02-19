@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem;
+package com.charlieNgo.maplestorymod.util.weaponitemstier;
 
 import com.google.common.collect.Lists;
 import com.mojang.math.Quaternion;

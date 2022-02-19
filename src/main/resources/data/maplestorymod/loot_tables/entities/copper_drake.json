@@ -2,100 +2,37 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 2.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": -1.0,
-                "max": 1.0
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:looting_enchant",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
-              }
-            }
-          ],
+          "name": "maplestorymod:drake_skull"
+        },
+        {
+          "type": "minecraft:item",
           "name": "maplestorymod:melting_cheese"
         }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
+      ],
+      "conditions": [
         {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 2.0
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:looting_enchant",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
-              }
-            }
-          ],
-          "name": "maplestorymod:drake_skull"
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.15,
+          "looting_multiplier": 0.1
         }
       ]
     },
     {
-      "rolls": 1.0,
+      "rolls": 2.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 3.0,
-                "max": 8.0
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:looting_enchant",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
-              }
-            }
-          ],
           "name": "maplestorymod:meso_two"
         }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "maplestorymod:doombringer"
-        }
       ],
       "conditions": [
         {
@@ -103,87 +40,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "maplestorymod:cursayer_dagger"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "maplestorymod:hellslayer_polearm"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "maplestorymod:light_sage_wing"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
-          "looting_multiplier": 0.1
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "maplestorymod:red_hinkel"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        },
-        {
-          "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.05,
+          "chance": 0.30,
           "looting_multiplier": 0.1
         }
       ]
@@ -219,7 +76,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.1,
+          "chance": 0.07,
           "looting_multiplier": 0.1
         }
 
@@ -252,7 +109,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.1,
+          "chance": 0.07,
           "looting_multiplier": 0.1
         }
       ]

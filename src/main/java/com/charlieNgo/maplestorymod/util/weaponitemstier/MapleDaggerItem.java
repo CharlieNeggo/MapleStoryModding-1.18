@@ -1,4 +1,4 @@
-package com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem;
+package com.charlieNgo.maplestorymod.util.weaponitemstier;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;

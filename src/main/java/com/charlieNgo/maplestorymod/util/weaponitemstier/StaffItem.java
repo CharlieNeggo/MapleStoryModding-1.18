@@ -1,6 +1,7 @@
-package com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItems;
+package com.charlieNgo.maplestorymod.util.weaponitemstier;
 
 import java.util.function.Predicate;
+
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -42,48 +43,23 @@ public class StaffItem extends ProjectileWeaponItem implements Vanishable {
 
             float f = getPowerForTime(i);
             if (!((double)f < 0.1D)) {
-               boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, pStack, player));
+               boolean flag1 = player.getAbilities().instabuild || (itemstack.getItem() instanceof FireChargeItem);
                if (!pLevel.isClientSide) {
                   ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                   AbstractArrow abstractarrow = arrowitem.createArrow(pLevel, itemstack, player);
                   abstractarrow = customArrow(abstractarrow);
-                  abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);
-                  if (f == 1.0F) {
-                     abstractarrow.setCritArrow(true);
-                  }
-
-                  int j = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, pStack);
-                  if (j > 0) {
-                     abstractarrow.setBaseDamage(abstractarrow.getBaseDamage() + (double)j * 0.5D + 0.5D);
-                  }
-
-                  int k = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PUNCH_ARROWS, pStack);
-                  if (k > 0) {
-                     abstractarrow.setKnockback(k);
-                  }
-
-                  if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, pStack) > 0) {
-                     abstractarrow.setSecondsOnFire(100);
-                  }
-
-                  pStack.hurtAndBreak(1, player, (p_40665_) -> {
-                     p_40665_.broadcastBreakEvent(player.getUsedItemHand());
-                  });
-                  if (flag1 || player.getAbilities().instabuild && (itemstack.is(Items.SPECTRAL_ARROW) || itemstack.is(Items.TIPPED_ARROW))) {
-                     abstractarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
-                  }
+                  abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 10.0F, f * 2.0F, 4.0F);
 
                   pLevel.addFreshEntity(abstractarrow);
                }
 
-               pLevel.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (pLevel.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+               pLevel.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.GUARDIAN_ATTACK, SoundSource.PLAYERS, 1.0F, 1.0F / (pLevel.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                if (!flag1 && !player.getAbilities().instabuild) {
                   itemstack.shrink(1);
                   if (itemstack.isEmpty()) {
                      player.getInventory().removeItem(itemstack);
                   }
                }
-
                player.awardStat(Stats.ITEM_USED.get(this));
             }
          }
@@ -94,10 +70,10 @@ public class StaffItem extends ProjectileWeaponItem implements Vanishable {
     * Gets the velocity of the arrow entity from the bow's charge
     */
    public static float getPowerForTime(int pCharge) {
-      float f = (float)pCharge / 20.0F;
+      float f = (float)pCharge / 10.0F;
       f = (f * f + f * 2.0F) / 3.0F;
-      if (f > 1.0F) {
-         f = 1.0F;
+      if (f > 0.0F) {
+         f = 3.0F;
       }
 
       return f;

@@ -6,9 +6,11 @@ import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.FifthSet.W
 import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.FirstSet.WarriorFirstSet;
 import com.charlieNgo.maplestorymod.client.init.MapleSetItems.Warrior.ThirdSet.WarriorThirdSet;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.BowItem.MapleBowItem;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem.MapleDaggerItem;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItems.StaffItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleBowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleCrossbowItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleDaggerItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MaplePoleArmItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.StaffItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -111,16 +113,16 @@ public class MapleModItems {
     public static final RegistryObject<SwordItem> DEVIL_SUNRISE = ITEMS.register("devil_sunrise", ()->
             new SwordItem(MapleSetWeaponInit.MAPLE, 6, -2.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Items for Pole-arms 10-130
-    public static final RegistryObject<SwordItem> BASIC_POLEARM = ITEMS.register("basic_polearm", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 4, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> STEEL_POLEARM = ITEMS.register("steel_polearm", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 5, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> SKYLAR_POLEARM = ITEMS.register("skylar_polearm", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 7, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> HELLSLAYER_POLEARM = ITEMS.register("hellslayer_polearm", () ->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 8, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
-    public static final RegistryObject<SwordItem> TIMELESS_POLEARM = ITEMS.register("timeless_polearm", ()->
-            new SwordItem(MapleSetWeaponInit.MAPLE, 9, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<MaplePoleArmItem> BASIC_POLEARM = ITEMS.register("basic_polearm", () ->
+            new MaplePoleArmItem(MapleSetWeaponInit.MAPLE, 4, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<MaplePoleArmItem> STEEL_POLEARM = ITEMS.register("steel_polearm", () ->
+            new MaplePoleArmItem(MapleSetWeaponInit.MAPLE, 5, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<MaplePoleArmItem> SKYLAR_POLEARM = ITEMS.register("skylar_polearm", () ->
+            new MaplePoleArmItem(MapleSetWeaponInit.MAPLE, 7, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<MaplePoleArmItem> HELLSLAYER_POLEARM = ITEMS.register("hellslayer_polearm", () ->
+            new MaplePoleArmItem(MapleSetWeaponInit.MAPLE, 8, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
+    public static final RegistryObject<MaplePoleArmItem> TIMELESS_POLEARM = ITEMS.register("timeless_polearm", ()->
+            new MaplePoleArmItem(MapleSetWeaponInit.MAPLE, 9, -3.0F, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));
     //Items for Shining Rods for 10-130
     public static final RegistryObject<StaffItem> PLAIN = ITEMS.register("plain", () ->
             new StaffItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
@@ -143,17 +145,16 @@ public class MapleModItems {
             new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
     public static final RegistryObject<MapleBowItem> TIMELESS_ENGAW = ITEMS.register("timeless_engaw", () ->
             new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> BEGINNER_CROSSBOW = ITEMS.register("beginner_crossbow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> HECKLER = ITEMS.register("heckler", () ->
-            new MapleBowItem( new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> VOID_HUNTER = ITEMS.register("void_hunter", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> CASA_CROW = ITEMS.register("casa_crow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-    public static final RegistryObject<MapleBowItem> BRISER_CROSSBOW = ITEMS.register("briser_crossbow", () ->
-            new MapleBowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
-
+    public static final RegistryObject<MapleCrossbowItem> BEGINNER_CROSSBOW = ITEMS.register("beginner_crossbow", () ->
+            new MapleCrossbowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<MapleCrossbowItem> HECKLER = ITEMS.register("heckler", () ->
+            new MapleCrossbowItem( new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<MapleCrossbowItem> VOID_HUNTER = ITEMS.register("void_hunter", () ->
+            new MapleCrossbowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<MapleCrossbowItem> CASA_CROW = ITEMS.register("casa_crow", () ->
+            new MapleCrossbowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
+    public static final RegistryObject<MapleCrossbowItem> BRISER_CROSSBOW = ITEMS.register("briser_crossbow", () ->
+            new MapleCrossbowItem(new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB).stacksTo(1)));
     //Armor for warriors 10-130
     public static final RegistryObject<ArmorItem> IRON_VIKING_HELMET = ITEMS.register("iron_viking_helmet", () ->
             new ArmorItem(WarriorBeginnerSet.BRONZE, EquipmentSlot.HEAD, new Item.Properties().tab(MapleSetup.MAPLESTORY_TAB)));

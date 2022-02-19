@@ -3,7 +3,7 @@ package com.charlieNgo.maplestorymod.client.init.ArcaneSetItems;
 import com.charlieNgo.maplestorymod.MapleStoryMod;
 import com.charlieNgo.maplestorymod.client.init.ArcaneSetItems.Thief.MapleArcaneThiefBuff;
 import com.charlieNgo.maplestorymod.setup.MapleSetup;
-import com.charlieNgo.maplestorymod.util.weaponitemstier.DaggerItem.MapleDaggerItem;
+import com.charlieNgo.maplestorymod.util.weaponitemstier.MapleDaggerItem;
 import com.charlieNgo.maplestorymod.client.init.ArcaneSetItems.Bowman.MapleArcaneBowmanBuff;
 import com.charlieNgo.maplestorymod.client.init.ArcaneSetItems.Bowman.MapleArcaneBowmanBuffTwo;
 import com.charlieNgo.maplestorymod.client.init.ArcaneSetItems.Bowman.MapleArcaneBowmanMaterial;
